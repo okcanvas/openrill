@@ -1,0 +1,33 @@
+{
+  "id": "agent-failure-recovery",
+  "title": "Retryable model failure recovery",
+  "category": "recovery",
+  "risk": "medium",
+  "executor": "failure-recovery",
+  "coverage": {
+    "primary": [
+      "recovery.retryable-model-failure"
+    ],
+    "secondary": [
+      "recovery.durable-attempt-evidence"
+    ]
+  },
+  "capabilities": [
+    "model.retry",
+    "agent.reply"
+  ],
+  "objective": "Verify a retryable model transport failure before durable output is retried once and completes with recorded invocation evidence.",
+  "successCriteria": [
+    "The first model invocation is recorded as failed.",
+    "The second invocation completes successfully.",
+    "The final Run completes within the configured model-call budget."
+  ],
+  "budget": {
+    "maxDurationMs": 10000,
+    "maxTurns": 2,
+    "maxModelCalls": 3,
+    "maxToolCalls": 1,
+    "maxTotalTokens": 1024
+  },
+  "defaultRepetitions": 2
+}

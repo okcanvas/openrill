@@ -1,0 +1,11 @@
+version: 1
+host:
+  bind: 127.0.0.1
+  port: 47117
+execution:
+  approvalMode: ask
+  defaultTimeoutMs: 120000
+automation:
+  enabled: false
+ui:
+  openOnStart: false

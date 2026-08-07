@@ -1,0 +1,19 @@
+{
+  "step": "STEP022A_LOCAL_EXTENSION_PACKAGE_CONTRACT_AND_RUNTIME_REGISTRY",
+  "version": "0.22.0-step022a",
+  "schema": 24,
+  "expectedChecks": "43/43",
+  "liveHarness": "STEP022A_H1_LOCAL_EXTENSION_PACKAGE_RUNTIME_RESTART",
+  "fields": {
+    "manifest_contract": "CLOSED_V1",
+    "discovery": "EXPLICIT_ROOTS_DETERMINISTIC",
+    "activation": "BOUNDED_ISOLATED",
+    "capability_ownership": "UNIQUE",
+    "secrets": "REFERENCE_ONLY",
+    "state_authority": "NOT_GRANTED",
+    "runtime_toggle": "HOST_EFFECTIVE_ONLY",
+    "restart": "DUPLICATE_FREE",
+    "marketplace": "NOT_IMPLEMENTED",
+    "connector": "DEFERRED_STEP022B"
+  }
+}

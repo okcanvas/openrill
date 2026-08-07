@@ -1,0 +1,102 @@
+[PASS] root-version :: 0.12.5-step012cr1
+[PASS] package-manager
+[PASS] step012cr1-script
+[PASS] step012cr1-package-script
+[PASS] required:scripts/run_step012cr1_acceptance.py
+[PASS] required:scripts/run_step012c_acceptance.py
+[PASS] required:scripts/verify_historical_browser_no_impact.py
+[PASS] required:scripts/sh_run_step012cr1_acceptance.cmd
+[PASS] required:scripts/sh_run_step012cr1_acceptance.sh
+[PASS] required:scripts/package_step012cr1.py
+[PASS] required:tests/unit/historical-browser-regression-ownership-step012cr1.test.mjs
+[PASS] required:docs/plans/STEP012CR1_HISTORICAL_BROWSER_REGRESSION_OWNERSHIP.md
+[PASS] required:reference/validation/STEP012C_WINDOWS_HISTORICAL_BROWSER_RUNTIME_OWNERSHIP.md
+[PASS] required:reference/validation/STEP012BR1_BROWSER_SURFACE_BASELINE.json
+[PASS] required:reference/validation/STEP012C_ACCEPTANCE_REPORT.txt
+[PASS] required:reference/validation/STEP012CR1_ACCEPTANCE_REPORT.txt
+[PASS] required:reference/validation/STEP012BR1_WINDOWS_LIVE_ACCEPTED.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.12.5-step012cr1"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP012CR1_HISTORICAL_BROWSER_REGRESSION_OWNERSHIP 0.12.5-step012cr1
+[PASS] issue-registry-066
+[PASS] issue-detail-066
+[PASS] recurrence-browser-owner
+[PASS] accepted-browser-baseline-step
+[PASS] accepted-browser-baseline-sha
+[PASS] accepted-browser-files-six
+[PASS] feature-default-chromium
+[PASS] feature-delegated-mode
+[PASS] feature-actual-path-retained
+[PASS] accepted-step-evidence
+[PASS] accepted-artifact-sha
+[PASS] accepted-marker-exact
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-current-step:README.md
+[PASS] baseline-current-version:README.md
+[PASS] baseline-feature-history:README.md
+[PASS] baseline-accepted-step:README.md
+[PASS] baseline-accepted-sha:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-browser-scope:README.md
+[PASS] baseline-current-step:HANDOFF.md
+[PASS] baseline-current-version:HANDOFF.md
+[PASS] baseline-feature-history:HANDOFF.md
+[PASS] baseline-accepted-step:HANDOFF.md
+[PASS] baseline-accepted-sha:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-browser-scope:HANDOFF.md
+[PASS] baseline-current-step:PLANS.md
+[PASS] baseline-current-version:PLANS.md
+[PASS] baseline-feature-history:PLANS.md
+[PASS] baseline-accepted-step:PLANS.md
+[PASS] baseline-accepted-sha:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-browser-scope:PLANS.md
+[PASS] baseline-current-step:ROADMAP.md
+[PASS] baseline-current-version:ROADMAP.md
+[PASS] baseline-feature-history:ROADMAP.md
+[PASS] baseline-accepted-step:ROADMAP.md
+[PASS] baseline-accepted-sha:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-browser-scope:ROADMAP.md
+[PASS] baseline-current-step:VALIDATION.md
+[PASS] baseline-current-version:VALIDATION.md
+[PASS] baseline-feature-history:VALIDATION.md
+[PASS] baseline-accepted-step:VALIDATION.md
+[PASS] baseline-accepted-sha:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] baseline-browser-scope:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] package-manifest-initial :: OPENRILL_PACKAGE_MANIFEST_PASS declared=704 actual=704 missing=0 extra=0 changed=0
+[PASS] browser-no-impact :: OPENRILL_HISTORICAL_BROWSER_NO_IMPACT_PASS accepted_step=STEP012BR1_HISTORICAL_ACCEPTANCE_BASELINE_OWNERSHIP accepted_sha256=b90721d4d24f7467355f1f2dcd7e94d65f03517a7f60ff8208fa0c915f6ccbde browser_files=6 live_delta=SCHEMA_OWNER_ONLY
+[PASS] focused-browser-ownership :: browser_ownership_tests_pass
+[PASS] step012c-full-regression :: step012c_delegated_pass
+[PASS] nested-step012c-report-artifact :: .artifacts/nested/STEP012C_ACCEPTANCE_REPORT.txt
+[PASS] nested-step012c-packaged-report-immutable :: before=3a1b1428cfe5ba098cabe680cc407c87e83035ebd8deb7694a9fcee4d9d65a01 after=3a1b1428cfe5ba098cabe680cc407c87e83035ebd8deb7694a9fcee4d9d65a01
+[PASS] package-manifest-final :: OPENRILL_PACKAGE_MANIFEST_PASS declared=704 actual=704 missing=0 extra=0 changed=0
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP012CR1_HISTORICAL_BROWSER_REGRESSION_OWNERSHIP checks=101/101 state=PASSED schema=9 feature=STEP012C protocol=CREATE_LIST_GET_UPDATE_RUN_NOW_HISTORY manual_idempotency=DURABLE run_link=PRE_EXECUTION_LEASE_GUARDED executor=CONVERSATION_RUN notices=DOMAIN_EXPLICIT shutdown=ABORT_QUIESCENT browser_scope=HISTORICAL_DELEGATED browser_regression=ACCEPTED_BASELINE_NO_IMPACT ui=DEFERRED_NEXT_STEP012D

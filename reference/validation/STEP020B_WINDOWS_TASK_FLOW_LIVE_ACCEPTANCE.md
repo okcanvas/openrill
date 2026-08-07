@@ -1,0 +1,9 @@
+# STEP020B Windows Task Flow Live Acceptance
+
+Immutable user-supplied Windows evidence:
+
+```text
+STEP020B_DURABLE_TASK_FLOW_REGISTRY_AND_CONTROLLER_LIFECYCLE_FOUNDATION checks=37/37 state=PASSED version=0.20.1-step020b schema=19 accepted_product_baseline=STEP020A_DURABLE_BACKGROUND_TASK_LEDGER_AND_RUNTIME_LIFECYCLE_FOUNDATION accepted_checks=40/40 task_flow=CONTROLLER_OWNED_REGISTRY revision=OPTIMISTIC_CAS wait=WAITING_BLOCKED_RESUME tasks=ONE_FLOW_MANY_TASKS restart=FLOW_IDENTITY_STABLE cancellation=CHILD_TASK_CASCADE terminal=MONOTONE executor=DEFERRED openclaw_reference=TASK_FLOW_SOURCE_AUDITED external_model=NOT_RUN browser_live=NOT_RUN connector=DEFERRED_NO_REAL_SYSTEM focused_product=6 affected_regression=73 governance=127 canonical_files=130 canonical_tests=706 windows_task_flow_live=PASSED live_harness=STEP020B_H1_TASK_FLOW_PROTOCOL_RESTART_REVISION_AND_CANCELLATION promotion=READY automated_run_seconds=154.032
+```
+
+Accepted ZIP SHA-256: `e24cebe0b8fbb966dc942c0f5df0509b21e4e0a5d583ed6f807f0128c5894751`.

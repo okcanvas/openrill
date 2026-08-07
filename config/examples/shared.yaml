@@ -1,0 +1,6 @@
+version: 1
+host:
+  bind: 127.0.0.1
+  port: 47117
+automation:
+  enabled: false

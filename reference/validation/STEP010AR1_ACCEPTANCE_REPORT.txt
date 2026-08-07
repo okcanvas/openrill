@@ -1,0 +1,122 @@
+[PASS] root-version :: 0.10.3-step010ar1
+[PASS] package-manager
+[PASS] step010ar1-script
+[PASS] step010ar1-package-script
+[PASS] required:scripts/run-step001-suite.mjs
+[PASS] required:scripts/run_step010a_acceptance.py
+[PASS] required:scripts/run_step010ar1_acceptance.py
+[PASS] required:scripts/sh_run_step010ar1_acceptance.cmd
+[PASS] required:scripts/sh_run_step010ar1_acceptance.sh
+[PASS] required:scripts/package_step010ar1.py
+[PASS] required:docs/plans/STEP010AR1_WINDOWS_UNIT_SUITE_DETERMINISM_AND_FAILURE_EVIDENCE.md
+[PASS] required:reference/validation/STEP010A_WINDOWS_UNIT_FAILURE_EVIDENCE_TRUNCATION.md
+[PASS] required:reference/validation/STEP010A_UNIT_FILE_CONCURRENCY_UNDECLARED.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.10.3-step010ar1"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP010AR1_WINDOWS_UNIT_SUITE_DETERMINISM_AND_FAILURE_EVIDENCE 0.10.3-step010ar1
+[PASS] suite-concurrency-constant
+[PASS] suite-concurrency-argument
+[PASS] suite-concurrency-marker
+[PASS] suite-unbounded-command-zero
+[PASS] tap-extractor-defined
+[PASS] tap-extractor-not-ok
+[PASS] tap-extractor-boundaries
+[PASS] tap-extractor-used
+[PASS] suite-tail-only-zero
+[PASS] synthetic-early-failure-gate
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-registry:OR-ISSUE-033
+[PASS] issue-registry:OR-ISSUE-034
+[PASS] issue-registry:OR-ISSUE-035
+[PASS] issue-registry:OR-ISSUE-036
+[PASS] issue-detail:STEP010A_WINDOWS_UNIT_FAILURE_EVIDENCE_TRUNCATION.md
+[PASS] issue-detail:STEP010A_UNIT_FILE_CONCURRENCY_UNDECLARED.md
+[PASS] recurrence:tap-failure-evidence
+[PASS] recurrence:unit-suite-concurrency
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Windows 실패 증거
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-step010a-failure:README.md
+[PASS] baseline-framework:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-step010a-failure:HANDOFF.md
+[PASS] baseline-framework:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-step010a-failure:PLANS.md
+[PASS] baseline-framework:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-step010a-failure:ROADMAP.md
+[PASS] baseline-framework:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-step010a-failure:VALIDATION.md
+[PASS] baseline-framework:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] step010ar1-windows-pending
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step010a-full-regression :: step010a_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP010AR1_WINDOWS_UNIT_SUITE_DETERMINISM_AND_FAILURE_EVIDENCE checks=121/121 state=PASSED schema=7 concurrency=SERIAL diagnostics=TAP_BLOCK

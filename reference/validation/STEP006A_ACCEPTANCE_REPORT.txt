@@ -1,0 +1,54 @@
+[PASS] root-version :: 0.6.1-step006a
+[PASS] package-manager
+[PASS] step006a-script
+[PASS] step006a-package-script
+[PASS] required:scripts/run_step006_acceptance.py
+[PASS] required:scripts/run_step006a_acceptance.py
+[PASS] required:scripts/sh_run_step006a_acceptance.cmd
+[PASS] required:scripts/sh_run_step006a_acceptance.sh
+[PASS] required:scripts/package_step006a.py
+[PASS] required:docs/plans/STEP006A_WINDOWS_UTF8_TEXT_IO.md
+[PASS] required:docs/adrs/ADR-0022-EXPLICIT_UTF8_REPOSITORY_TEXT_IO.md
+[PASS] required:docs/testing/PYTHON_UTF8_TEXT_IO.md
+[PASS] required:reference/validation/STEP006_WINDOWS_DEFAULT_TEXT_DECODING_FAILURE.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.1-step006a"]
+[PASS] step006-read-helper
+[PASS] step006-read-encoding
+[PASS] step006-report-encoding
+[PASS] step006-bare-read-zero
+[PASS] step006-bare-write-zero
+[PASS] all-python-text-io-explicit :: []
+[PASS] reported-cp949-failure-reproduced :: position=73 byte=0xed
+[PASS] utf8-evidence-count :: 104
+[PASS] utf8-evidence-report :: 104
+[PASS] utf8-korean-content :: 패키지 이름은 openclaw이다.
+[PASS] step006a-heading:## 목적
+[PASS] step006a-heading:## 기준선
+[PASS] step006a-heading:## 실패 증거
+[PASS] step006a-heading:## 원인
+[PASS] step006a-heading:## 구현 범위
+[PASS] step006a-heading:## 공개 계약
+[PASS] step006a-heading:## 상태 전이
+[PASS] step006a-heading:## 실패 및 복구
+[PASS] step006a-heading:## Acceptance
+[PASS] step006a-heading:## 패키징 산출물
+[PASS] step006a-heading:## 제외
+[PASS] step006a-heading:## 완료 선언
+[PASS] plan-exact-error
+[PASS] plan-cp949
+[PASS] plan-explicit-utf8
+[PASS] adr-accepted
+[PASS] adr-repository-utf8
+[PASS] failure-log-command
+[PASS] failure-log-position
+[PASS] failure-log-byte
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step006-regression :: step006_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP006A_WINDOWS_UTF8_TEXT_IO checks=53/53 state=PASSED repository_text=UTF8 python_locale=INDEPENDENT regression=STEP006

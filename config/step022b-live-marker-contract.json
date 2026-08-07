@@ -1,0 +1,17 @@
+{
+  "step": "STEP022B_DURABLE_CONNECTOR_RUNTIME_INGRESS_DELIVERY_AND_BINDING",
+  "version": "0.23.0-step022b",
+  "schema": 25,
+  "expectedChecks": "50/50",
+  "liveHarness": "STEP022B_H1_DURABLE_CONNECTOR_INGRESS_DELIVERY_RECEIPT_AND_RESTART",
+  "fields": {
+    "ingress": "PERSIST_BEFORE_ACK",
+    "binding": "ATOMIC_CONVERSATION_MESSAGE_RUN",
+    "delivery": "CLAIM_DISPATCH_RECEIPT",
+    "uncertain": "NO_AUTOMATIC_REPLAY",
+    "extension": "HOST_REGISTERED_ADAPTER",
+    "protocol": "REDACTED_LEDGER_READ",
+    "restart": "SAFE_RECLAIM_AND_UNCERTAIN_ISOLATION",
+    "mattermost": "DEFERRED_STEP022C"
+  }
+}

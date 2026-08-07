@@ -1,0 +1,351 @@
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { mkdir, mkdtemp, readFile, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+import { LocalProtocolClient } from "../apps/agent-web/dist/api/local-protocol-client.js";
+import { startLocalHost } from "../services/agent-host/dist/index.js";
+import {
+  attachBrowserPageEvidence,
+  createBrowserPageEvidence,
+  enableBrowserPageEvidence,
+  waitForBrowserCondition,
+} from "./browser-page-evidence.mjs";
+import {
+  captureChildSpawnFailure,
+  describeChromiumSpawnFailure,
+  resolveChromiumExecutable,
+} from "./chromium-executable.mjs";
+import {
+  CONTROL_UI_MODULE_ENTRYPOINT,
+  controlUiModuleEntrypointFromHtml,
+} from "./control-ui-static-contract.mjs";
+import { getLoopbackJson, getLoopbackText } from "./live-loopback-http.mjs";
+import { verifyServedVueRuntime } from "./live-vue-static.mjs";
+import { seedDeterministicNestedDelegationFixture } from "./step014dr6-deterministic-nested-fixture.mjs";
+
+class CdpClient {
+  #socket;
+  #nextId = 1;
+  #pending = new Map();
+  #listeners = new Map();
+
+  constructor(url) {
+    this.url = url;
+  }
+
+  async connect() {
+    this.#socket = new WebSocket(this.url);
+    await new Promise((resolveOpen, rejectOpen) => {
+      this.#socket.addEventListener("open", resolveOpen, { once: true });
+      this.#socket.addEventListener("error", rejectOpen, { once: true });
+    });
+    this.#socket.addEventListener("message", (event) => {
+      const message = JSON.parse(String(event.data));
+      if (message.id) {
+        const pending = this.#pending.get(message.id);
+        if (!pending) return;
+        this.#pending.delete(message.id);
+        if (message.error) pending.reject(new Error(`${pending.method}:${message.error.message}`));
+        else pending.resolve(message.result ?? {});
+        return;
+      }
+      for (const listener of this.#listeners.get(message.method) ?? []) listener(message.params ?? {});
+    });
+  }
+
+  on(method, listener) {
+    const listeners = this.#listeners.get(method) ?? [];
+    listeners.push(listener);
+    this.#listeners.set(method, listeners);
+  }
+
+  call(method, params = {}) {
+    const id = this.#nextId++;
+    return new Promise((resolveCall, rejectCall) => {
+      this.#pending.set(id, { resolve: resolveCall, reject: rejectCall, method });
+      this.#socket.send(JSON.stringify({ id, method, params }));
+    });
+  }
+
+  close() {
+    this.#socket?.close();
+  }
+}
+
+const wait = (ms) => new Promise((resolveWait) => setTimeout(resolveWait, ms));
+
+async function waitUntil(predicate, description, timeoutMs = 20_000) {
+  const deadline = Date.now() + timeoutMs;
+  let detail;
+  let firstAttempt = true;
+  while (firstAttempt || Date.now() < deadline) {
+    firstAttempt = false;
+    try {
+      const value = await predicate();
+      if (value) return value;
+      detail = value;
+    } catch (error) {
+      detail = error;
+    }
+    await wait(100);
+  }
+  throw new Error(
+    `OPENRILL_STEP014DR8_WAIT_TIMEOUT:${description}:${detail instanceof Error ? detail.message : JSON.stringify(detail)}`,
+  );
+}
+
+async function launch(url, userData) {
+  const resolved = await resolveChromiumExecutable();
+  const child = spawn(
+    resolved.executable,
+    [
+      "--headless=new",
+      "--no-sandbox",
+      "--disable-gpu",
+      "--disable-dev-shm-usage",
+      "--disable-background-networking",
+      "--disable-component-update",
+      "--disable-default-apps",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--remote-debugging-port=0",
+      `--user-data-dir=${userData}`,
+      "about:blank",
+    ],
+    { stdio: ["ignore", "pipe", "pipe"] },
+  );
+  let cdp;
+  let output = "";
+  child.stdout.on("data", (chunk) => { output += chunk; });
+  child.stderr.on("data", (chunk) => { output += chunk; });
+  const spawnState = captureChildSpawnFailure(child, {
+    executable: resolved.executable,
+    onDiagnostic: (detail) => { output += `${detail}\n`; },
+  });
+  try {
+    const activePort = join(userData, "DevToolsActivePort");
+    const port = await waitUntil(async () => {
+      if (spawnState.failure) {
+        throw new Error(describeChromiumSpawnFailure(spawnState.failure, resolved.executable), { cause: spawnState.failure });
+      }
+      if (child.exitCode !== null) throw new Error(`Chromium exited ${child.exitCode}:${output}`);
+      try {
+        return Number((await readFile(activePort, "utf8")).split(/\r?\n/, 1)[0]) || false;
+      } catch {
+        return false;
+      }
+    }, "chromium-port", 30_000);
+    const target = await waitUntil(async () => {
+      const targets = (await getLoopbackJson(`http://127.0.0.1:${port}/json/list`, {
+        label: "step014dr8-chromium-targets",
+        expectedStatus: 200,
+        maxBytes: 1024 * 1024,
+      })).json;
+      return targets.find((item) => item.type === "page" && item.webSocketDebuggerUrl) || false;
+    }, "chromium-target", 10_000);
+    cdp = new CdpClient(target.webSocketDebuggerUrl);
+    await cdp.connect();
+    const evidence = attachBrowserPageEvidence(cdp, createBrowserPageEvidence());
+    await enableBrowserPageEvidence(cdp);
+    const navigation = await cdp.call("Page.navigate", { url });
+    if (navigation.errorText) {
+      throw new Error(`OPENRILL_STEP014DR8_UI_NAVIGATION_FAILED:${navigation.errorText}`);
+    }
+    return { child, cdp, evidence, executable: resolved.executable, executableSource: resolved.source };
+  } catch (error) {
+    try {
+      await closeBrowser({ child, cdp });
+    } catch (cleanupError) {
+      throw new AggregateError(
+        [error, cleanupError],
+        `OPENRILL_STEP014DR8_BROWSER_LAUNCH_CLEANUP_FAILED:${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+    throw error;
+  }
+}
+
+async function evaluate(cdp, expression) {
+  const result = await cdp.call("Runtime.evaluate", {
+    expression,
+    awaitPromise: true,
+    returnByValue: true,
+    userGesture: true,
+  });
+  if (result.exceptionDetails) {
+    throw new Error(`OPENRILL_STEP014DR8_UI_EVALUATION_FAILED:${JSON.stringify(result.exceptionDetails)}`);
+  }
+  return result.result?.value;
+}
+
+async function closeBrowser(browser) {
+  if (!browser) return;
+  browser.cdp?.close();
+  if (browser.child.exitCode === null) browser.child.kill();
+  await waitUntil(() => browser.child.exitCode !== null, "chromium-exit", 10_000).catch(() => undefined);
+  if (browser.child.exitCode === null && process.platform === "win32") {
+    await new Promise((resolveKill) => {
+      const killer = spawn("taskkill", ["/PID", String(browser.child.pid), "/T", "/F"], { stdio: "ignore" });
+      killer.once("exit", resolveKill);
+    });
+    await waitUntil(() => browser.child.exitCode !== null, "chromium-taskkill-exit", 10_000).catch(() => undefined);
+  }
+  if (browser.child.exitCode === null) {
+    throw new Error(`OPENRILL_STEP014DR8_CHROMIUM_ORPHAN:${browser.child.pid}`);
+  }
+}
+
+const root = await mkdtemp(join(tmpdir(), "openrill-step014dr8-ui-live-"));
+const workspace = join(root, "workspace");
+await mkdir(workspace, { recursive: true });
+const profile = "step014dr8-ui-live";
+const vueVendorRoot = resolve(process.env.OPENRILL_VUE_RUNTIME_VENDOR_DIR ?? "apps/agent-web/public/vendor");
+const env = {
+  ...process.env,
+  OPENRILL_DATA_ROOT: join(root, "data"),
+  OPENRILL_CONFIG_ROOT: join(root, "config"),
+  OPENAI_API_KEY: "not-used",
+  NO_COLOR: "1",
+  NODE_DISABLE_COLORS: "1",
+  TERM: "dumb",
+};
+const seeded = await seedDeterministicNestedDelegationFixture({ profile, env, workspaceId: "alpha" });
+const config = {
+  version: 1,
+  host: { bind: "127.0.0.1", port: 0 },
+  modelProviders: {
+    default: {
+      type: "openai-responses",
+      endpoint: "https://api.openai.com/v1",
+      apiKey: { kind: "env", key: "OPENAI_API_KEY" },
+      model: "not-used",
+      maxOutputTokens: 32,
+      maxRetries: 0,
+    },
+  },
+  workspaces: [{ id: "alpha", path: workspace, readOnly: false }],
+  execution: { approvalMode: "deny", defaultTimeoutMs: 10_000, approvalTimeoutMs: 10_000 },
+  skills: { roots: [], enabled: [] },
+  automation: { enabled: false },
+  browser: {
+    enabled: false,
+    headless: true,
+    launchTimeoutMs: 20_000,
+    actionTimeoutMs: 10_000,
+    idleTimeoutMs: 60_000,
+    sweepIntervalMs: 60_000,
+    maxSessions: 1,
+    maxPagesPerSession: 1,
+    allowPrivateNetwork: false,
+    allowedHostnames: [],
+  },
+  ui: { openOnStart: false },
+};
+
+let host;
+let client;
+let browser;
+let primaryError;
+try {
+  host = await startLocalHost({
+    profile,
+    bind: "127.0.0.1",
+    port: 0,
+    force: true,
+    forceMinimumAgeMs: 0,
+    env,
+    config,
+    configRoot: env.OPENRILL_CONFIG_ROOT,
+  });
+  await host.ready;
+  const bootstrap = (await getLoopbackJson(`http://127.0.0.1:${host.port}/ui/bootstrap`, {
+    label: "step014dr8-ui-bootstrap",
+    expectedStatus: 200,
+    maxBytes: 1024 * 1024,
+  })).json;
+  client = new LocalProtocolClient({
+    url: `ws://127.0.0.1:${host.port}/protocol`,
+    token: bootstrap.protocol.token,
+    clientId: "step014dr8-ui-live",
+    clientVersion: "0.14.11-step014dr8",
+    platform: process.platform,
+  });
+  await client.connect();
+  const items = (await client.call("delegation.list", {
+    rootRunId: seeded.rootRunId,
+    limit: 20,
+  }, "step014dr8:list")).items;
+  assert.equal(items.length, 3);
+  assert.equal(items.filter((item) => item.depth === 1).length, 2);
+  assert.equal(items.filter((item) => item.depth === 2).length, 1);
+  assert.ok(items.every((item) => item.status === "COMPLETED"));
+
+  const uiBase = `http://127.0.0.1:${host.port}`;
+  const index = await getLoopbackText(`${uiBase}/`, {
+    label: "step014dr8-ui-index",
+    expectedStatus: 200,
+    maxBytes: 1024 * 1024,
+  });
+  const entry = controlUiModuleEntrypointFromHtml(index.text);
+  assert.equal(entry, CONTROL_UI_MODULE_ENTRYPOINT);
+  const module = await getLoopbackText(new URL(entry, uiBase), {
+    label: "step014dr8-ui-module",
+    expectedStatus: 200,
+    maxBytes: 4 * 1024 * 1024,
+  });
+  assert.ok(module.text.includes("delegation.list"), "delegation.list");
+  await verifyServedVueRuntime({ baseUrl: uiBase, vendorRoot: vueVendorRoot });
+
+  const chromiumRoot = join(root, "chromium");
+  await mkdir(chromiumRoot, { recursive: true });
+  browser = await launch(`${uiBase}/`, chromiumRoot);
+  await waitForBrowserCondition(
+    browser.cdp,
+    `document.querySelector('[data-testid="startup-phase"]')?.textContent === 'READY' && Boolean(document.querySelector('[data-testid="nav-delegations"]'))`,
+    "Control UI ready with delegation navigation",
+    { timeoutMs: 20_000, evidence: browser.evidence },
+  );
+  const clicked = await evaluate(
+    browser.cdp,
+    `(() => { const element = document.querySelector('[data-testid="nav-delegations"]'); if (!(element instanceof HTMLElement)) return false; element.click(); return true; })()`,
+  );
+  assert.equal(clicked, true, "delegation navigation click");
+  await waitForBrowserCondition(
+    browser.cdp,
+    `document.querySelectorAll('[data-testid^="delegation-"][data-depth]').length >= 3`,
+    "delegation tree rendered",
+    { timeoutMs: 20_000, evidence: browser.evidence },
+  );
+  const rendered = await evaluate(
+    browser.cdp,
+    `({ rows: document.querySelectorAll('[data-testid^="delegation-"][data-depth]').length, depth2: document.querySelectorAll('[data-depth="2"]').length, body: document.body.textContent ?? '' })`,
+  );
+  assert.ok(rendered.rows >= 3, JSON.stringify(rendered));
+  assert.equal(rendered.depth2, 1, JSON.stringify(rendered));
+  for (const marker of ["taskSha256", "reasoning", "Raw child transcript"]) {
+    assert.equal(rendered.body.includes(marker), false, marker);
+  }
+  assert.deepEqual(browser.evidence.entries, [], JSON.stringify(browser.evidence.entries));
+  const browserIdentity = `${browser.executableSource}:${browser.executable}`;
+  await closeBrowser(browser);
+  browser = undefined;
+  console.log(
+    `STEP014DR8_DETERMINISTIC_NESTED_UI_PASS root_run=${seeded.rootRunId} delegations=${items.length} depth2=1 vue_runtime=VERIFIED browser_evidence=CLEAN chromium=${JSON.stringify(browserIdentity)} chromium_orphan=0`,
+  );
+} catch (error) {
+  primaryError = error;
+} finally {
+  const cleanupFailures = [];
+  try { await closeBrowser(browser); } catch (error) { cleanupFailures.push(error); }
+  try { client?.close(); } catch (error) { cleanupFailures.push(error); }
+  try { await host?.close("step014dr8-ui-live"); } catch (error) { cleanupFailures.push(error); }
+  try { await host?.closed; } catch (error) { cleanupFailures.push(error); }
+  try { await rm(root, { recursive: true, force: true }); } catch (error) { cleanupFailures.push(error); }
+  if (cleanupFailures.length > 0) {
+    primaryError = primaryError
+      ? new AggregateError([primaryError, ...cleanupFailures], "OPENRILL_STEP014DR8_BODY_AND_CLEANUP_FAILED")
+      : new AggregateError(cleanupFailures, "OPENRILL_STEP014DR8_CLEANUP_FAILED");
+  }
+}
+if (primaryError) throw primaryError;

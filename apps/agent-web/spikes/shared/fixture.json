@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "openrill-control-ui-step010a-v1",
+  "conversationId": "conv-ui-001",
+  "runId": "run-ui-001",
+  "initialCursor": 100,
+  "snapshot": {
+    "conversation": {
+      "conversationId": "conv-ui-001",
+      "workspaceId": "workspace-alpha",
+      "title": "Workspace review"
+    },
+    "run": {
+      "runId": "run-ui-001",
+      "status": "CREATED"
+    },
+    "cards": []
+  },
+  "notices": [
+    {
+      "type": "notice",
+      "sequence": 101,
+      "notice": "conversation.updated",
+      "payload": {
+        "conversationId": "conv-ui-001",
+        "title": "Workspace review"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 102,
+      "notice": "run.updated",
+      "payload": {
+        "runId": "run-ui-001",
+        "status": "RUNNING"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 103,
+      "notice": "run.event",
+      "payload": {
+        "runId": "run-ui-001",
+        "eventType": "model.text.delta",
+        "text": "Hello "
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 104,
+      "notice": "run.event",
+      "payload": {
+        "runId": "run-ui-001",
+        "eventType": "model.text.delta",
+        "text": "OpenRill"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 105,
+      "notice": "run.event",
+      "payload": {
+        "runId": "run-ui-001",
+        "eventType": "tool.started",
+        "toolCallId": "tool-ui-001",
+        "toolName": "workspace.read"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 106,
+      "notice": "approval.updated",
+      "payload": {
+        "requestId": "approval-ui-001",
+        "runId": "run-ui-001",
+        "status": "PENDING",
+        "summary": "Run a bounded process"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 107,
+      "notice": "run.event",
+      "payload": {
+        "runId": "run-ui-001",
+        "eventType": "artifact.created",
+        "artifactId": "artifact-ui-001",
+        "kind": "READ_OUTPUT",
+        "label": "Full read output"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 108,
+      "notice": "run.event",
+      "payload": {
+        "runId": "run-ui-001",
+        "eventType": "future.event.type",
+        "value": "preserve-as-fallback"
+      }
+    },
+    {
+      "type": "notice",
+      "sequence": 109,
+      "notice": "run.updated",
+      "payload": {
+        "runId": "run-ui-001",
+        "status": "COMPLETED"
+      }
+    }
+  ],
+  "expected": {
+    "finalCursor": 109,
+    "assistantText": "Hello OpenRill",
+    "runStatus": "COMPLETED",
+    "cardKinds": ["text", "tool", "approval", "artifact", "unknown"],
+    "approvalRequestId": "approval-ui-001",
+    "artifactId": "artifact-ui-001",
+    "unknownEventType": "future.event.type"
+  }
+}

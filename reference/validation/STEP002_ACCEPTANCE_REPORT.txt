@@ -1,0 +1,123 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step002-script
+[PASS] step002-package-script
+[PASS] required:services/agent-host/src/lifecycle.ts
+[PASS] required:services/agent-host/src/lock.ts
+[PASS] required:services/agent-host/src/metadata.ts
+[PASS] required:services/agent-host/src/control-server.ts
+[PASS] required:services/agent-host/src/control-client.ts
+[PASS] required:services/agent-host/src/errors.ts
+[PASS] required:packages/config/src/index.ts
+[PASS] required:packages/protocol/src/index.ts
+[PASS] required:apps/agent-cli/src/index.ts
+[PASS] required:scripts/run-step002-live.mjs
+[PASS] required:scripts/run_step002_acceptance.py
+[PASS] required:scripts/sh_run_step002_acceptance.cmd
+[PASS] required:scripts/sh_run_step002_acceptance.sh
+[PASS] required:docs/plans/STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md
+[PASS] required:reference/openclaw/GATEWAY_LIFECYCLE.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: {}
+[PASS] lock-cli-config-link
+[PASS] lock-cli-host-link
+[PASS] lock-null-importers-zero
+[PASS] auto-install-peers-aligned
+[PASS] host-build-before-cli
+[PASS] config-contract:canonicalizeProfileName
+[PASS] config-contract:OPENRILL_DATA_ROOT
+[PASS] config-contract:OPENRILL_CONFIG_ROOT
+[PASS] config-contract:host.lock
+[PASS] config-contract:host.json
+[PASS] protocol-contract:HostLifecycleState
+[PASS] protocol-contract:HostStatusPayload
+[PASS] protocol-contract:HostStopPayload
+[PASS] host-contract:DEFAULT_HOST_BIND = OPENRILL_DEFAULT_HOST_BIND
+[PASS] host-contract:DEFAULT_HOST_PORT = OPENRILL_DEFAULT_HOST_PORT
+[PASS] host-contract:"STARTING"
+[PASS] host-contract:"LISTENING"
+[PASS] host-contract:"READY"
+[PASS] host-contract:"STOPPING"
+[PASS] host-contract:"STOPPED"
+[PASS] host-contract:"/lifecycle/status"
+[PASS] host-contract:"/lifecycle/stop"
+[PASS] host-contract:timingSafeEqual
+[PASS] host-contract:open(paths.lockPath, "wx"
+[PASS] host-contract:instanceId
+[PASS] host-contract:controlToken
+[PASS] host-non-loopback-guard
+[PASS] host-owner-release
+[PASS] host-token-not-public
+[PASS] cli-contract:"start"
+[PASS] cli-contract:"run"
+[PASS] cli-contract:"status"
+[PASS] cli-contract:"stop"
+[PASS] cli-contract:SIGINT
+[PASS] cli-contract:SIGTERM
+[PASS] foreground-help
+[PASS] signal-installed-before-host-start
+[PASS] evidence-count :: 104
+[PASS] evidence:OC-GW-012
+[PASS] evidence:OC-GW-013
+[PASS] evidence:OC-GW-015
+[PASS] evidence:OC-GW-016
+[PASS] evidence:OC-GW-017
+[PASS] evidence:OC-GW-018
+[PASS] evidence-report :: 104
+[PASS] evidence-live :: 1a4fbe7e05ebd37db79a335749067b715eca900db1071e6d4af1cd5604604e82
+[PASS] step002-heading:## 목적
+[PASS] step002-heading:## 기준선
+[PASS] step002-heading:## Reference Evidence
+[PASS] step002-heading:## OpenClaw 문제 분석
+[PASS] step002-heading:## 구현 범위
+[PASS] step002-heading:## 공개 계약
+[PASS] step002-heading:## 상태 전이
+[PASS] step002-heading:## 실패 및 복구
+[PASS] step002-heading:## Acceptance
+[PASS] step002-heading:## 패키징 산출물
+[PASS] step002-heading:## 제외
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step001-regression :: regression_pass
+[PASS] step001a-regression
+[PASS] step001b-regression
+[PASS] step001c-regression
+[PASS] step001d-regression
+[PASS] step002-build-suite :: suite_pass
+[PASS] step002-live-process :: live_pass
+[PASS] cli-version-live :: OpenRill 0.6.0-step006
+[PASS] cli-help-live :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  config path       Show profile config and snapshot paths
+  config validate   Parse, include-resolve, validate, and snapshot config
+  config show       Show the redacted materialized config
+  config init       Atomically create the minimal agent.yaml
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind override for start/run (default config: 127.0.0.1)
+  --port <port>         Port override for start/run; 0 selects an ephemeral port (default config: 47117)
+  --force               Reclaim an old unverified Host lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP003 start/run remain foreground commands. OS background service installation begins in STEP019.
+STEP003 config output is redacted. Secret values are resolved only at point of use.
+[PASS] cli-stopped-status-live :: {"running":false,"status":null,"reason":"STOPPED"}
+[PASS] cli-loopback-guard-live :: loopback_guard_pass
+[PASS] cli-background-closed-live :: openrill: unknown option: --background
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE checks=97/97 state=PASSED host=FOREGROUND lock=PROFILE_SCOPED control=AUTHENTICATED_LOOPBACK readiness=SEPARATE_FROM_LISTEN

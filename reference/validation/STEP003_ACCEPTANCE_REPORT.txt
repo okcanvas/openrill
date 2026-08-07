@@ -1,0 +1,142 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] typescript-version
+[PASS] step003-script
+[PASS] step003-package-script
+[PASS] required:packages/config/src/errors.ts
+[PASS] required:packages/config/src/types.ts
+[PASS] required:packages/config/src/yaml-subset.ts
+[PASS] required:packages/config/src/schema.ts
+[PASS] required:packages/config/src/canonical.ts
+[PASS] required:packages/config/src/includes.ts
+[PASS] required:packages/config/src/secrets.ts
+[PASS] required:packages/config/src/io.ts
+[PASS] required:config/schema/openrill-config-v1.schema.json
+[PASS] required:config/examples/minimal.agent.yaml
+[PASS] required:config/examples/provider.agent.yaml
+[PASS] required:config/examples/include.agent.yaml
+[PASS] required:config/examples/shared.yaml
+[PASS] required:tests/unit/config-step003.test.mjs
+[PASS] required:tests/unit/cli-step003.test.mjs
+[PASS] required:scripts/run-step003-live.mjs
+[PASS] required:scripts/run_step003_acceptance.py
+[PASS] required:scripts/sh_run_step003_acceptance.cmd
+[PASS] required:scripts/sh_run_step003_acceptance.sh
+[PASS] required:scripts/package_step003.py
+[PASS] required:docs/contracts/CONFIG.md
+[PASS] required:docs/security/SECRETS.md
+[PASS] required:docs/plans/STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md
+[PASS] required:docs/adrs/ADR-0017-CONFIG_SOURCE_SNAPSHOT_AND_SECRET_REFERENCE_BOUNDARY.md
+[PASS] required:reference/openclaw/CONFIG.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.0-step006"]
+[PASS] config-path-contract:resolveConfigPaths
+[PASS] config-path-contract:"agent.yaml"
+[PASS] config-path-contract:"materialized.json"
+[PASS] config-path-contract:"last-known-good.json"
+[PASS] config-path-contract:"config.mutation.lock"
+[PASS] config-path-contract:"secrets"
+[PASS] config-type-contract:export const OPENRILL_CONFIG_VERSION = 1
+[PASS] config-type-contract:export type SecretReferenceKind = "env" | "file" | "os"
+[PASS] config-type-contract:export type ConfigRecoveryMode = "SOURCE" | "LAST_KNOWN_GOOD" | "DEFAULTS"
+[PASS] config-type-contract:event: "config.write"
+[PASS] yaml-contract:parseOpenRillYaml
+[PASS] yaml-contract:stringifyOpenRillYaml
+[PASS] yaml-contract:tabs are not allowed
+[PASS] yaml-contract:YAML directives, document markers, tags, anchors, and aliases are not supported
+[PASS] yaml-contract:duplicate key:
+[PASS] yaml-contract:ambiguous boolean
+[PASS] schema-contract:validateAndMaterializeConfig
+[PASS] schema-contract:ConfigFutureVersionError
+[PASS] schema-contract:unknown configuration key
+[PASS] schema-contract:modelProviders
+[PASS] schema-contract:workspaces
+[PASS] schema-contract:approvalMode: "ask"
+[PASS] include-depth-limit
+[PASS] include-file-limit
+[PASS] include-byte-limit
+[PASS] include-cycle-guard
+[PASS] include-escape-guard
+[PASS] include-realpath-guard
+[PASS] include-revision
+[PASS] secret-contract:inspectSecretReference
+[PASS] secret-contract:resolveSecretReference
+[PASS] secret-contract:collectSecretStatuses
+[PASS] secret-contract:redactSecretReferences
+[PASS] secret-contract:reference.kind === "env"
+[PASS] secret-contract:reference.kind === "file"
+[PASS] secret-contract:record.kind === "os"
+[PASS] secret-contract:"<redacted>"
+[PASS] io-contract:open(temporary, "wx", 0o600)
+[PASS] io-contract:handle.sync()
+[PASS] io-contract:rename(temporary, path)
+[PASS] io-contract:persistValidSnapshot
+[PASS] io-contract:readLastKnownGood
+[PASS] io-contract:recovery: "LAST_KNOWN_GOOD"
+[PASS] io-contract:open(paths.mutationLockPath, "wx", 0o600)
+[PASS] io-contract:ConfigRevisionConflictError
+[PASS] io-contract:candidatePath
+[PASS] io-contract:post-commit verification failed; previous source was restored
+[PASS] io-contract:appendMutationJournal
+[PASS] cli-config-contract:"config"
+[PASS] cli-config-contract:action !== "path" && action !== "validate" && action !== "show" && action !== "init"
+[PASS] cli-config-contract:config output is redacted
+[PASS] cli-config-contract:loadOpenRillConfig
+[PASS] cli-config-contract:writeOpenRillConfig
+[PASS] cli-config-contract:config startup validation failed
+[PASS] cli-config-contract:configRevision
+[PASS] cli-config-contract:configRecovery
+[PASS] json-schema-closed-root
+[PASS] json-schema-version-one
+[PASS] json-schema-root-keys
+[PASS] json-schema-secret-ref
+[PASS] json-schema-loopback
+[PASS] unit-contract:closed YAML subset parses a real config
+[PASS] unit-contract:closed schema rejects unknown keys, literal secrets, and future versions
+[PASS] unit-contract:includes are root-contained, recursive, bounded, and cycle-safe
+[PASS] unit-contract:atomic writes create materialized and last-known-good snapshots without secret values
+[PASS] unit-contract:optimistic source revision detects concurrent writes
+[PASS] unit-contract:parse and schema failures recover from LKG
+[PASS] unit-contract:resolve only at point of use
+[PASS] cli-unit-contract
+[PASS] evidence-count :: 104
+[PASS] evidence-report-count :: 104
+[PASS] evidence-report-state :: True
+[PASS] evidence:OC-CONFIG-007
+[PASS] evidence:OC-CONFIG-008
+[PASS] evidence:OC-CONFIG-009
+[PASS] evidence:OC-CONFIG-010
+[PASS] evidence:OC-CONFIG-011
+[PASS] evidence:OC-CONFIG-012
+[PASS] step003-heading:## 목적
+[PASS] step003-heading:## 기준선
+[PASS] step003-heading:## Reference Evidence
+[PASS] step003-heading:## OpenClaw 문제 분석
+[PASS] step003-heading:## 구현 범위
+[PASS] step003-heading:## 파일·영속성 구조
+[PASS] step003-heading:## YAML 계약
+[PASS] step003-heading:## Include 계약
+[PASS] step003-heading:## Schema 계약
+[PASS] step003-heading:## SecretRef 계약
+[PASS] step003-heading:## Revision 계약
+[PASS] step003-heading:## Atomic write
+[PASS] step003-heading:## 상태 전이
+[PASS] step003-heading:## 실패 및 복구
+[PASS] step003-heading:## Acceptance
+[PASS] step003-heading:## 패키징 산출물
+[PASS] step003-heading:## 제외
+[PASS] step003-heading:## 완료 선언
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step002b-regression :: step002b_pass
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step003-live-process :: live_pass
+[PASS] cli-version-live :: OpenRill 0.6.0-step006
+[PASS] cli-help-config-live :: help_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] example-literal-secret-zero
+[PASS] generated-cleanup
+STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES checks=141/141 state=PASSED source=YAML_SUBSET snapshot=MATERIALIZED_LKG secrets=REFERENCES_ONLY write=ATOMIC_REVISIONED

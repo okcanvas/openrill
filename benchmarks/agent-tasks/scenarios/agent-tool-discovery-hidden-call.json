@@ -1,0 +1,35 @@
+{
+  "id": "agent-tool-discovery-hidden-call",
+  "title": "Structured discovery of a hidden tool",
+  "category": "tool-discovery",
+  "risk": "medium",
+  "executor": "tool-discovery-hidden-call",
+  "coverage": {
+    "primary": [
+      "tools.structured-discovery"
+    ],
+    "secondary": [
+      "tools.schema-bounded",
+      "tools.existing-registry-execution"
+    ]
+  },
+  "capabilities": [
+    "tool.search",
+    "tool.describe",
+    "tool.call"
+  ],
+  "objective": "Verify a compact model view can search, describe, and execute a hidden Tool through the existing ToolRegistry.",
+  "successCriteria": [
+    "The hidden tool is absent from the direct model schema.",
+    "Search and describe expose only bounded metadata and the exact schema.",
+    "tool.call executes the target exactly once through ToolRegistry."
+  ],
+  "budget": {
+    "maxDurationMs": 10000,
+    "maxTurns": 6,
+    "maxModelCalls": 6,
+    "maxToolCalls": 6,
+    "maxTotalTokens": 4096
+  },
+  "defaultRepetitions": 2
+}

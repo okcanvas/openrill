@@ -1,0 +1,143 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step004-script
+[PASS] step004-package-script
+[PASS] required:packages/protocol/src/frames.ts
+[PASS] required:packages/protocol/src/validation.ts
+[PASS] required:services/agent-host/src/transport/upgrade-policy.ts
+[PASS] required:services/agent-host/src/transport/websocket-codec.ts
+[PASS] required:services/agent-host/src/transport/notice-window.ts
+[PASS] required:services/agent-host/src/transport/operation-registry.ts
+[PASS] required:services/agent-host/src/transport/protocol-server.ts
+[PASS] required:apps/agent-web/src/api/local-protocol-client.ts
+[PASS] required:tests/unit/protocol-step004.test.mjs
+[PASS] required:tests/unit/local-protocol-step004.test.mjs
+[PASS] required:scripts/run-step004-live.mjs
+[PASS] required:scripts/run_step004_acceptance.py
+[PASS] required:scripts/sh_run_step004_acceptance.cmd
+[PASS] required:scripts/sh_run_step004_acceptance.sh
+[PASS] required:scripts/package_step004.py
+[PASS] required:docs/contracts/LOCAL_PROTOCOL.md
+[PASS] required:docs/security/LOCAL_PROTOCOL_SECURITY.md
+[PASS] required:docs/plans/STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md
+[PASS] required:docs/adrs/ADR-0019-NARROW_AUTHENTICATED_LOCAL_WEBSOCKET.md
+[PASS] required:reference/openclaw/LOCAL_PROTOCOL.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.0-step006"]
+[PASS] no-openclaw-dependency
+[PASS] no-websocket-runtime-dependency
+[PASS] ui-framework-still-deferred
+[PASS] frame-contract:OPENRILL_PROTOCOL_MIN = 1
+[PASS] frame-contract:OPENRILL_PROTOCOL_MAX = 1
+[PASS] frame-contract:OPENRILL_WEBSOCKET_PATH = "/protocol"
+[PASS] frame-contract:OPENRILL_WEBSOCKET_SUBPROTOCOL = "openrill.local.v1"
+[PASS] frame-contract:type: "open"
+[PASS] frame-contract:type: "accepted"
+[PASS] frame-contract:type: "rejected"
+[PASS] frame-contract:type: "call"
+[PASS] frame-contract:type: "result"
+[PASS] frame-contract:type: "notice"
+[PASS] frame-contract:idempotencyKey: string
+[PASS] frame-contract:sequence: number
+[PASS] frame-contract:resyncRequired: boolean
+[PASS] validation-contract:hasExactKeys
+[PASS] validation-contract:validateOpenFrame
+[PASS] validation-contract:validateCallFrame
+[PASS] validation-contract:validateServerFrame
+[PASS] validation-contract:negotiateProtocol
+[PASS] validation-contract:open frame must be a closed object
+[PASS] validation-contract:call frame must be a closed object
+[PASS] validation-contract:diagnostics.ping input must be a closed object
+[PASS] upgrade-policy:isLoopbackAddress
+[PASS] upgrade-policy:hasForwardedHeaders
+[PASS] upgrade-policy:connectionRequestsUpgrade
+[PASS] upgrade-policy:originAllowed
+[PASS] upgrade-policy:code: "PROXY_DENIED"
+[PASS] upgrade-policy:code: "ORIGIN_DENIED"
+[PASS] upgrade-policy:code: "REMOTE_DENIED"
+[PASS] upgrade-policy:OPENRILL_WEBSOCKET_SUBPROTOCOL
+[PASS] trusted-proxy-surface-zero
+[PASS] codec-contract:WEBSOCKET_GUID
+[PASS] codec-contract:Sec-WebSocket-Accept
+[PASS] codec-contract:client frames must be masked
+[PASS] codec-contract:fragmented or extended frames are not supported
+[PASS] codec-contract:only UTF-8 text frames are supported
+[PASS] codec-contract:new TextDecoder("utf-8", { fatal: true })
+[PASS] codec-contract:opcode === 0x9
+[PASS] codec-contract:opcode === 0x8
+[PASS] codec-contract:control frame payload is too large
+[PASS] codec-contract:invalid close frame payload
+[PASS] codec-compression-zero
+[PASS] protocol-server:DEFAULT_HANDSHAKE_TIMEOUT_MS = 3000
+[PASS] protocol-server:MAX_PREAUTH_PAYLOAD_BYTES = 16 * 1024
+[PASS] protocol-server:MAX_AUTHENTICATED_PAYLOAD_BYTES = 64 * 1024
+[PASS] protocol-server:MAX_OUTBOUND_BUFFER_BYTES = 256 * 1024
+[PASS] protocol-server:MAX_IDEMPOTENCY_ENTRIES = 128
+[PASS] protocol-server:timingSafeEqual
+[PASS] protocol-server:preauthFrames > 1
+[PASS] protocol-server:PROTOCOL_MISMATCH
+[PASS] protocol-server:AUTH_FAILED
+[PASS] protocol-server:IDEMPOTENCY_CONFLICT
+[PASS] protocol-server:resyncRequired
+[PASS] protocol-server:allPeers
+[PASS] protocol-server:slow consumer
+[PASS] token-query-zero
+[FAIL] operation-host-status
+[FAIL] operation-diagnostics-ping
+[FAIL] operation-business-surface-zero
+[PASS] notice-monotonic-sequence
+[PASS] notice-bounded-window
+[PASS] notice-stale-resync
+[PASS] host-attaches-protocol
+[PASS] separate-control-and-protocol-tokens
+[PASS] host-lifecycle-notices
+[PASS] host-closes-all-protocol-peers
+[PASS] web-native-websocket
+[PASS] web-protocol-only
+[PASS] web-validates-server-frames
+[PASS] web-node-import-zero
+[PASS] web-framework-import-zero
+[PASS] unit-contract:authenticated WebSocket negotiates protocol
+[PASS] unit-contract:bad token and non-overlapping protocol
+[PASS] unit-contract:first frame, pre-auth byte budget, and one-handshake rule
+[PASS] unit-contract:silent pre-auth connection
+[PASS] unit-contract:unknown operations, closed input schemas, and idempotency conflicts
+[PASS] unit-contract:notice sequence replays within the retained window
+[PASS] unit-contract:foreign Origin and untrusted proxy
+[PASS] unit-contract:framework-neutral browser client
+[PASS] evidence-count :: 104
+[PASS] evidence-unique
+[PASS] evidence-report :: 104
+[PASS] evidence:OC-PROTO-008
+[PASS] evidence:OC-PROTO-009
+[PASS] evidence:OC-PROTO-010
+[PASS] evidence:OC-PROTO-011
+[PASS] evidence:OC-PROTO-012
+[PASS] step004-heading:## 목적
+[PASS] step004-heading:## 기준선
+[PASS] step004-heading:## Reference Evidence
+[PASS] step004-heading:## OpenClaw 문제 분석
+[PASS] step004-heading:## 구현 범위
+[PASS] step004-heading:## 공개 계약
+[PASS] step004-heading:## 상태 전이
+[PASS] step004-heading:## 실패 및 복구
+[PASS] step004-heading:## Acceptance
+[PASS] step004-heading:## 패키징 산출물
+[PASS] step004-heading:## 제외
+[PASS] step004-heading:## 완료 선언
+[PASS] plan-independent-redesign
+[PASS] protocol-doc
+[PASS] security-doc
+[PASS] reference-study
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step003a-regression :: step003a_pass
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step004-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] profile-token-value-not-reported
+[PASS] generated-cleanup
+STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET checks=139/142 state=FAILED protocol=V1 auth=PROFILE_TOKEN transport=LOOPBACK_WEBSOCKET replay=BOUNDED

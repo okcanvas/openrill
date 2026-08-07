@@ -1,0 +1,267 @@
+[PASS] root-version :: 0.10.3-step010ar1
+[PASS] package-manager
+[PASS] step010a-script
+[PASS] step010a-package-script
+[PASS] required:config/ui-framework.json
+[PASS] required:apps/agent-web/src/control-ui-projection.ts
+[PASS] required:apps/agent-web/spikes/shared/fixture.json
+[PASS] required:apps/agent-web/spikes/shared/workload.mjs
+[PASS] required:apps/agent-web/spikes/shared/dom-contract.mjs
+[PASS] required:apps/agent-web/spikes/shared/styles.css
+[PASS] required:apps/agent-web/spikes/frameworks.lock.json
+[PASS] required:apps/agent-web/spikes/decision-matrix.json
+[PASS] required:apps/agent-web/spikes/vue/index.html
+[PASS] required:apps/agent-web/spikes/vue/app.mjs
+[PASS] required:apps/agent-web/spikes/lit/index.html
+[PASS] required:apps/agent-web/spikes/lit/app.mjs
+[PASS] required:tests/unit/control-ui-framework-step010a.test.mjs
+[PASS] required:scripts/run-step010a-spikes.mjs
+[PASS] required:scripts/run_step010a_acceptance.py
+[PASS] required:scripts/sh_run_step010a_acceptance.cmd
+[PASS] required:scripts/sh_run_step010a_acceptance.sh
+[PASS] required:scripts/package_step010a.py
+[PASS] required:docs/ui/FRAMEWORK_EVALUATION.md
+[PASS] required:docs/adrs/ADR-0027-CONTROL_UI_FRAMEWORK_VUE3.md
+[PASS] required:docs/plans/STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md
+[PASS] required:reference/openclaw/CONTROL_UI_FRAMEWORK_SELECTION.md
+[PASS] required:reference/validation/STEP010A_UI_FRAMEWORK_ARCHITECTURE_DECISION_DRIFT.md
+[PASS] required:reference/validation/STEP010A_SCHEMA_OWNER_FILE_ASSERTION.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.10.3-step010ar1"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP010AR1_WINDOWS_UNIT_SUITE_DETERMINISM_AND_FAILURE_EVIDENCE 0.10.3-step010ar1
+[PASS] schema-owner-version-seven
+[PASS] schema-public-export
+[PASS] framework-config-schema
+[PASS] framework-config-selection
+[PASS] framework-config-decision-step
+[PASS] framework-config-runtime-step
+[PASS] framework-config-production-absent
+[PASS] framework-config-adr
+[PASS] web-contract-version
+[PASS] web-contract-framework
+[PASS] web-contract-decision-step
+[PASS] web-contract-runtime-step
+[PASS] web-projection-export:createControlUiProjection
+[PASS] web-projection-export:applyControlUiNotice
+[PASS] web-projection-export:applyControlUiSnapshot
+[PASS] web-projection-export:getControlUiReconnectPlan
+[PASS] web-projection-export:moveControlUiCardSelection
+[PASS] projection-contract:"APPLIED"
+[PASS] projection-contract:"DUPLICATE"
+[PASS] projection-contract:"GAP"
+[PASS] projection-contract:"SNAPSHOT_RESYNC"
+[PASS] projection-contract:"CURSOR_RESUME"
+[PASS] projection-contract:"unknown"
+[PASS] projection-contract:structuredClone
+[PASS] finalists-count
+[PASS] vue-version
+[PASS] lit-version
+[PASS] spike-runtime-external
+[PASS] production-runtime-step011
+[PASS] vue-production-esm
+[PASS] lit-core-esm
+[PASS] fixture-id
+[PASS] fixture-hash :: 45ca6118a68277140ef84c9f0ccaa6fd8fd978e38ac5565741fa46066650cd57
+[PASS] fixture-notices :: 9
+[PASS] fixture-final-cursor
+[PASS] fixture-card-kinds
+[PASS] matrix-signature :: 0fe6066ad50a6b69513157b7a1cc89be083f12c6cc3fdab9710d847c3d7d5579
+[PASS] matrix-decision
+[PASS] matrix-weight-total
+[PASS] matrix-vue-score :: 4.7
+[PASS] matrix-lit-score :: 4.15
+[PASS] matrix-selects-higher
+[PASS] vue-api:createApp
+[PASS] vue-api:ref
+[PASS] vue-api:nextTick
+[PASS] lit-api:LitElement
+[PASS] lit-api:html
+[PASS] lit-api:customElements
+[PASS] candidate-shared-workload:vue
+[PASS] candidate-shared-dom:vue
+[PASS] candidate-approval:vue
+[PASS] candidate-keyboard:vue
+[PASS] candidate-a11y-banner:vue
+[PASS] candidate-a11y-log:vue
+[PASS] candidate-shared-workload:lit
+[PASS] candidate-shared-dom:lit
+[PASS] candidate-approval:lit
+[PASS] candidate-keyboard:lit
+[PASS] candidate-a11y-banner:lit
+[PASS] candidate-a11y-log:lit
+[PASS] shared-workload:createProjection
+[PASS] shared-workload:applyNotice
+[PASS] shared-workload:reconnectPlan
+[PASS] shared-workload:createLongTranscript
+[PASS] shared-workload:virtualWindow
+[PASS] shared-workload:moveCardSelection
+[PASS] shared-workload:resolveApprovalLocally
+[PASS] shared-dom:banner
+[PASS] shared-dom:main
+[PASS] shared-dom:log
+[PASS] shared-dom:status
+[PASS] shared-dom:assertAccessibleDescriptor
+[PASS] production-framework-dependencies-zero :: []
+[PASS] lock-framework-importers-zero
+[PASS] protocol-client-framework-import-zero
+[PASS] architecture-canonical-config
+[PASS] architecture-old-literal-zero
+[PASS] architecture-selection-marker
+[PASS] unit-fixture:shared fixture has stable identity and hash
+[PASS] unit-fixture:stream tool approval artifact and unknown event project in sequence
+[PASS] unit-fixture:duplicates are ignored and sequence gaps require snapshot resync
+[PASS] unit-fixture:ten-thousand-row transcript uses a bounded virtual window
+[PASS] unit-fixture:keyboard navigation and accessibility descriptor are deterministic
+[PASS] unit-fixture:Vue and Lit finalists consume the same fixture and DOM contracts
+[PASS] unit-fixture:decision matrix is hash-bound and selects Vue 3
+[PASS] unit-fixture:spike projection matches the exported framework-neutral package contract
+[PASS] unit-fixture:framework code does not leak into Local Protocol client
+[PASS] evaluation-heading:## Decision summary
+[PASS] evaluation-heading:## Repository workload
+[PASS] evaluation-heading:## Candidate reduction
+[PASS] evaluation-heading:## Exact finalist versions
+[PASS] evaluation-heading:## Measured spike results
+[PASS] evaluation-heading:## Decision matrix
+[PASS] evaluation-heading:## Why Vue 3 was selected
+[PASS] evaluation-heading:## Why Lit was not selected
+[PASS] evaluation-heading:## Reproducibility
+[PASS] evaluation-contract:45ca6118a68277140ef84c9f0ccaa6fd8fd978e38ac5565741fa46066650cd57
+[PASS] evaluation-contract:0fe6066ad50a6b69513157b7a1cc89be083f12c6cc3fdab9710d847c3d7d5579
+[PASS] evaluation-contract:Vue=4.70
+[PASS] evaluation-contract:Lit=4.15
+[PASS] evaluation-contract:STEP011
+[PASS] evaluation-no-browser-overclaim
+[PASS] adr-status-accepted
+[PASS] adr-select-vue
+[PASS] adr-production-step011
+[PASS] adr-rejected-lit
+[PASS] defer-adr-superseded
+[PASS] evidence-count :: 122
+[PASS] evidence-report :: 122
+[PASS] evidence:OC-UI-001
+[PASS] evidence:OC-UI-002
+[PASS] evidence:OC-UI-003
+[PASS] evidence:OC-UI-004
+[PASS] evidence:OC-UI-005
+[PASS] evidence:OC-UI-006
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-registry:OR-ISSUE-033
+[PASS] issue-registry:OR-ISSUE-034
+[PASS] issue-registry:OR-ISSUE-035
+[PASS] issue-registry:OR-ISSUE-036
+[PASS] issue-detail:STEP010A_UI_FRAMEWORK_ARCHITECTURE_DECISION_DRIFT.md
+[PASS] issue-detail:STEP010A_SCHEMA_OWNER_FILE_ASSERTION.md
+[PASS] issue-detail:STEP010A_WINDOWS_UNIT_FAILURE_EVIDENCE_TRUNCATION.md
+[PASS] issue-detail:STEP010A_UNIT_FILE_CONCURRENCY_UNDECLARED.md
+[PASS] recurrence:ui-framework-coherence
+[PASS] recurrence:contract-owner-files
+[PASS] recurrence:tap-failure-evidence
+[PASS] recurrence:unit-suite-concurrency
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## 후보 축소
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공통 fixture
+[PASS] plan-heading:## 구현 상세
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 측정 의미
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-step010a-failure:README.md
+[PASS] baseline-framework:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-step010a-failure:HANDOFF.md
+[PASS] baseline-framework:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-step010a-failure:PLANS.md
+[PASS] baseline-framework:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-step010a-failure:ROADMAP.md
+[PASS] baseline-framework:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-step010a-failure:VALIDATION.md
+[PASS] baseline-framework:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] step010ar1-windows-pending
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] unit-suite-concurrency-one
+[PASS] unit-suite-concurrency-marker
+[PASS] tap-failure-position-independent
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step010a-spike-runner :: spike_pass
+[PASS] spike-report-version
+[PASS] spike-report-fixture
+[PASS] spike-report-finalists
+[PASS] spike-report-selection
+[PASS] spike-report-virtualization
+[PASS] spike-report-accessibility
+[PASS] spike-report-isolation
+[PASS] step010-skill-live-regression :: live_pass
+[PASS] credential-shaped-source-literal-zero :: []
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP010A_CONTROL_UI_FRAMEWORK_SELECTION checks=266/266 state=PASSED schema=7 framework=VUE_3 finalists=2 fixture=SHARED

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "acceptanceModel": "DIMENSIONAL",
+  "step": "STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE",
+  "version": "0.21.3-step021br2",
+  "stateSchema": 24,
+  "checks": "82/82",
+  "artifact": "openrill-step021br2-windows-tap-summary-parser-closure-v1.zip",
+  "zipSha256": "4f763933b37235b2ed7f87f1c1922fc934fdf80bb4135b8e37b12b274f1a1ed5",
+  "evidence": "reference/validation/STEP021BR2_WINDOWS_TAP_SUMMARY_LIVE_ACCEPTANCE.md",
+  "dimensions": {
+    "productCore": "ACCEPTED",
+    "requiredIntegration": "ACCEPTED_WINDOWS_TAP_SUMMARY_AND_PLAN_REVISION_LIVE",
+    "optionalUi": "NOT_RUN",
+    "harness": "ACCEPTED_STEP021BR2_H1_WINDOWS_TAP_SUMMARY_PARSER_AND_PLAN_REVISION_RESTART",
+    "package": "ACCEPTED"
+  },
+  "schema": 24,
+  "zip": "openrill-step021br2-windows-tap-summary-parser-closure-v1.zip",
+  "acceptedAt": "2026-08-07"
+}

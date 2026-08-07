@@ -1,0 +1,207 @@
+
+D:\NODE_AGENTS\okcanvas-openrill>pnpm acceptance:step014dr8
+$ python scripts/run_step014dr8_acceptance.py
+OPENRILL_ACCEPTANCE_STAGE_START name=cleanup timeout_seconds=internal
+OPENRILL_ACCEPTANCE_STAGE_END name=cleanup state=PASS returncode=0 elapsed_seconds=internal
+OPENRILL_ACCEPTANCE_STAGE_START name=source-version-alignment timeout_seconds=60
+OPENRILL_ACCEPTANCE_STAGE_END name=source-version-alignment state=PASS returncode=0 elapsed_seconds=0.828
+OPENRILL_ACCEPTANCE_STAGE_LOG name=source-version-alignment path=.artifacts/acceptance/STEP014DR8_STAGES/source-version-alignment.log bytes=107
+OPENRILL_ACCEPTANCE_STAGE_START name=workspace-lock-alignment timeout_seconds=60
+OPENRILL_ACCEPTANCE_STAGE_END name=workspace-lock-alignment state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=workspace-lock-alignment path=.artifacts/acceptance/STEP014DR8_STAGES/workspace-lock-alignment.log bytes=69
+OPENRILL_ACCEPTANCE_STAGE_START name=workspace-module-links timeout_seconds=60
+OPENRILL_ACCEPTANCE_STAGE_END name=workspace-module-links state=PASS returncode=0 elapsed_seconds=0.203
+OPENRILL_ACCEPTANCE_STAGE_LOG name=workspace-module-links path=.artifacts/acceptance/STEP014DR8_STAGES/workspace-module-links.log bytes=107
+OPENRILL_ACCEPTANCE_STAGE_START name=source-root-boundary timeout_seconds=60
+OPENRILL_ACCEPTANCE_STAGE_END name=source-root-boundary state=PASS returncode=0 elapsed_seconds=0.203
+OPENRILL_ACCEPTANCE_STAGE_LOG name=source-root-boundary path=.artifacts/acceptance/STEP014DR8_STAGES/source-root-boundary.log bytes=43
+OPENRILL_ACCEPTANCE_STAGE_START name=package-manifest-initial timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_HEARTBEAT name=package-manifest-initial elapsed_seconds=15
+OPENRILL_ACCEPTANCE_STAGE_END name=package-manifest-initial state=PASS returncode=0 elapsed_seconds=17.907
+OPENRILL_ACCEPTANCE_STAGE_LOG name=package-manifest-initial path=.artifacts/acceptance/STEP014DR8_STAGES/package-manifest-initial.log bytes=86
+OPENRILL_ACCEPTANCE_STAGE_START name=vue-runtime-acquisition timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_END name=vue-runtime-acquisition state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=vue-runtime-acquisition path=.artifacts/acceptance/STEP014DR8_STAGES/vue-runtime-acquisition.log bytes=133
+OPENRILL_ACCEPTANCE_STAGE_START name=vue-runtime-reextract timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_END name=vue-runtime-reextract state=PASS returncode=0 elapsed_seconds=0.218
+OPENRILL_ACCEPTANCE_STAGE_LOG name=vue-runtime-reextract path=.artifacts/acceptance/STEP014DR8_STAGES/vue-runtime-reextract.log bytes=133
+OPENRILL_ACCEPTANCE_STAGE_START name=vue-runtime-byte-verification timeout_seconds=60
+OPENRILL_ACCEPTANCE_STAGE_END name=vue-runtime-byte-verification state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=vue-runtime-byte-verification path=.artifacts/acceptance/STEP014DR8_STAGES/vue-runtime-byte-verification.log bytes=261
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-build timeout_seconds=300
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-build state=PASS returncode=0 elapsed_seconds=8.063
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-build path=.artifacts/acceptance/STEP014DR8_STAGES/focused-build.log bytes=294
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-foundation timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-foundation state=PASS returncode=0 elapsed_seconds=1.234
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-foundation path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-foundation.log bytes=3500
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-foundation-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-foundation-boundaries state=PASS returncode=0 elapsed_seconds=0.406
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-foundation-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-foundation-boundaries.log bytes=2254
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegated-execution timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegated-execution state=PASS returncode=0 elapsed_seconds=1.047
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegated-execution path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegated-execution.log bytes=1990
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegated-execution-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegated-execution-boundaries state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegated-execution-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegated-execution-boundaries.log bytes=2322
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-nested-recovery timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-nested-recovery state=PASS returncode=0 elapsed_seconds=1.015
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-nested-recovery path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-nested-recovery.log bytes=1733
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-nested-recovery-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-nested-recovery-boundaries state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-nested-recovery-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-nested-recovery-boundaries.log bytes=2170
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-control timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-control state=PASS returncode=0 elapsed_seconds=0.828
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-control path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-control.log bytes=1235
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-delegation-control-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-delegation-control-boundaries state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-delegation-control-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-delegation-control-boundaries.log bytes=1717
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr1-diagnostics timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr1-diagnostics state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr1-diagnostics path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr1-diagnostics.log bytes=1245
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr1-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr1-boundaries state=PASS returncode=0 elapsed_seconds=0.406
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr1-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr1-boundaries.log bytes=1091
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr2-model-alias timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr2-model-alias state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr2-model-alias path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr2-model-alias.log bytes=849
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr2-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr2-boundaries state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr2-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr2-boundaries.log bytes=984
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr3-model-identity timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr3-model-identity state=PASS returncode=0 elapsed_seconds=0.406
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr3-model-identity path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr3-model-identity.log bytes=804
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr3-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr3-boundaries state=PASS returncode=0 elapsed_seconds=0.204
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr3-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr3-boundaries.log bytes=984
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr4-default-budget timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr4-default-budget state=PASS returncode=0 elapsed_seconds=0.610
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr4-default-budget path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr4-default-budget.log bytes=830
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr4-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr4-boundaries state=PASS returncode=0 elapsed_seconds=0.218
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr4-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr4-boundaries.log bytes=1119
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr5-entrypoint timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr5-entrypoint state=PASS returncode=0 elapsed_seconds=0.625
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr5-entrypoint path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr5-entrypoint.log bytes=984
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr5-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr5-boundaries state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr5-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr5-boundaries.log bytes=1121
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr6-determinism timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr6-determinism state=PASS returncode=0 elapsed_seconds=0.609
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr6-determinism path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr6-determinism.log bytes=1080
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr6-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr6-boundaries state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr6-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr6-boundaries.log bytes=1066
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-live-loopback-http timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-live-loopback-http state=PASS returncode=0 elapsed_seconds=0.625
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-live-loopback-http path=.artifacts/acceptance/STEP014DR8_STAGES/focused-live-loopback-http.log bytes=981
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr7-closure timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr7-closure state=PASS returncode=0 elapsed_seconds=0.406
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr7-closure path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr7-closure.log bytes=1275
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr7-boundaries timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr7-boundaries state=PASS returncode=0 elapsed_seconds=0.218
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr7-boundaries path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr7-boundaries.log bytes=982
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-canonical-batch-runner timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-canonical-batch-runner state=PASS returncode=0 elapsed_seconds=1.016
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-canonical-batch-runner path=.artifacts/acceptance/STEP014DR8_STAGES/focused-canonical-batch-runner.log bytes=491
+OPENRILL_ACCEPTANCE_STAGE_START name=focused-step014dr8-vue-browser-closure timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=focused-step014dr8-vue-browser-closure state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=focused-step014dr8-vue-browser-closure path=.artifacts/acceptance/STEP014DR8_STAGES/focused-step014dr8-vue-browser-closure.log bytes=985
+OPENRILL_ACCEPTANCE_STAGE_START name=live-acceptance-lifecycle-audit timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_END name=live-acceptance-lifecycle-audit state=PASS returncode=0 elapsed_seconds=0.218
+OPENRILL_ACCEPTANCE_STAGE_LOG name=live-acceptance-lifecycle-audit path=.artifacts/acceptance/STEP014DR8_STAGES/live-acceptance-lifecycle-audit.log bytes=158
+OPENRILL_ACCEPTANCE_STAGE_START name=canonical-suite timeout_seconds=900
+OPENRILL_ACCEPTANCE_STAGE_HEARTBEAT name=canonical-suite elapsed_seconds=15
+OPENRILL_ACCEPTANCE_STAGE_HEARTBEAT name=canonical-suite elapsed_seconds=30
+OPENRILL_ACCEPTANCE_STAGE_END name=canonical-suite state=PASS returncode=0 elapsed_seconds=45.172
+OPENRILL_ACCEPTANCE_STAGE_LOG name=canonical-suite path=.artifacts/acceptance/STEP014DR8_STAGES/canonical-suite.log bytes=137050
+OPENRILL_ACCEPTANCE_STAGE_START name=architecture timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_END name=architecture state=PASS returncode=0 elapsed_seconds=0.219
+OPENRILL_ACCEPTANCE_STAGE_LOG name=architecture path=.artifacts/acceptance/STEP014DR8_STAGES/architecture.log bytes=80
+OPENRILL_ACCEPTANCE_STAGE_START name=exports timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_END name=exports state=PASS returncode=0 elapsed_seconds=0.422
+OPENRILL_ACCEPTANCE_STAGE_LOG name=exports path=.artifacts/acceptance/STEP014DR8_STAGES/exports.log bytes=41
+OPENRILL_ACCEPTANCE_STAGE_START name=external-model-parallel-live timeout_seconds=300
+OPENRILL_ACCEPTANCE_STAGE_END name=external-model-parallel-live state=PASS returncode=0 elapsed_seconds=6.421
+OPENRILL_ACCEPTANCE_STAGE_LOG name=external-model-parallel-live path=.artifacts/acceptance/STEP014DR8_STAGES/external-model-parallel-live.log bytes=492
+OPENRILL_ACCEPTANCE_STAGE_START name=deterministic-nested-control-ui-live timeout_seconds=180
+OPENRILL_ACCEPTANCE_STAGE_HEARTBEAT name=deterministic-nested-control-ui-live elapsed_seconds=15
+OPENRILL_ACCEPTANCE_STAGE_END name=deterministic-nested-control-ui-live state=FAIL returncode=1 elapsed_seconds=22.266
+OPENRILL_ACCEPTANCE_STAGE_LOG name=deterministic-nested-control-ui-live path=.artifacts/acceptance/STEP014DR8_STAGES/deterministic-nested-control-ui-live.log bytes=3280
+OPENRILL_ACCEPTANCE_STAGE_START name=package-manifest-final timeout_seconds=120
+OPENRILL_ACCEPTANCE_STAGE_END name=package-manifest-final state=PASS returncode=0 elapsed_seconds=10.625
+OPENRILL_ACCEPTANCE_STAGE_LOG name=package-manifest-final path=.artifacts/acceptance/STEP014DR8_STAGES/package-manifest-final.log bytes=86
+STEP014DR8_VUE_RUNTIME_MATERIALIZATION_AND_BROWSER_BOOTSTRAP_EVIDENCE_CLOSURE checks=357/358 state=FAILED schema=14 baseline=STEP013CR2 retained_feature=STEP014D delegation=PROTOCOL_CONTROL_UI protocol=LIST_GET_CANCEL ui=PARENT_CHILD_TREE cancel=DEEPEST_FIRST external_model=PARALLEL_DIRECT nested=DETERMINISTIC_RUNTIME_UI chromium=RENDERED privacy=BOUNDED diagnostics=TYPED_AND_PRESERVED source_root=ARCHIVE_FREE provider_tool_names=ALIASED canonical_tools=ROUND_TRIP stream_tool_identity=UNIFIED empty_tool_name=FAIL_CLOSED delegation_defaults=PARALLEL_NESTED_FIT tool_errors=TYPED_AND_PRESERVED ui_entrypoint=DISCOVERED_AND_ALIGNED acceptance_evidence=STOCHASTIC_DETERMINISTIC_SEPARATED acceptance_transport=BOUNDED_NODE_HTTP lifecycle=CLOSURE_AUDITED vue_runtime=MATERIALIZED_AND_SERVED browser_bootstrap=EVIDENCE_PRESERVED reporter=TAP chromium_orphan=0
+OPENRILL_STEP014DR8_FAILURE check=deterministic-nested-control-ui-live
+full_stage_log=.artifacts/acceptance/STEP014DR8_STAGES/deterministic-nested-control-ui-live.log bytes=3280
+OPENRILL_STAGE_FAILURE_EVIDENCE_BEGIN name=deterministic-nested-control-ui-live
+OPENRILL_LIVE_HTTP_START label=step014dr8-chromium-targets method=GET origin=http://127.0.0.1:4088 path=/json/list timeout_ms=10000 max_bytes=1048576
+OPENRILL_LIVE_HTTP_END label=step014dr8-chromium-targets method=GET origin=http://127.0.0.1:4088 path=/json/list state=PASS elapsed_ms=91 status=200 bytes=970 content_type="application/json; charset=UTF-8"
+file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:347
+      ? new AggregateError([primaryError, ...cleanupFailures], "OPENRILL_STEP014DR8_BODY_AND_CLEANUP_FAILED")
+        ^
+
+AggregateError: OPENRILL_STEP014DR8_BODY_AND_CLEANUP_FAILED
+    at file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:347:9 {
+  [errors]: [
+    AssertionError [ERR_ASSERTION]: Raw child transcript
+
+    true !== false
+
+        at file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:327:12 {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: true,
+      expected: false,
+      operator: 'strictEqual',
+      diff: 'simple'
+    },
+    Error: OPENRILL_STEP014DR8_CHROMIUM_ORPHAN:11420
+        at closeBrowser (file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:195:11)
+        at async file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:340:9
+  ]
+}
+
+Node.js v24.18.0
+OPENRILL_STAGE_FAILURE_EVIDENCE_END name=deterministic-nested-control-ui-live
+OPENRILL_STAGE_OUTPUT_TAIL_BEGIN name=deterministic-nested-control-ui-live
+OPENRILL_LIVE_HTTP_START label=step014dr8-ui-bootstrap method=GET origin=http://127.0.0.1:4081 path=/ui/bootstrap timeout_ms=10000 max_bytes=1048576
+OPENRILL_LIVE_HTTP_END label=step014dr8-ui-bootstrap method=GET origin=http://127.0.0.1:4081 path=/ui/bootstrap state=PASS elapsed_ms=12 status=200 bytes=450 content_type="application/json; charset=utf-8"
+OPENRILL_LIVE_HTTP_START label=step014dr8-ui-index method=GET origin=http://127.0.0.1:4081 path=/ timeout_ms=10000 max_bytes=1048576
+OPENRILL_LIVE_HTTP_END label=step014dr8-ui-index method=GET origin=http://127.0.0.1:4081 path=/ state=PASS elapsed_ms=4 status=200 bytes=736 content_type="text/html; charset=utf-8"
+OPENRILL_LIVE_HTTP_START label=step014dr8-ui-module method=GET origin=http://127.0.0.1:4081 path=/assets/web/browser-app.js timeout_ms=10000 max_bytes=4194304
+OPENRILL_LIVE_HTTP_END label=step014dr8-ui-module method=GET origin=http://127.0.0.1:4081 path=/assets/web/browser-app.js state=PASS elapsed_ms=3 status=200 bytes=58433 content_type="text/javascript; charset=utf-8"
+OPENRILL_LIVE_HTTP_START label=vue-runtime-static method=GET origin=http://127.0.0.1:4081 path=/vendor/vue.runtime.global.prod.js timeout_ms=10000 max_bytes=106948
+OPENRILL_LIVE_HTTP_END label=vue-runtime-static method=GET origin=http://127.0.0.1:4081 path=/vendor/vue.runtime.global.prod.js state=PASS elapsed_ms=137 status=200 bytes=106947 content_type="text/javascript; charset=utf-8"
+OPENRILL_LIVE_HTTP_START label=vue-runtime-lock method=GET origin=http://127.0.0.1:4081 path=/vendor/vue.runtime.lock.json timeout_ms=10000 max_bytes=608
+OPENRILL_LIVE_HTTP_END label=vue-runtime-lock method=GET origin=http://127.0.0.1:4081 path=/vendor/vue.runtime.lock.json state=PASS elapsed_ms=30 status=200 bytes=607 content_type="application/json; charset=utf-8"
+OPENRILL_LIVE_HTTP_START label=step014dr8-chromium-targets method=GET origin=http://127.0.0.1:4088 path=/json/list timeout_ms=10000 max_bytes=1048576
+OPENRILL_LIVE_HTTP_END label=step014dr8-chromium-targets method=GET origin=http://127.0.0.1:4088 path=/json/list state=PASS elapsed_ms=91 status=200 bytes=970 content_type="application/json; charset=UTF-8"
+file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:347
+      ? new AggregateError([primaryError, ...cleanupFailures], "OPENRILL_STEP014DR8_BODY_AND_CLEANUP_FAILED")
+        ^
+
+AggregateError: OPENRILL_STEP014DR8_BODY_AND_CLEANUP_FAILED
+    at file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:347:9 {
+  [errors]: [
+    AssertionError [ERR_ASSERTION]: Raw child transcript
+
+    true !== false
+
+        at file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:327:12 {
+      generatedMessage: false,
+      code: 'ERR_ASSERTION',
+      actual: true,
+      expected: false,
+      operator: 'strictEqual',
+      diff: 'simple'
+    },
+    Error: OPENRILL_STEP014DR8_CHROMIUM_ORPHAN:11420
+        at closeBrowser (file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:195:11)
+        at async file:///D:/NODE_AGENTS/okcanvas-openrill/scripts/run-step014dr8-deterministic-nested-ui-live.mjs:340:9
+  ]
+}
+
+Node.js v24.18.0
+
+OPENRILL_STAGE_OUTPUT_TAIL_END name=deterministic-nested-control-ui-live
+[ELIFECYCLE] Command failed with exit code 1.

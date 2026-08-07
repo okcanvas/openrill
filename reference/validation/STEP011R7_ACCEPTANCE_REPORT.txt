@@ -1,0 +1,186 @@
+[PASS] root-version :: 0.11.7-step011r7
+[PASS] package-manager
+[PASS] step011r7-script
+[PASS] step011r7-package-script
+[PASS] required:apps/agent-web/src/browser-app.ts
+[PASS] required:apps/agent-web/public/index.html
+[PASS] required:apps/agent-web/public/assets/favicon.svg
+[PASS] required:scripts/vendor-vue-runtime.mjs
+[PASS] required:scripts/run-step011-live.mjs
+[PASS] required:scripts/run_step011_acceptance.py
+[PASS] required:scripts/run_step011r7_acceptance.py
+[PASS] required:scripts/sh_run_step011r7_acceptance.cmd
+[PASS] required:scripts/sh_run_step011r7_acceptance.sh
+[PASS] required:scripts/package_step011r7.py
+[PASS] required:tests/unit/vue-csp-step011r4.test.mjs
+[PASS] required:tests/unit/approval-timeout-separation-step011r5.test.mjs
+[PASS] required:tests/unit/vue-proxy-projection-step011r6.test.mjs
+[PASS] required:tests/unit/process-manager-close-step011r7.test.mjs
+[PASS] required:docs/plans/STEP011R7_PROCESS_MANAGER_ASYNC_CLOSE_AND_WINDOWS_CHILD_QUIESCENCE.md
+[PASS] required:reference/validation/STEP011R3_VUE_RUNTIME_COMPILER_CSP_MISMATCH.md
+[PASS] required:reference/validation/STEP011R3_IMPLICIT_FAVICON_HTTP_FAILURE.md
+[PASS] required:reference/validation/STEP011R3_APPROVAL_DEEP_LINK_REACTIVITY.md
+[PASS] required:reference/validation/STEP011R4_APPROVAL_TTL_PROCESS_TIMEOUT_COUPLING.md
+[PASS] required:reference/validation/STEP011R5_VUE_REACTIVE_PROXY_STRUCTURED_CLONE_FAILURE.md
+[PASS] required:reference/validation/STEP011R6_WINDOWS_ASYNC_CHILD_FINALIZATION_AFTER_TEST.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.11.7-step011r7"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP011R7_PROCESS_MANAGER_ASYNC_CLOSE_AND_WINDOWS_CHILD_QUIESCENCE 0.11.7-step011r7
+[PASS] config-approval-timeout-source
+[PASS] config-approval-timeout-materialized
+[PASS] approval-timeout-host-wiring
+[PASS] process-timeout-host-wiring
+[PASS] old-timeout-coupling-zero
+[PASS] live-independent-timeouts
+[PASS] focused-timeout-contract
+[PASS] runtime-entry-only
+[PASS] runtime-output-only
+[PASS] runtime-vendor-test
+[PASS] html-runtime-only
+[PASS] render-function
+[PASS] runtime-template-zero
+[PASS] runtime-eval-zero
+[PASS] csp-unsafe-eval-zero
+[PASS] explicit-favicon
+[PASS] route-hash-owner
+[PASS] route-hash-dependency
+[PASS] feature-suite-current
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-registry:OR-ISSUE-033
+[PASS] issue-registry:OR-ISSUE-034
+[PASS] issue-registry:OR-ISSUE-035
+[PASS] issue-registry:OR-ISSUE-036
+[PASS] issue-registry:OR-ISSUE-037
+[PASS] issue-registry:OR-ISSUE-038
+[PASS] issue-registry:OR-ISSUE-039
+[PASS] issue-registry:OR-ISSUE-040
+[PASS] issue-registry:OR-ISSUE-041
+[PASS] issue-registry:OR-ISSUE-042
+[PASS] issue-registry:OR-ISSUE-043
+[PASS] issue-registry:OR-ISSUE-044
+[PASS] issue-registry:OR-ISSUE-045
+[PASS] issue-registry:OR-ISSUE-046
+[PASS] issue-registry:OR-ISSUE-047
+[PASS] issue-registry:OR-ISSUE-048
+[PASS] issue-registry:OR-ISSUE-049
+[PASS] issue-registry:OR-ISSUE-050
+[PASS] issue-registry:OR-ISSUE-051
+[PASS] issue-registry:OR-ISSUE-052
+[PASS] issue-registry:OR-ISSUE-053
+[PASS] issue-detail:STEP011R3_VUE_RUNTIME_COMPILER_CSP_MISMATCH.md
+[PASS] issue-detail:STEP011R3_IMPLICIT_FAVICON_HTTP_FAILURE.md
+[PASS] issue-detail:STEP011R3_APPROVAL_DEEP_LINK_REACTIVITY.md
+[PASS] issue-detail:STEP011R4_APPROVAL_TTL_PROCESS_TIMEOUT_COUPLING.md
+[PASS] issue-detail:STEP011R5_VUE_REACTIVE_PROXY_STRUCTURED_CLONE_FAILURE.md
+[PASS] issue-detail:STEP011R6_WINDOWS_ASYNC_CHILD_FINALIZATION_AFTER_TEST.md
+[PASS] recurrence:vue-runtime-csp
+[PASS] recurrence:browser-assets
+[PASS] recurrence:route-hash
+[PASS] recurrence:approval-process-timeout-separation
+[PASS] recurrence:vue-proxy-projection-boundary
+[PASS] recurrence:background-child-quiescence
+[PASS] recurrence:async-tap-evidence
+[PASS] transport-shallow-ref
+[PASS] projection-proxy-safe-copy
+[PASS] focused-proxy-contract
+[PASS] process-close-returns-promise
+[PASS] process-child-settlement-owned
+[PASS] process-terminal-status-preserved
+[PASS] host-close-order
+[PASS] step009-cleanup-awaits-manager
+[PASS] focused-close-contract
+[PASS] async-tap-diagnostic-preserved
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Windows 실패 증거
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-step011r6-failure:README.md
+[PASS] baseline-feature:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-step011r6-failure:HANDOFF.md
+[PASS] baseline-feature:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-step011r6-failure:PLANS.md
+[PASS] baseline-feature:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-step011r6-failure:ROADMAP.md
+[PASS] baseline-feature:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-step011r6-failure:VALIDATION.md
+[PASS] baseline-feature:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] focused-build :: build_pass
+[PASS] focused-process-close-tests :: process_close_tests_pass
+[PASS] canonical-suite :: suite_pass
+[FAIL] step011-full-regression :: STEP011_CONTROL_UI_VERTICAL_SLICE checks=215/227 state=FAILED schema=7 framework=VUE_3 browser=CHROMIUM prerequisite=runtime_unavailable
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP011R7_PROCESS_MANAGER_ASYNC_CLOSE_AND_WINDOWS_CHILD_QUIESCENCE checks=184/185 state=FAILED schema=7 process_close=ASYNC child_quiescence=AWAITED transport=SHALLOW_REF projection=PROXY_SAFE approval_ttl=120000 process_timeout=5000 vue=RUNTIME_ONLY csp=NO_UNSAFE_EVAL browser=CHROMIUM

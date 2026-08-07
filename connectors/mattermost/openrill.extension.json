@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "openrill.connector.mattermost",
+  "displayName": "OpenRill Mattermost Connector",
+  "version": "0.24.0-step022c",
+  "entry": "dist/extension.js",
+  "compatibility": {
+    "apiVersion": 1,
+    "host": {
+      "minInclusive": "0.24.0-step022c",
+      "maxExclusive": "0.25.0"
+    }
+  },
+  "capabilities": [
+    { "kind": "connector", "id": "mattermost" }
+  ],
+  "configSchema": {
+    "additionalProperties": false,
+    "fields": [
+      { "key": "accountId", "kind": "string", "required": false, "maxLength": 128 },
+      { "key": "workspaceId", "kind": "string", "required": true, "maxLength": 64 },
+      { "key": "baseUrl", "kind": "string", "required": true, "maxLength": 2048 },
+      { "key": "botToken", "kind": "secret", "required": true },
+      { "key": "botUserId", "kind": "string", "required": false, "maxLength": 256 },
+      { "key": "botUsername", "kind": "string", "required": false, "maxLength": 128 },
+      { "key": "requireMention", "kind": "boolean", "required": false },
+      { "key": "allowPrivateNetwork", "kind": "boolean", "required": false },
+      { "key": "requestTimeoutMs", "kind": "integer", "required": false, "min": 1000, "max": 120000 },
+      { "key": "reconnectMinMs", "kind": "integer", "required": false, "min": 100, "max": 60000 },
+      { "key": "reconnectMaxMs", "kind": "integer", "required": false, "min": 100, "max": 300000 },
+      { "key": "pumpIntervalMs", "kind": "integer", "required": false, "min": 50, "max": 60000 }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "step": "STEP023A_PERIODIC_MAINTENANCE_PHYSICAL_RETENTION_AND_PRUNE",
+  "version": "0.25.0-step023a",
+  "schema": 26,
+  "expectedChecks": "28/28",
+  "liveHarness": "STEP023A_H1_PERIODIC_RETENTION_LEASE_CURSOR_PRUNE_AND_RESTART",
+  "fields": {
+    "maintenance": "HOST_OWNED_PERIODIC",
+    "ownership": "DURABLE_LEASE",
+    "cursor": "PERSISTED_RESTART_CONTINUATION",
+    "prune": "PROTECTION_RECHECK_TOMBSTONE_FIRST",
+    "task": "TERMINAL_RUN_PROTECTED",
+    "flow": "GOAL_REFERENCE_PROTECTED",
+    "connector": "SAFE_TERMINAL_RECEIPT_REQUIRED",
+    "ambiguous_delivery": "NO_AUTOMATIC_PRUNE",
+    "protocol": "PREVIEW_PRUNE_TOMBSTONES_CLOSED",
+    "mattermost": "PREPARING_LIVE_PENDING_NON_BLOCKING"
+  }
+}

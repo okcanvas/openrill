@@ -1,0 +1,69 @@
+name: openrill-mattermost-testbed
+
+services:
+  postgres:
+    image: ${POSTGRES_IMAGE:-postgres:18-alpine}
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-mmuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-openrill_mm_local_db_password}
+      POSTGRES_DB: ${POSTGRES_DB:-mattermost}
+    volumes:
+      - mattermost-db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+    networks:
+      - mattermost-testbed
+
+  mattermost:
+    image: ${MATTERMOST_IMAGE:-mattermost/mattermost-team-edition:11.7.7}
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${MATTERMOST_PORT:-8065}:8065"
+    environment:
+      MM_SQLSETTINGS_DRIVERNAME: postgres
+      MM_SQLSETTINGS_DATASOURCE: postgres://${POSTGRES_USER:-mmuser}:${POSTGRES_PASSWORD:-openrill_mm_local_db_password}@postgres:5432/${POSTGRES_DB:-mattermost}?sslmode=disable&connect_timeout=10
+      MM_BLEVESETTINGS_INDEXDIR: /mattermost/bleve-indexes
+      MM_SERVICESETTINGS_SITEURL: http://localhost:${MATTERMOST_PORT:-8065}
+      MM_SERVICESETTINGS_LISTENADDRESS: :8065
+      MM_TEAMSETTINGS_ENABLEUSERCREATION: "true"
+      MM_EMAILSETTINGS_ENABLESIGNUPWITHEMAIL: "true"
+      MM_EMAILSETTINGS_REQUIREEMAILVERIFICATION: "false"
+      MM_SERVICESETTINGS_ENABLEUSERACCESSTOKENS: "true"
+      MM_SERVICESETTINGS_ENABLEBOTACCOUNTCREATION: "true"
+      MM_SERVICESETTINGS_ENABLELOCALMODE: "true"
+      MM_LOGSETTINGS_ENABLECONSOLE: "true"
+      MM_LOGSETTINGS_CONSOLELEVEL: INFO
+      MM_PLUGINSETTINGS_ENABLE: "false"
+    volumes:
+      - mattermost-config:/mattermost/config
+      - mattermost-data:/mattermost/data
+      - mattermost-logs:/mattermost/logs
+      - mattermost-plugins:/mattermost/plugins
+      - mattermost-client-plugins:/mattermost/client/plugins
+      - mattermost-bleve:/mattermost/bleve-indexes
+    networks:
+      - mattermost-testbed
+
+volumes:
+  mattermost-db:
+  mattermost-config:
+  mattermost-data:
+  mattermost-logs:
+  mattermost-plugins:
+  mattermost-client-plugins:
+  mattermost-bleve:
+
+networks:
+  mattermost-testbed:
+    driver: bridge

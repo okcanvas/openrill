@@ -1,0 +1,248 @@
+[PASS] root-version :: 0.10.1-step010r1
+[PASS] package-manager
+[PASS] step010-script
+[PASS] step010-package-script
+[PASS] required:packages/skills/src/types.ts
+[PASS] required:packages/skills/src/yaml.ts
+[PASS] required:packages/skills/src/catalog.ts
+[PASS] required:packages/skills/src/snapshot.ts
+[PASS] required:packages/state/migrations/007_skill_discovery_run_snapshot.sql
+[PASS] required:packages/state/src/skill-repository.ts
+[PASS] required:services/agent-host/src/skill-run-service.ts
+[PASS] required:services/agent-host/src/run-coordinator.ts
+[PASS] required:services/agent-host/src/lifecycle.ts
+[PASS] required:skills/builtin/catalog/workspace-review/skill.yaml
+[PASS] required:skills/builtin/catalog/workspace-review/instructions.md
+[PASS] required:tests/unit/skills-step010.test.mjs
+[PASS] required:scripts/run-step010-live.mjs
+[PASS] required:scripts/run_step010_acceptance.py
+[PASS] required:scripts/sh_run_step010_acceptance.cmd
+[PASS] required:scripts/sh_run_step010_acceptance.sh
+[PASS] required:scripts/package_step010.py
+[PASS] required:docs/contracts/SKILLS.md
+[PASS] required:docs/adrs/ADR-0026-IMMUTABLE_SKILL_RUN_SNAPSHOT.md
+[PASS] required:docs/plans/STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md
+[PASS] required:reference/openclaw/SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.10.1-step010r1"]
+[PASS] skills-package
+[PASS] skills-builtin-package
+[PASS] no-openclaw-dependency
+[PASS] skills-package-unused-dependencies-zero
+[PASS] builtin-package-unused-dependencies-zero
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP010R1_WINDOWS_SYMLINK_CAPABILITY_AND_SUITE_DIAGNOSTICS 0.10.1-step010r1
+[PASS] lock-skills-empty-importer
+[PASS] lock-builtin-empty-importer
+[PASS] lock-host-skills
+[PASS] schema-version-seven
+[PASS] migration-contract:CREATE TABLE skill_sources
+[PASS] migration-contract:CREATE TABLE skill_validation_diagnostics
+[PASS] migration-contract:CREATE TABLE skill_run_contexts
+[PASS] migration-contract:CREATE TABLE skill_snapshots
+[PASS] migration-contract:UNIQUE (run_id, skill_id)
+[PASS] migration-contract:FOREIGN KEY (run_id) REFERENCES agent_runs
+[PASS] migration-contract:FOREIGN KEY (source_key) REFERENCES skill_sources
+[PASS] repository:class StateSkillRepository
+[PASS] repository:replaceSourceDiscovery
+[PASS] repository:insertRunContext
+[PASS] repository:getRunContext
+[PASS] repository:insertSnapshot
+[PASS] repository:getSnapshotByRunSkill
+[PASS] repository:listRunSnapshots
+[PASS] repository:STATE_CONFLICT
+[PASS] manifest-exact-top-level-keys
+[PASS] manifest-compatibility-keys
+[PASS] manifest-parser:unknown field
+[PASS] manifest-parser:duplicate field
+[PASS] manifest-parser:tabs are not allowed
+[PASS] manifest-parser:block list syntax
+[PASS] manifest-parser:two-space nesting
+[PASS] catalog-contract:type: "BUNDLED"
+[PASS] catalog-contract:type: "MANAGED_USER"
+[PASS] catalog-contract:type: "WORKSPACE"
+[PASS] catalog-contract:precedence: 10
+[PASS] catalog-contract:precedence: 20
+[PASS] catalog-contract:precedence: 30
+[PASS] catalog-contract:SKILL_REQUIRED_TOOL_UNAVAILABLE
+[PASS] catalog-contract:SKILL_SHADOWED
+[PASS] catalog-contract:manifestSha256: sha256(raw)
+[PASS] catalog-contract:canonicalSourceRevision
+[PASS] catalog-contract:selectActivatedSkills
+[PASS] catalog-contract:metadataSink.replaceSourceDiscovery
+[PASS] source-revision-not-path-only
+[PASS] discovery-content-lazy
+[PASS] snapshot-contract:serializeCapture
+[PASS] snapshot-contract:captureTails
+[PASS] snapshot-contract:await rm(destination, { recursive: true, force: true })
+[PASS] snapshot-contract:manifestRead.bytes
+[PASS] snapshot-contract:entry.manifestSha256
+[PASS] snapshot-contract:await rename(temp, destination)
+[PASS] snapshot-contract:file.bytes
+[PASS] snapshot-contract:file.sha256
+[PASS] snapshot-contract:SKILL_SNAPSHOT_INCONSISTENT
+[PASS] snapshot-contract:MAX_TOTAL_RESOURCE_BYTES
+[PASS] snapshot-contract:formatActiveSkillInstructions
+[PASS] snapshot-existing-dir-blind-reuse-zero
+[PASS] host-skill-service:class SkillRunService
+[PASS] host-skill-service:getRunContext(runId)
+[PASS] host-skill-service:loadRun(runId)
+[PASS] host-skill-service:discoverSkills
+[PASS] host-skill-service:selectActivatedSkills
+[PASS] host-skill-service:insertRunContext
+[PASS] host-skill-service:eventType: "skill.snapshot.captured"
+[PASS] host-skill-service:resolveManagedSkillRoots
+[PASS] coordinator-skill-failure:resolveSystemInstructions
+[PASS] coordinator-skill-failure:SKILL_PREPARATION_FAILED
+[PASS] coordinator-skill-failure:failExecution
+[PASS] coordinator-skill-failure:modelCalls: 0
+[PASS] coordinator-skill-failure:toolCalls: 0
+[PASS] host-integration:new SkillRunService
+[PASS] host-integration:bundledSkillRoots
+[PASS] host-integration:resolveManagedSkillRoots
+[PASS] host-integration:skillRunService.resolveForRun
+[PASS] builtin-key:id
+[PASS] contract-key:id
+[PASS] builtin-key:version
+[PASS] contract-key:version
+[PASS] builtin-key:description
+[PASS] contract-key:description
+[PASS] builtin-key:activation
+[PASS] contract-key:activation
+[PASS] builtin-key:instructions
+[PASS] contract-key:instructions
+[PASS] builtin-key:tools
+[PASS] contract-key:tools
+[PASS] builtin-key:resources
+[PASS] contract-key:resources
+[PASS] builtin-key:compatibility
+[PASS] contract-key:compatibility
+[PASS] contract-stale-field-zero:summary:
+[PASS] contract-stale-field-zero:entry:
+[PASS] contract-stale-field-zero:allowedTools:
+[PASS] unit-fixture:valid Skill discovery exposes metadata and loads content only at snapshot
+[PASS] unit-fixture:invalid manifest, missing instructions, resource escape, and unavailable tools isolate only the bad Skill
+[PASS] unit-fixture:resource symlink escape is rejected
+[PASS] unit-fixture:workspace precedence wins and shadow diagnostics remain durable
+[PASS] unit-fixture:Run snapshot ignores mid-Run edits and next Run captures a new hash
+[PASS] unit-fixture:enabled Skill allowlist gates activation
+[PASS] unit-fixture:source revision changes when discovered manifest metadata changes
+[PASS] unit-fixture:deleted original Skill remains readable
+[PASS] unit-fixture:concurrent same-Run capture serializes
+[PASS] unit-fixture:Skill preparation failure durably fails the Run
+[PASS] unsupported-openrill-home-zero
+[PASS] supported-profile-isolation
+[PASS] live-contract:randomBytes(32)
+[PASS] live-contract:skill_sources
+[PASS] live-contract:skill_run_contexts
+[PASS] live-contract:skill_snapshots
+[PASS] live-contract:mid-Run
+[PASS] live-contract:next Run
+[PASS] live-contract:OPENRILL_STEP010_LIVE_PASS
+[PASS] live-static-api-secret-zero
+[PASS] credential-shaped-source-literal-zero :: []
+[PASS] historical-step008-secret-marker-split
+[PASS] evidence-count :: 120
+[PASS] evidence-report :: 120
+[PASS] evidence:OC-SKILL-001
+[PASS] evidence:OC-SKILL-002
+[PASS] evidence:OC-SKILL-003
+[PASS] evidence:OC-SKILL-004
+[PASS] evidence:OC-SKILL-005
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-detail:STEP010_UNSUPPORTED_PROFILE_ENV_TEST_ISOLATION.md
+[PASS] issue-detail:STEP010_SKILL_SOURCE_REVISION_INTEGRITY.md
+[PASS] issue-detail:STEP010_SKILL_SNAPSHOT_CAPTURE_RACE.md
+[PASS] issue-detail:STEP010_PRE_KERNEL_SKILL_FAILURE_STATE.md
+[PASS] issue-detail:STEP010_SKILL_CONTRACT_DOCUMENT_DRIFT.md
+[PASS] issue-detail:STEP010_HISTORICAL_SECRET_MARKER_LITERAL.md
+[PASS] recurrence:### Test profile isolation
+[PASS] recurrence:### Skill source revision integrity
+[PASS] recurrence:### Immutable Skill snapshot capture
+[PASS] recurrence:### Pre-Kernel preparation failure
+[PASS] recurrence:### Skill contract documentation coherence
+[PASS] recurrence:### Historical acceptance secret markers
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] stale-step009-pending-zero
+[PASS] windows-status-transition
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step006-ledger-regression :: live_pass
+[PASS] step007-model-regression :: live_pass
+[PASS] step008-workspace-regression :: live_pass
+[PASS] step009-approval-regression :: live_pass
+[PASS] step010-skill-live :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP010R1_WINDOWS_SYMLINK_CAPABILITY_AND_SUITE_DIAGNOSTICS checks=247/247 state=PASSED schema=7 skills=DISCOVERED snapshot=IMMUTABLE

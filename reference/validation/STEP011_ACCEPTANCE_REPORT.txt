@@ -1,0 +1,229 @@
+[PASS] root-version :: 0.12.0-step012a
+[PASS] package-manager
+[PASS] step011-script
+[PASS] step011-package-script
+[PASS] step011-vendor-script
+[PASS] required:apps/agent-web/src/browser-app.ts
+[PASS] required:apps/agent-web/src/control-ui-projection.ts
+[PASS] required:apps/agent-web/src/api/local-protocol-client.ts
+[PASS] required:apps/agent-web/public/index.html
+[PASS] required:apps/agent-web/public/assets/app.css
+[PASS] required:packages/protocol/src/control-ui-operations.ts
+[PASS] required:services/agent-host/src/control-ui-service.ts
+[PASS] required:services/agent-host/src/control-server.ts
+[PASS] required:services/agent-host/src/transport/operation-registry.ts
+[PASS] required:tests/unit/control-ui-step011.test.mjs
+[PASS] required:tests/unit/vue-runtime-vendor-step011.test.mjs
+[PASS] required:tests/unit/vue-proxy-projection-step011r6.test.mjs
+[PASS] required:tests/unit/process-manager-close-step011r7.test.mjs
+[PASS] required:tests/unit/approval-notice-propagation-step011r8.test.mjs
+[PASS] required:scripts/vendor-vue-runtime.mjs
+[PASS] required:scripts/run-step011-live.mjs
+[PASS] required:scripts/run_step011_acceptance.py
+[PASS] required:scripts/sh_run_step011_acceptance.cmd
+[PASS] required:scripts/sh_run_step011_acceptance.sh
+[PASS] required:scripts/package_step011.py
+[PASS] required:docs/contracts/CONTROL_UI.md
+[PASS] required:docs/adrs/ADR-0028-CONTROL_UI_VERTICAL_SLICE.md
+[PASS] required:docs/plans/STEP011_CONTROL_UI_VERTICAL_SLICE.md
+[PASS] required:reference/validation/STEP011_LIVE_PROGRESS_ENVELOPE_VOCABULARY_DRIFT.md
+[PASS] required:reference/validation/STEP011_NOTICE_GAP_CURSOR_ADVANCE.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.12.0-step012a"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP012A_AUTOMATION_DOMAIN_AND_PERSISTENCE_FOUNDATION 0.12.0-step012a
+[PASS] schema-version-eight
+[PASS] framework-selection
+[PASS] framework-runtime-step
+[PASS] framework-production-present
+[PASS] web-version
+[PASS] web-framework
+[PASS] web-runtime-step
+[PASS] vue-vendor:version
+[PASS] vue-vendor:url
+[PASS] vue-vendor:integrity
+[PASS] vue-vendor:runtime-entry
+[PASS] vue-vendor:license-entry
+[PASS] vue-vendor:archive-bound
+[PASS] vue-vendor:unpacked-bound
+[PASS] build-external-vendor-root
+[PASS] build-vendor-file:vue.runtime.global.prod.js
+[PASS] build-vendor-file:LICENSE.vue.txt
+[PASS] build-vendor-file:vue.runtime.lock.json
+[PASS] html-vue-before-app
+[PASS] html-same-origin-vue
+[PASS] html-importmap
+[PASS] html-no-cdn
+[PASS] ui-render-function
+[PASS] ui-runtime-template-zero
+[PASS] ui-runtime-eval-zero
+[PASS] ui-route-hash-reactive
+[PASS] ui-transport-shallow-ref
+[PASS] ui-route:conversations
+[PASS] ui-route:workspaces
+[PASS] ui-route:skills
+[PASS] ui-route:approvals
+[PASS] ui-route:artifacts
+[PASS] ui-route:settings
+[PASS] ui-route:diagnostics
+[PASS] ui-testid:app-shell
+[PASS] ui-testid:connection-state
+[PASS] ui-testid:composer
+[PASS] ui-testid:send-message
+[PASS] ui-testid:approval-allow-once
+[PASS] ui-testid:artifact-file
+[PASS] ui-testid:artifact-modal
+[PASS] ui-testid:artifact-content
+[PASS] ui-operation:ui.snapshot
+[PASS] ui-operation:conversation.send
+[PASS] ui-operation:approval.resolve
+[PASS] ui-operation:artifact.list
+[PASS] ui-operation:workspace.list
+[PASS] ui-token-memory-only
+[PASS] ui-card-bound
+[PASS] ui-mobile-smoke-source
+[PASS] projection-live-envelope
+[PASS] projection-unknown
+[PASS] projection-proxy-safe-clone
+[PASS] client-gap-no-advance
+[PASS] server-replay-base-cursor
+[PASS] protocol-operation:ui.snapshot
+[PASS] protocol-operation:workspace.list
+[PASS] protocol-operation:artifact.list
+[PASS] protocol-operation:artifact.get
+[PASS] host-ui-boundary:/ui/bootstrap
+[PASS] host-ui-boundary:^\/ui\/artifacts\/
+[PASS] host-ui-boundary:content-security-policy
+[PASS] host-ui-boundary:x-forwarded-host
+[PASS] host-ui-boundary:no-store
+[PASS] host-ui-no-direct-sqlite
+[PASS] host-ui-no-private-path
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-registry:OR-ISSUE-033
+[PASS] issue-registry:OR-ISSUE-034
+[PASS] issue-registry:OR-ISSUE-035
+[PASS] issue-registry:OR-ISSUE-036
+[PASS] issue-registry:OR-ISSUE-037
+[PASS] issue-registry:OR-ISSUE-038
+[PASS] issue-registry:OR-ISSUE-039
+[PASS] issue-registry:OR-ISSUE-040
+[PASS] issue-registry:OR-ISSUE-041
+[PASS] issue-registry:OR-ISSUE-042
+[PASS] issue-registry:OR-ISSUE-043
+[PASS] issue-registry:OR-ISSUE-044
+[PASS] issue-registry:OR-ISSUE-045
+[PASS] issue-registry:OR-ISSUE-046
+[PASS] issue-registry:OR-ISSUE-047
+[PASS] issue-registry:OR-ISSUE-048
+[PASS] issue-registry:OR-ISSUE-049
+[PASS] issue-registry:OR-ISSUE-050
+[PASS] issue-registry:OR-ISSUE-051
+[PASS] issue-registry:OR-ISSUE-052
+[PASS] issue-detail:STEP011_LIVE_PROGRESS_ENVELOPE_VOCABULARY_DRIFT.md
+[PASS] issue-detail:STEP011_NOTICE_GAP_CURSOR_ADVANCE.md
+[PASS] issue-detail:STEP011R3_VUE_RUNTIME_COMPILER_CSP_MISMATCH.md
+[PASS] issue-detail:STEP011R3_IMPLICIT_FAVICON_HTTP_FAILURE.md
+[PASS] issue-detail:STEP011R3_APPROVAL_DEEP_LINK_REACTIVITY.md
+[PASS] issue-detail:STEP011R4_APPROVAL_TTL_PROCESS_TIMEOUT_COUPLING.md
+[PASS] issue-detail:STEP011R5_VUE_REACTIVE_PROXY_STRUCTURED_CLONE_FAILURE.md
+[PASS] recurrence:live-progress-envelope
+[PASS] recurrence:notice-gap-cursor
+[PASS] recurrence:real-browser
+[PASS] recurrence:vue-runtime-csp
+[PASS] recurrence:explicit-browser-assets
+[PASS] recurrence:route-hash-reactivity
+[PASS] recurrence:approval-process-timeout-separation
+[PASS] recurrence:vue-proxy-projection-boundary
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[FAIL] vue-runtime-acquisition :: runtime_unavailable
+[FAIL] vue-runtime-version :: runtime_unavailable
+[FAIL] vue-runtime-source :: runtime_unavailable
+[FAIL] vue-runtime-integrity :: runtime_unavailable
+[FAIL] vue-runtime-bytes :: runtime_unavailable
+[FAIL] vue-runtime-sha256 :: runtime_unavailable
+[FAIL] vue-archive-sha256 :: runtime_unavailable
+[FAIL] vue-license-mit :: runtime_unavailable
+[FAIL] vue-runtime-reextract :: runtime_unavailable
+[FAIL] vue-runtime-byte-identical :: runtime_unavailable
+[FAIL] vue-license-byte-identical :: runtime_unavailable
+[PASS] build-unit-architecture-exports :: suite_pass
+[FAIL] step011-real-chromium-live :: runtime_unavailable
+[PASS] step010-skill-live-regression :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP011_CONTROL_UI_VERTICAL_SLICE checks=216/228 state=FAILED schema=8 framework=VUE_3 browser=CHROMIUM

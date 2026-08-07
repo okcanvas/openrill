@@ -1,0 +1,20 @@
+{
+  "step": "STEP022C_MATTERMOST_REAL_CONNECTOR_DURABLE_VERTICAL_SLICE",
+  "version": "0.24.0-step022c",
+  "schema": 25,
+  "expectedChecks": "56/56",
+  "liveHarness": "STEP022C_H1_REAL_MATTERMOST_DM_MENTION_THREAD_DELIVERY_AND_RESTART",
+  "fields": {
+    "mattermost": "REAL_REST_WEBSOCKET",
+    "routing": "DM_MENTION_THREAD",
+    "ingress": "PERSIST_BEFORE_ACK",
+    "execution": "ADOPTED_RUN_SCHEDULED",
+    "delivery": "TERMINAL_RUN_TO_RECEIPT",
+    "ambiguity": "MAYBE_ACCEPTED_NO_REPLAY",
+    "doctor": "REST_AND_WEBSOCKET_AUTH_PROBE",
+    "restart": "REMOTE_REPLY_DUPLICATE_FREE",
+    "extension": "DYNAMIC_IMPORT_SECRETREF",
+    "protocol": "REDACTED_STATUS_DOCTOR",
+    "model": "SCRIPTED_LOCAL"
+  }
+}

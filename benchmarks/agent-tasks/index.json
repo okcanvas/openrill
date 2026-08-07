@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scenarioFiles": [
+    "scenarios/agent-memory-preference-recall.json",
+    "scenarios/agent-redaction-no-secret-leak.json",
+    "scenarios/agent-tool-safety-followthrough.json",
+    "scenarios/agent-approval-denial-stop.json",
+    "scenarios/agent-task-followthrough-status.json",
+    "scenarios/agent-share-safe-diagnostics-artifact.json",
+    "scenarios/agent-no-fake-progress.json",
+    "scenarios/agent-failure-recovery.json",
+    "scenarios/agent-tool-discovery-hidden-call.json",
+    "scenarios/agent-delegation-scope-preserved.json"
+  ]
+}

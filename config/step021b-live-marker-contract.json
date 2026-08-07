@@ -1,0 +1,19 @@
+{
+  "step": "STEP021B_DURABLE_PLAN_REVISION_RETRY_AND_BLOCKER_RESOLUTION_CLOSURE",
+  "version": "0.21.1-step021b",
+  "schema": 24,
+  "expectedChecks": "24/24",
+  "liveHarness": "STEP021B_H1_PLAN_REVISION_ADOPTION_RETRY_BLOCKER_AND_RESTART",
+  "fields": {
+    "revision": "IMMUTABLE_EXECUTION_SNAPSHOT",
+    "adoption": "EXPLICIT_STABLE_STEP",
+    "retry": "MANUAL_BOUNDED_NEW_ATTEMPT",
+    "blocker": "DURABLE_RESOLUTION_LEDGER",
+    "decision": "REVISION_SNAPSHOT_STALE_REJECTED",
+    "restart": "PINNED_REVISION_IDENTITY_STABLE",
+    "executor": "SINGLE_ACTIVE_STEP",
+    "parallel": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL",
+    "openclaw_reference": "BOUND_CONTROLLER_SOURCE_REAUDITED"
+  }
+}

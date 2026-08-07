@@ -1,0 +1,26 @@
+{
+  "step": "STEP020ER2_WINDOWS_COMPLETION_LIVE_MARKER_CONTRACT_ALIGNMENT",
+  "version": "0.20.7-step020er2",
+  "schema": 22,
+  "expectedChecks": "23/23",
+  "liveHarness": "STEP020ER2_H1_WINDOWS_COMPLETION_LIVE_MARKER_CONTRACT_ALIGNMENT",
+  "fields": {
+    "correction": "SHARED_STRUCTURED_MARKER_CONTRACT",
+    "source": "JSON_SINGLE_SOURCE",
+    "validation": "FIELD_SET_NOT_WHOLE_STRING",
+    "retry": "BOUNDED_TRANSPORT_ONLY",
+    "timeout": "CALLER_DEADLINE",
+    "security": "NON_TRANSPORT_FAIL_FAST",
+    "delivery": "DURABLE_TASK_EVENT",
+    "semantics": "REQUIRED_COMPLETION",
+    "controller": "OWNER_CONVERSATION_WAKE",
+    "queue": "SYSTEM_MESSAGE_WAKE_RUN",
+    "restart": "PENDING_DRAIN_IDENTITY_STABLE",
+    "scope": "CONTROLLER_TOOLS_DURABLE",
+    "decision": "EXPLICIT_TOOL_REQUIRED",
+    "migration": "TERMINAL_CHILD_SAFE_BACKFILL",
+    "flow": "CONTROLLER_OWNED_OUTCOME",
+    "plan_executor": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL"
+  }
+}

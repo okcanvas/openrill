@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "selection": "VUE_3",
+  "decisionStep": "STEP010A_CONTROL_UI_FRAMEWORK_SELECTION",
+  "runtimeIntroductionStep": "STEP011_CONTROL_UI_VERTICAL_SLICE",
+  "productionRuntimeDependencyPresent": true,
+  "decisionMatrix": "apps/agent-web/spikes/decision-matrix.json",
+  "adr": "docs/adrs/ADR-0027-CONTROL_UI_FRAMEWORK_VUE3.md"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@openrill/goal-executor",
+  "version": "0.25.0-step023a",
+  "private": true,
+  "description": "Durable single-active-step Goal Plan executor over Conversation-bound Task Flows.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0 <23 || >=24.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "node ../../scripts/package-task.mjs clean .",
+    "build": "node ../../scripts/package-task.mjs build .",
+    "typecheck": "node ../../scripts/package-task.mjs typecheck ."
+  },
+  "dependencies": {
+    "@openrill/state": "workspace:*",
+    "@openrill/tasks": "workspace:*",
+    "@openrill/task-flows": "workspace:*",
+    "@openrill/goals": "workspace:*"
+  }
+}

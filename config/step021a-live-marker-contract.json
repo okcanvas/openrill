@@ -1,0 +1,22 @@
+{
+  "step": "STEP021A_DURABLE_GOAL_PLAN_TO_TASK_FLOW_EXECUTOR_FOUNDATION",
+  "version": "0.21.0-step021a",
+  "schema": 23,
+  "expectedChecks": "22/22",
+  "liveHarness": "STEP021A_H1_DURABLE_GOAL_PLAN_EXECUTOR_RESTART_BLOCK_RESUME_AND_COMPLETION",
+  "fields": {
+    "executor": "SINGLE_ACTIVE_STEP",
+    "ownership": "GOAL_PLAN_EXECUTION",
+    "flow": "ONE_GOAL_ONE_CONTROLLER_FLOW",
+    "admission": "ATOMIC_STEP_RUN_TASK_FLOW",
+    "continuation": "DELIVERY_CONTROLLER_DECISION",
+    "completion": "SEMANTIC_REQUIRED",
+    "restart": "IDENTITY_STABLE_NO_DUPLICATE",
+    "blocked": "EXPLICIT_RESUME_NEW_ATTEMPT",
+    "mutation": "EXECUTOR_OWNED",
+    "cancellation": "RECOVERY_PROJECTED",
+    "parallel": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL",
+    "openclaw_reference": "BOUND_CONTROLLER_SOURCE_AUDITED"
+  }
+}

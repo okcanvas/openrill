@@ -1,0 +1,59 @@
+{
+  "name": "@openrill/host",
+  "version": "0.25.0-step023a",
+  "private": true,
+  "description": "Foreground local Host lifecycle, single-instance lock, readiness, and control endpoint.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0 <23 || >=24.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./control": {
+      "types": "./dist/control.d.ts",
+      "import": "./dist/control.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "node ../../scripts/package-task.mjs clean .",
+    "build": "node ../../scripts/package-task.mjs build .",
+    "typecheck": "node ../../scripts/package-task.mjs typecheck ."
+  },
+  "dependencies": {
+    "@openrill/agent-kernel": "workspace:*",
+    "@openrill/approval": "workspace:*",
+    "@openrill/automation": "workspace:*",
+    "@openrill/browser-playwright": "workspace:*",
+    "@openrill/browser-runtime": "workspace:*",
+    "@openrill/config": "workspace:*",
+    "@openrill/conversations": "workspace:*",
+    "@openrill/diagnostics": "workspace:*",
+    "@openrill/extension-sdk": "workspace:*",
+    "@openrill/goal-executor": "workspace:*",
+    "@openrill/goals": "workspace:*",
+    "@openrill/memory": "workspace:*",
+    "@openrill/model-adapter": "workspace:*",
+    "@openrill/model-openai-responses": "workspace:*",
+    "@openrill/protocol": "workspace:*",
+    "@openrill/sandbox": "workspace:*",
+    "@openrill/sandbox-docker": "workspace:*",
+    "@openrill/skills": "workspace:*",
+    "@openrill/state": "workspace:*",
+    "@openrill/task-flows": "workspace:*",
+    "@openrill/tasks": "workspace:*",
+    "@openrill/tool-discovery": "workspace:*",
+    "@openrill/tool-runtime": "workspace:*",
+    "@openrill/tools-delegation": "workspace:*",
+    "@openrill/tools-files": "workspace:*",
+    "@openrill/tools-goals": "workspace:*",
+    "@openrill/tools-memory": "workspace:*",
+    "@openrill/tools-process": "workspace:*",
+    "@openrill/workspace": "workspace:*"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "agent-core": {
+      "coverageIds": [
+        "memory.preference-recall",
+        "privacy.secret-no-echo",
+        "tools.safe-followthrough",
+        "security.approval-denial-stop",
+        "tasks.proof-backed-status",
+        "diagnostics.share-safe-artifact",
+        "grounding.no-fake-progress",
+        "recovery.retryable-model-failure",
+        "tools.structured-discovery",
+        "delegation.tool-scope-preserved"
+      ]
+    }
+  }
+}

@@ -1,0 +1,218 @@
+[PASS] root-version :: 0.9.0-step009
+[PASS] package-manager
+[PASS] step009-script
+[PASS] step009-package-script
+[PASS] required:packages/approval/src/index.ts
+[PASS] required:packages/tools-process/src/index.ts
+[PASS] required:packages/state/migrations/006_process_approval_resume.sql
+[PASS] required:packages/state/src/approval-process-repository.ts
+[PASS] required:packages/protocol/src/approval-operations.ts
+[PASS] required:packages/agent-kernel/src/kernel.ts
+[PASS] required:services/agent-host/src/lifecycle.ts
+[PASS] required:services/agent-host/src/transport/operation-registry.ts
+[PASS] required:tests/unit/process-approval-step009.test.mjs
+[PASS] required:scripts/run-step009-live.mjs
+[PASS] required:scripts/run_step009_acceptance.py
+[PASS] required:scripts/sh_run_step009_acceptance.cmd
+[PASS] required:scripts/sh_run_step009_acceptance.sh
+[PASS] required:scripts/package_step009.py
+[PASS] required:docs/contracts/PROCESS_TOOL.md
+[PASS] required:docs/contracts/APPROVALS.md
+[PASS] required:docs/adrs/ADR-0025-DURABLE_PROCESS_APPROVAL_RESUME.md
+[PASS] required:docs/plans/STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md
+[PASS] required:reference/openclaw/PROCESS_TOOL_AND_APPROVAL_RESUME.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.9.0-step009"]
+[PASS] approval-package
+[PASS] tools-process-package
+[PASS] no-openclaw-dependency
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME 0.9.0-step009
+[PASS] lock-agent-kernel-approval
+[PASS] lock-process-approval
+[PASS] lock-process-config
+[PASS] lock-process-state
+[PASS] lock-host-tools-process
+[PASS] schema-version-six
+[PASS] migration-contract:CREATE TABLE tool_calls
+[PASS] migration-contract:UNIQUE (run_id, tool_call_id)
+[PASS] migration-contract:CREATE TABLE approval_requests
+[PASS] migration-contract:version INTEGER NOT NULL DEFAULT 1
+[PASS] migration-contract:CREATE TABLE approval_conversation_grants
+[PASS] migration-contract:CREATE TABLE process_records
+[PASS] migration-contract:idx_process_records_active
+[PASS] migration-contract:FOREIGN KEY (attempt_id) REFERENCES run_attempts
+[PASS] migration-contract:FOREIGN KEY (workspace_id) REFERENCES workspace_registrations
+[PASS] repository:class StateApprovalProcessRepository
+[PASS] repository:insertToolCall
+[PASS] repository:getToolCall
+[PASS] repository:insertApproval
+[PASS] repository:resolveApproval
+[PASS] repository:consumeApproval
+[PASS] repository:insertConversationGrant
+[PASS] repository:insertProcess
+[PASS] repository:listProcesses
+[PASS] repository:markActiveProcessesOrphaned
+[PASS] approval-contract:ExecutionPolicyDecision = "DENY" | "PROMPT" | "ALLOW"
+[PASS] approval-contract:matchExecutionPolicy
+[PASS] approval-contract:approvalSha256
+[PASS] approval-contract:ToolApprovalRequiredError
+[PASS] approval-contract:authorizeOrRequest
+[PASS] approval-contract:bindingDigest
+[PASS] approval-contract:expectedVersion
+[PASS] approval-contract:allow_for_conversation
+[PASS] approval-contract:consumeApproval
+[PASS] approval-contract:recordApprovalTerminalResult
+[PASS] tool:process.run
+[PASS] tool:process.list
+[PASS] tool:process.tail
+[PASS] tool:process.cancel
+[PASS] tool-count-source
+[PASS] process-contract:kind: "argv"
+[PASS] process-contract:kind: "shell"
+[PASS] process-contract:shellInvocation
+[PASS] process-contract:resolveSecretReference
+[PASS] process-contract:this.options.workspaces.resolve
+[PASS] process-contract:ToolApprovalRequiredError
+[PASS] process-contract:executeApproved
+[PASS] process-contract:await mkdir(this.options.rootDirectory, { recursive: true
+[PASS] process-contract:finished(stdoutFile)
+[PASS] process-contract:background
+[PASS] process-contract:recoverOrphans
+[PASS] process-contract:status: current?.status === "CANCELLED" ? "CANCELLED" : "EXITED"
+[PASS] approval-interrupt-passthrough
+[PASS] kernel-resume:WAITING_APPROVAL
+[PASS] kernel-resume:resumeExecution
+[PASS] kernel-resume:ToolApprovalRequiredError
+[PASS] kernel-resume:waitForApproval
+[PASS] kernel-resume:approval.requested
+[PASS] conversation-resume:waitForApproval
+[PASS] conversation-resume:resumeExecution
+[PASS] conversation-resume:appendApprovalToolResult
+[PASS] conversation-resume:approval-result:
+[PASS] conversation-resume:resumedFromApproval
+[PASS] protocol-operation:approval.list
+[PASS] protocol-operation:approval.get
+[PASS] protocol-operation:approval.resolve
+[PASS] protocol-operation:approval.cancel
+[PASS] protocol-contract:ApprovalResolveInput
+[PASS] protocol-contract:expectedVersion
+[PASS] protocol-contract:"allow_once" | "allow_for_conversation" | "deny"
+[PASS] protocol-validation:validateApprovalListInput
+[PASS] protocol-validation:validateApprovalGetInput
+[PASS] protocol-validation:validateApprovalResolveInput
+[PASS] protocol-validation:validateApprovalCancelInput
+[PASS] host-integration:new ApprovalService
+[PASS] host-integration:new ProcessManager
+[PASS] host-integration:registerProcessTools
+[PASS] host-integration:recoverOrphans
+[PASS] host-integration:approvalHooks
+[PASS] host-integration:executeApproved
+[PASS] host-integration:appendApprovalToolResult
+[PASS] host-integration:runCoordinator?.resume
+[PASS] host-integration:approvalExpiryTimer
+[PASS] host-integration:processManager?.close()
+[PASS] resume-after-active
+[PASS] migration-sequence-derived
+[PASS] future-version-derived
+[PASS] workspace-schema-derived
+[PASS] protocol-current-approval-capabilities
+[PASS] live-secrets-runtime-generated
+[PASS] live-preapproval-zero-process
+[PASS] live-websocket-approval
+[PASS] live-secret-sqlite-zero
+[PASS] synthetic-secret-literal-zero :: []
+[PASS] evidence-count :: 119
+[PASS] evidence-report :: 119
+[PASS] evidence:OC-APPROVAL-001
+[PASS] evidence:OC-APPROVAL-002
+[PASS] evidence:OC-APPROVAL-003
+[PASS] evidence:OC-APPROVAL-004
+[PASS] evidence:OC-APPROVAL-005
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-detail:STEP009_APPROVAL_INTERRUPT_WRAPPED_AS_TOOL_FAILURE.md
+[PASS] issue-detail:STEP009_PROCESS_OUTPUT_STREAM_COMPLETION_RACE.md
+[PASS] issue-detail:STEP009_EXTENSION_EXPECTATION_DRIFT.md
+[PASS] issue-detail:STEP009_SYNTHETIC_SECRET_LITERAL_RECURRENCE.md
+[PASS] recurrence:### Typed control-flow interrupts
+[PASS] recurrence:### Process output completion
+[PASS] recurrence:### Additive schema and protocol evolution
+[PASS] recurrence:### Durable approval exactly-once
+[PASS] recurrence:### Synthetic secret fixtures
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] stale-step008-pending-zero
+[PASS] step009-windows-pending
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step006-ledger-regression :: live_pass
+[PASS] step007-model-regression :: live_pass
+[PASS] step008-workspace-regression :: live_pass
+[PASS] step009-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME checks=217/217 state=PASSED schema=6 policy=DURABLE process_tools=4 resume=WAITING_APPROVAL

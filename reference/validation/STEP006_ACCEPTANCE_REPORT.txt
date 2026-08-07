@@ -1,0 +1,89 @@
+[PASS] root-version :: 0.6.1-step006a
+[PASS] package-manager
+[PASS] step006-script
+[PASS] required:packages/state/migrations/003_conversation_event_ledger.sql
+[PASS] required:packages/state/src/conversation-repository.ts
+[PASS] required:packages/conversations/src/errors.ts
+[PASS] required:packages/conversations/src/types.ts
+[PASS] required:packages/conversations/src/service.ts
+[PASS] required:packages/protocol/src/conversation-operations.ts
+[PASS] required:tests/unit/conversation-step006.test.mjs
+[PASS] required:scripts/run-step006-live.mjs
+[PASS] required:scripts/run_step006_acceptance.py
+[PASS] required:scripts/sh_run_step006_acceptance.cmd
+[PASS] required:scripts/sh_run_step006_acceptance.sh
+[PASS] required:scripts/package_step006.py
+[PASS] required:docs/contracts/CONVERSATION_LEDGER.md
+[PASS] required:docs/plans/STEP006_CONVERSATION_AND_EVENT_LEDGER.md
+[PASS] required:docs/adrs/ADR-0021-CONVERSATION_RUN_EVENT_LEDGER.md
+[PASS] required:reference/openclaw/CONVERSATION_LEDGER.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.1-step006a"]
+[PASS] migration-contract:CREATE TABLE conversations
+[PASS] migration-contract:CREATE TABLE conversation_messages
+[PASS] migration-contract:CREATE TABLE agent_runs
+[PASS] migration-contract:CREATE TABLE run_attempts
+[PASS] migration-contract:CREATE TABLE run_events
+[PASS] migration-contract:CREATE TABLE conversation_submissions
+[PASS] migration-contract:CREATE TABLE conversation_projections
+[PASS] migration-contract:idx_run_events_idempotency
+[PASS] migration-contract:json_valid(payload_json)
+[PASS] service-contract:class ConversationService
+[PASS] service-contract:SUBMISSION_CONFLICT
+[PASS] service-contract:EVENT_SEQUENCE_CONFLICT
+[PASS] service-contract:EVENT_IDEMPOTENCY_CONFLICT
+[PASS] service-contract:recoverIncompleteRuns
+[PASS] service-contract:run.checkpoint
+[PASS] service-contract:HOST_RESTART
+[PASS] service-contract:rebuildProjection
+[PASS] service-contract:WORKSPACE_ACCESS_DENIED
+[PASS] repository-contract:nextMessageSequence
+[PASS] repository-contract:nextEventSequence
+[PASS] repository-contract:ORDER BY sequence
+[PASS] repository-contract:conversation_projections
+[PASS] repository-contract:BEGIN IMMEDIATE
+[PASS] operation:conversation.create
+[PASS] operation:conversation.list
+[PASS] operation:conversation.get
+[PASS] operation:conversation.send
+[PASS] operation:conversation.cancel
+[PASS] recovery-before-listener
+[PASS] configured-workspace-scope
+[PASS] unit-contract:strict per-conversation ordering
+[PASS] unit-contract:submission idempotency
+[PASS] unit-contract:append-only, sequence checked
+[PASS] unit-contract:projection is rebuildable
+[PASS] unit-contract:checkpointed running run resumable
+[PASS] unit-contract:uncheckpointed running run non-resumable
+[PASS] unit-contract:cancel is effective
+[PASS] unit-contract:foreign and unknown workspaces
+[PASS] unit-contract:authenticated protocol exposes conversation operations
+[PASS] evidence-count :: 104
+[PASS] evidence-report :: 104
+[PASS] evidence:OC-STATE-013
+[PASS] evidence:OC-STATE-014
+[PASS] evidence:OC-STATE-015
+[PASS] evidence:OC-STATE-016
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step005-core-regression :: step005_core_pass
+[PASS] step006-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP006_CONVERSATION_AND_EVENT_LEDGER checks=88/88 state=PASSED schema=3 ledger=APPEND_ONLY recovery=CLASSIFIED protocol=WORKSPACE_SCOPED

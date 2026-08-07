@@ -1,0 +1,9 @@
+:root { font-family: system-ui, sans-serif; color-scheme: light dark; }
+body { margin: 0; }
+.shell { display: grid; grid-template-rows: auto 1fr auto; min-height: 100vh; }
+header, main, footer { padding: 1rem; }
+.transcript { display: grid; gap: .75rem; max-width: 64rem; margin: 0 auto; }
+.card { border: 1px solid currentColor; border-radius: .5rem; padding: .75rem; }
+.card:focus { outline: 3px solid currentColor; outline-offset: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.status { font-variant-numeric: tabular-nums; }

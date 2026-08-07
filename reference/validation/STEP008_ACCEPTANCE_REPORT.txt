@@ -1,0 +1,188 @@
+[PASS] root-version :: 0.8.0-step008
+[PASS] package-manager
+[PASS] step008-script
+[PASS] step008-package-script
+[PASS] required:packages/workspace/src/catalog.ts
+[PASS] required:packages/workspace/src/path-policy.ts
+[PASS] required:packages/tools-files/src/tools.ts
+[PASS] required:packages/tools-files/src/io.ts
+[PASS] required:packages/tools-files/src/artifacts.ts
+[PASS] required:packages/tools-files/src/mutation-queue.ts
+[PASS] required:packages/state/migrations/005_workspace_file_artifacts.sql
+[PASS] required:packages/state/src/workspace-repository.ts
+[PASS] required:services/agent-host/src/lifecycle.ts
+[PASS] required:tests/unit/workspace-file-tools-step008.test.mjs
+[PASS] required:scripts/run-step008-live.mjs
+[PASS] required:scripts/run_step008_acceptance.py
+[PASS] required:scripts/sh_run_step008_acceptance.cmd
+[PASS] required:scripts/sh_run_step008_acceptance.sh
+[PASS] required:scripts/package_step008.py
+[PASS] required:docs/contracts/WORKSPACE.md
+[PASS] required:docs/contracts/FILE_TOOLS.md
+[PASS] required:docs/adrs/ADR-0024-WORKSPACE_RELATIVE_FILE_AUTHORITY.md
+[PASS] required:docs/plans/STEP008_WORKSPACE_AND_FILE_TOOLS.md
+[PASS] required:reference/openclaw/WORKSPACE_AND_FILE_TOOLS.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.8.0-step008"]
+[PASS] workspace-package
+[PASS] tools-files-package
+[PASS] no-openclaw-dependency
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP008_WORKSPACE_AND_FILE_TOOLS 0.8.0-step008
+[PASS] lock-host-tools-files
+[PASS] lock-builtin-no-tools-files
+[PASS] schema-version-five
+[PASS] migration-contract:CREATE TABLE workspace_registrations
+[PASS] migration-contract:canonical_root TEXT NOT NULL UNIQUE
+[PASS] migration-contract:CREATE TABLE workspace_artifacts
+[PASS] migration-contract:FOREIGN KEY (run_id) REFERENCES agent_runs
+[PASS] migration-contract:FOREIGN KEY (attempt_id) REFERENCES run_attempts
+[PASS] migration-contract:FOREIGN KEY (workspace_id) REFERENCES workspace_registrations
+[PASS] workspace-contract:class WorkspaceCatalog
+[PASS] workspace-contract:realpath(configuredPath)
+[PASS] workspace-contract:WORKSPACE_DUPLICATE_ROOT
+[PASS] workspace-contract:WORKSPACE_SYMLINK_ESCAPE
+[PASS] workspace-contract:revalidateForWrite
+[PASS] workspace-contract:rootRevision: sha256(canonicalRoot)
+[PASS] path-policy:posix.isAbsolute
+[PASS] path-policy:win32.isAbsolute
+[PASS] path-policy:segment === ".."
+[PASS] path-policy:WINDOWS_RESERVED
+[PASS] path-policy:DENIED_SEGMENTS
+[PASS] path-policy:SECRET_BASENAME.test(segment)
+[PASS] tool:workspace.list
+[PASS] tool:workspace.stat
+[PASS] tool:workspace.read
+[PASS] tool:workspace.search
+[PASS] tool:workspace.write
+[PASS] tool:workspace.patch
+[PASS] tool-count-source
+[PASS] tool-contract:maxFileBytes
+[PASS] tool-contract:maxReadBytes
+[PASS] tool-contract:maxReadLines
+[PASS] tool-contract:maxSearchFiles
+[PASS] tool-contract:maxSearchMatches
+[PASS] tool-contract:WORKSPACE_BINARY_FILE_DENIED
+[PASS] tool-contract:WORKSPACE_PATCH_CONFLICT
+[PASS] tool-contract:withWorkspaceFileMutation
+[PASS] atomic-write:open(temp, "wx"
+[PASS] atomic-write:handle.sync()
+[PASS] atomic-write:revalidateForWrite
+[PASS] atomic-write:assertExpectedRevision(latest
+[PASS] atomic-write:rename(temp, input.path.absolutePath)
+[PASS] atomic-write:fsyncDirectoryBestEffort
+[PASS] atomic-write:rm(temp, { force: true })
+[PASS] no-implicit-parent-mkdir
+[PASS] mutation-realpath-key
+[PASS] mutation-tail-map
+[PASS] mutation-cleanup
+[PASS] artifact-root-owned
+[PASS] artifact-immutable-dir
+[PASS] artifact-partial-cleanup
+[PASS] workspace-repository:upsertWorkspace
+[PASS] workspace-repository:insertArtifact
+[PASS] workspace-repository:listArtifacts
+[PASS] host-integration:createWorkspaceCatalog
+[PASS] host-integration:repositories.workspaces.upsertWorkspace
+[PASS] host-integration:createWorkspaceArtifactStore
+[PASS] host-integration:registerWorkspaceFileTools
+[PASS] host-integration:repositories.workspaces.insertArtifact
+[PASS] live-secret-runtime-generated
+[PASS] migration-sequence-derived
+[PASS] future-version-derived
+[PASS] identity-version-derived
+[PASS] stale-schema-four-test-zero
+[PASS] evidence-symmetric-normalization
+[PASS] evidence-count :: 118
+[PASS] evidence-report :: 118
+[PASS] evidence:OC-FILE-001
+[PASS] evidence:OC-FILE-002
+[PASS] evidence:OC-FILE-003
+[PASS] evidence:OC-FILE-004
+[PASS] evidence:OC-FILE-005
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-detail:STEP008_BASELINE_DOCUMENT_DRIFT.md
+[PASS] issue-detail:STEP008_ARTIFACT_ROOT_INITIALIZATION_FAILURE.md
+[PASS] issue-detail:STEP008_SCHEMA_DERIVED_EXPECTATION_GAP.md
+[PASS] issue-detail:STEP008_REFERENCE_EVIDENCE_WHITESPACE_NORMALIZATION.md
+[PASS] issue-detail:STEP008_SAME_FILE_MUTATION_SERIALIZATION.md
+[PASS] issue-detail:STEP008_PACKAGE_MANIFEST_RELEASE_IDENTITY_DRIFT.md
+[PASS] issue-detail:STEP008_SYNTHETIC_SECRET_FIXTURE_LITERAL.md
+[PASS] recurrence:### Baseline document coherence
+[PASS] recurrence:### Artifact store ownership
+[PASS] recurrence:### Same-file mutation concurrency
+[PASS] recurrence:### Reference evidence normalization
+[PASS] recurrence:### Package manifest release identity
+[PASS] recurrence:### Synthetic secret fixtures
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] stale-step007-pending-zero
+[PASS] step008-windows-pending
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step006-ledger-regression :: step006_pass
+[PASS] step007-model-regression :: step007_pass
+[PASS] step008-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP008_WORKSPACE_AND_FILE_TOOLS checks=187/187 state=PASSED schema=5 workspace=CONFINED tools=6 artifacts=DURABLE

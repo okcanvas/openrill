@@ -1,0 +1,116 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/protocol"
+    },
+    {
+      "path": "packages/config"
+    },
+    {
+      "path": "packages/state"
+    },
+    {
+      "path": "packages/memory"
+    },
+    {
+      "path": "packages/goals"
+    },
+    {
+      "path": "packages/tasks"
+    },
+    {
+      "path": "packages/conversations"
+    },
+    {
+      "path": "packages/task-flows"
+    },
+    {
+      "path": "packages/goal-executor"
+    },
+    {
+      "path": "packages/diagnostics"
+    },
+    {
+      "path": "packages/workspace"
+    },
+    {
+      "path": "packages/model-adapter"
+    },
+    {
+      "path": "packages/model-openai-responses"
+    },
+    {
+      "path": "packages/approval"
+    },
+    {
+      "path": "packages/tool-runtime"
+    },
+    {
+      "path": "packages/tools-memory"
+    },
+    {
+      "path": "packages/tools-goals"
+    },
+    {
+      "path": "packages/tool-discovery"
+    },
+    {
+      "path": "packages/agent-benchmark"
+    },
+    {
+      "path": "packages/skills"
+    },
+    {
+      "path": "packages/agent-kernel"
+    },
+    {
+      "path": "packages/tools-files"
+    },
+    {
+      "path": "packages/sandbox"
+    },
+    {
+      "path": "packages/sandbox-docker"
+    },
+    {
+      "path": "packages/tools-process"
+    },
+    {
+      "path": "packages/automation"
+    },
+    {
+      "path": "packages/browser-runtime"
+    },
+    {
+      "path": "packages/browser-playwright"
+    },
+    {
+      "path": "packages/connectors"
+    },
+    {
+      "path": "packages/extension-sdk"
+    },
+    {
+      "path": "connectors/mattermost"
+    },
+    {
+      "path": "skills/builtin"
+    },
+    {
+      "path": "packages/tools-delegation"
+    },
+    {
+      "path": "services/agent-host"
+    },
+    {
+      "path": "apps/agent-cli"
+    },
+    {
+      "path": "apps/agent-web"
+    },
+    {
+      "path": "apps/desktop"
+    }
+  ]
+}

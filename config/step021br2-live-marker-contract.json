@@ -1,0 +1,23 @@
+{
+  "step": "STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE",
+  "version": "0.21.3-step021br2",
+  "schema": 24,
+  "expectedChecks": "28/28",
+  "liveHarness": "STEP021BR2_H1_WINDOWS_TAP_SUMMARY_PARSER_AND_PLAN_REVISION_RESTART",
+  "fields": {
+    "tap_summary": "LINE_BASED_INTEGER",
+    "line_endings": "LF_CRLF",
+    "numeric_escape": "REGEXP_STRING_REMOVED",
+    "stability": "SEMANTIC_DEFINITION_MATCH",
+    "changed_step": "FRESH_EXECUTION_HISTORY",
+    "mutable_plan": "STABLE_DEFINITION_ONLY",
+    "blocker_guard": "UNBOUNDED_OPEN_EXISTENCE",
+    "retry": "MANUAL_BOUNDED_NEW_ATTEMPT",
+    "decision": "REVISION_SNAPSHOT_STALE_REJECTED",
+    "restart": "CHANGED_STEP_REEXECUTION_DUPLICATE_FREE",
+    "executor": "SINGLE_ACTIVE_STEP",
+    "parallel": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL",
+    "openclaw_reference": "BOUND_CONTROLLER_SOURCE_REAUDITED"
+  }
+}

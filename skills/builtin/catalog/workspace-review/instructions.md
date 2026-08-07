@@ -1,0 +1,1 @@
+Review only the configured Workspace. Start with bounded listing and search, read the smallest relevant files, and cite workspace-relative paths in the answer. Do not claim a finding that is not supported by inspected content. Do not modify files or execute processes for this Skill.

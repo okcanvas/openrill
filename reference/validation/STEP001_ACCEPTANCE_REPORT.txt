@@ -1,0 +1,300 @@
+[PASS] required:package.json
+[PASS] required:pnpm-workspace.yaml
+[PASS] required:pnpm-lock.yaml
+[PASS] required:tsconfig.base.json
+[PASS] required:tsconfig.node.json
+[PASS] required:tsconfig.web.json
+[PASS] required:tsconfig.build.json
+[PASS] required:openrill.mjs
+[PASS] required:config/package-boundaries.json
+[PASS] required:scripts/check-runtime.mjs
+[PASS] required:scripts/check_architecture.py
+[PASS] required:scripts/check-exports.mjs
+[PASS] required:scripts/run-step001-suite.mjs
+[PASS] required:scripts/subprocess_utf8.py
+[PASS] required:scripts/run_step001_acceptance.py
+[PASS] required:scripts/run_step001c_acceptance.py
+[PASS] required:scripts/run_step001d_acceptance.py
+[PASS] required:scripts/sh_run_step001_acceptance.cmd
+[PASS] required:scripts/sh_run_step001_acceptance.sh
+[PASS] required:scripts/sh_run_step001c_acceptance.cmd
+[PASS] required:scripts/sh_run_step001c_acceptance.sh
+[PASS] required:scripts/sh_run_step001d_acceptance.cmd
+[PASS] required:scripts/sh_run_step001d_acceptance.sh
+[PASS] required:docs/adrs/ADR-0004-TYPESCRIPT_MONOREPO_AND_WEB_APPLICATION_BOUNDARY.md
+[PASS] required:docs/adrs/ADR-0014-DEFER_CONTROL_UI_FRAMEWORK_SELECTION.md
+[PASS] required:docs/plans/STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md
+[PASS] required:docs/plans/STEP011_CONTROL_UI_VERTICAL_SLICE.md
+[PASS] required:docs/plans/STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md
+[PASS] obsolete-absent:docs/adrs/ADR-0004-TYPESCRIPT_MONOREPO_AND_VUE_UI.md
+[PASS] obsolete-absent:docs/adrs/ADR-0014-DEFER_VUE_RUNTIME_TO_STEP011.md
+[PASS] obsolete-absent:docs/plans/STEP011_VUE_CONTROL_UI_VERTICAL_SLICE.md
+[PASS] root-package-name :: openrill
+[PASS] root-package-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] root-private
+[PASS] step001-script
+[PASS] reference-source-sha :: 1a4fbe7e05ebd37db79a335749067b715eca900db1071e6d4af1cd5604604e82
+[PASS] reference-evidence-count :: 104
+[PASS] reference-evidence-unique
+[PASS] reference-ui-runtime-observed
+[PASS] reference-live-reverification :: verified=104/104
+[PASS] reference-report :: 104
+[PASS] reference-zip-sha :: 1a4fbe7e05ebd37db79a335749067b715eca900db1071e6d4af1cd5604604e82
+[PASS] workspace-manifest:apps/agent-cli
+[PASS] workspace-manifest:apps/agent-web
+[PASS] workspace-manifest:apps/desktop
+[PASS] workspace-manifest:services/agent-host
+[PASS] workspace-manifest:packages/agent-kernel
+[PASS] workspace-manifest:packages/approval
+[PASS] workspace-manifest:packages/automation
+[PASS] workspace-manifest:packages/browser-runtime
+[PASS] workspace-manifest:packages/config
+[PASS] workspace-manifest:packages/connectors
+[PASS] workspace-manifest:packages/conversations
+[PASS] workspace-manifest:packages/diagnostics
+[PASS] workspace-manifest:packages/extension-sdk
+[PASS] workspace-manifest:packages/model-adapter
+[PASS] workspace-manifest:packages/protocol
+[PASS] workspace-manifest:packages/sandbox
+[PASS] workspace-manifest:packages/skills
+[PASS] workspace-manifest:packages/state
+[PASS] workspace-manifest:packages/tool-runtime
+[PASS] workspace-manifest:packages/tools-files
+[PASS] workspace-manifest:packages/tools-process
+[PASS] workspace-manifest:packages/workspace
+[PASS] workspace-manifest:connectors/mattermost
+[PASS] workspace-manifest:skills/builtin
+[PASS] workspace-package-count :: 24
+[PASS] workspace-package-unique
+[PASS] protocol-leaf
+[PASS] no-openclaw-dependency
+[PASS] ui-runtime-deferred
+[PASS] web-contract:UI_FRAMEWORK_SELECTION = "DEFERRED"
+[PASS] web-contract:UI_FRAMEWORK_DECISION_STEP = "STEP010A"
+[PASS] web-contract:UI_RUNTIME_INTRODUCTION_STEP = "STEP011"
+[PASS] web-contract:stateAccess: "LOCAL_PROTOCOL_ONLY"
+[PASS] no-fixed-vue-contract
+[PASS] lockfile-version
+[PASS] workspace-auto-install-peers-explicit
+[PASS] workspace-auto-install-peers-false-zero
+[PASS] lock-auto-install-peers-aligned
+[PASS] lock-auto-install-peers-false-zero
+[PASS] lock-importer:packages/agent-kernel :: dependency-importer
+[PASS] lock-importer:packages/approval :: dependency-importer
+[PASS] lock-importer:packages/automation :: dependency-importer
+[PASS] lock-importer:packages/browser-runtime :: dependency-importer
+[PASS] lock-importer:apps/agent-cli :: dependency-importer
+[PASS] lock-importer:packages/config :: dependency-importer
+[PASS] lock-importer:connectors/mattermost :: dependency-importer
+[PASS] lock-importer:packages/connectors :: dependency-importer
+[PASS] lock-importer:packages/conversations :: dependency-importer
+[PASS] lock-importer:apps/desktop :: dependency-importer
+[PASS] lock-importer:packages/diagnostics :: dependency-importer
+[PASS] lock-importer:packages/extension-sdk :: dependency-importer
+[PASS] lock-importer:services/agent-host :: dependency-importer
+[PASS] lock-importer:packages/model-adapter :: dependency-importer
+[PASS] lock-importer:packages/protocol :: empty-object-importer
+[PASS] lock-importer:packages/sandbox :: dependency-importer
+[PASS] lock-importer:packages/skills :: dependency-importer
+[PASS] lock-importer:skills/builtin :: dependency-importer
+[PASS] lock-importer:packages/state :: dependency-importer
+[PASS] lock-importer:packages/tool-runtime :: dependency-importer
+[PASS] lock-importer:packages/tools-files :: dependency-importer
+[PASS] lock-importer:packages/tools-process :: dependency-importer
+[PASS] lock-importer:apps/agent-web :: dependency-importer
+[PASS] lock-importer:packages/workspace :: dependency-importer
+[PASS] lock-no-null-importer
+[PASS] lock-snapshots-materialized
+[PASS] plan-count :: 30
+[PASS] plan-heading:STEP000A_OPENRILL_PRODUCT_IDENTITY_NORMALIZATION.md:## 목적
+[PASS] plan-heading:STEP000A_OPENRILL_PRODUCT_IDENTITY_NORMALIZATION.md:## Reference Evidence
+[PASS] plan-heading:STEP000A_OPENRILL_PRODUCT_IDENTITY_NORMALIZATION.md:## 구현 범위
+[PASS] plan-heading:STEP000A_OPENRILL_PRODUCT_IDENTITY_NORMALIZATION.md:## Acceptance
+[PASS] plan-heading:STEP000A_OPENRILL_PRODUCT_IDENTITY_NORMALIZATION.md:## 제외
+[PASS] plan-heading:STEP000_REFERENCE_AUDIT_AND_CLEAN_REDESIGN_BASELINE.md:## 목적
+[PASS] plan-heading:STEP000_REFERENCE_AUDIT_AND_CLEAN_REDESIGN_BASELINE.md:## Reference Evidence
+[PASS] plan-heading:STEP000_REFERENCE_AUDIT_AND_CLEAN_REDESIGN_BASELINE.md:## 구현 범위
+[PASS] plan-heading:STEP000_REFERENCE_AUDIT_AND_CLEAN_REDESIGN_BASELINE.md:## Acceptance
+[PASS] plan-heading:STEP000_REFERENCE_AUDIT_AND_CLEAN_REDESIGN_BASELINE.md:## 제외
+[PASS] plan-heading:STEP001A_PNPM_LOCKFILE_REPAIR.md:## 목적
+[PASS] plan-heading:STEP001A_PNPM_LOCKFILE_REPAIR.md:## Reference Evidence
+[PASS] plan-heading:STEP001A_PNPM_LOCKFILE_REPAIR.md:## 구현 범위
+[PASS] plan-heading:STEP001A_PNPM_LOCKFILE_REPAIR.md:## Acceptance
+[PASS] plan-heading:STEP001A_PNPM_LOCKFILE_REPAIR.md:## 제외
+[PASS] plan-heading:STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT.md:## 목적
+[PASS] plan-heading:STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT.md:## Reference Evidence
+[PASS] plan-heading:STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT.md:## 구현 범위
+[PASS] plan-heading:STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT.md:## Acceptance
+[PASS] plan-heading:STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT.md:## 제외
+[PASS] plan-heading:STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE.md:## 목적
+[PASS] plan-heading:STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE.md:## Reference Evidence
+[PASS] plan-heading:STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE.md:## 구현 범위
+[PASS] plan-heading:STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE.md:## Acceptance
+[PASS] plan-heading:STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE.md:## 제외
+[PASS] plan-heading:STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md:## 목적
+[PASS] plan-heading:STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md:## Reference Evidence
+[PASS] plan-heading:STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md:## 구현 범위
+[PASS] plan-heading:STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md:## Acceptance
+[PASS] plan-heading:STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION.md:## 제외
+[PASS] plan-heading:STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION.md:## 목적
+[PASS] plan-heading:STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION.md:## Reference Evidence
+[PASS] plan-heading:STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION.md:## 구현 범위
+[PASS] plan-heading:STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION.md:## Acceptance
+[PASS] plan-heading:STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION.md:## 제외
+[PASS] plan-heading:STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md:## 목적
+[PASS] plan-heading:STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md:## Reference Evidence
+[PASS] plan-heading:STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md:## 구현 범위
+[PASS] plan-heading:STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md:## Acceptance
+[PASS] plan-heading:STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md:## 제외
+[PASS] plan-heading:STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md:## 목적
+[PASS] plan-heading:STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md:## Reference Evidence
+[PASS] plan-heading:STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md:## 구현 범위
+[PASS] plan-heading:STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md:## Acceptance
+[PASS] plan-heading:STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md:## 제외
+[PASS] plan-heading:STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md:## 목적
+[PASS] plan-heading:STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md:## Reference Evidence
+[PASS] plan-heading:STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md:## 구현 범위
+[PASS] plan-heading:STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md:## Acceptance
+[PASS] plan-heading:STEP002_CLI_AND_LOCAL_HOST_LIFECYCLE.md:## 제외
+[PASS] plan-heading:STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md:## 목적
+[PASS] plan-heading:STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md:## Reference Evidence
+[PASS] plan-heading:STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md:## 구현 범위
+[PASS] plan-heading:STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md:## Acceptance
+[PASS] plan-heading:STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md:## 제외
+[PASS] plan-heading:STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md:## 목적
+[PASS] plan-heading:STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md:## Reference Evidence
+[PASS] plan-heading:STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md:## 구현 범위
+[PASS] plan-heading:STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md:## Acceptance
+[PASS] plan-heading:STEP003_CONFIG_SNAPSHOT_AND_SECRET_REFERENCES.md:## 제외
+[PASS] plan-heading:STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md:## 목적
+[PASS] plan-heading:STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md:## Reference Evidence
+[PASS] plan-heading:STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md:## 구현 범위
+[PASS] plan-heading:STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md:## Acceptance
+[PASS] plan-heading:STEP004_LOCAL_PROTOCOL_AND_AUTHENTICATED_WEBSOCKET.md:## 제외
+[PASS] plan-heading:STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md:## 목적
+[PASS] plan-heading:STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md:## Reference Evidence
+[PASS] plan-heading:STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md:## 구현 범위
+[PASS] plan-heading:STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md:## Acceptance
+[PASS] plan-heading:STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md:## 제외
+[PASS] plan-heading:STEP006_CONVERSATION_AND_EVENT_LEDGER.md:## 목적
+[PASS] plan-heading:STEP006_CONVERSATION_AND_EVENT_LEDGER.md:## Reference Evidence
+[PASS] plan-heading:STEP006_CONVERSATION_AND_EVENT_LEDGER.md:## 구현 범위
+[PASS] plan-heading:STEP006_CONVERSATION_AND_EVENT_LEDGER.md:## Acceptance
+[PASS] plan-heading:STEP006_CONVERSATION_AND_EVENT_LEDGER.md:## 제외
+[PASS] plan-heading:STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md:## 목적
+[PASS] plan-heading:STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md:## Reference Evidence
+[PASS] plan-heading:STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md:## 구현 범위
+[PASS] plan-heading:STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md:## Acceptance
+[PASS] plan-heading:STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md:## 제외
+[PASS] plan-heading:STEP008_WORKSPACE_AND_FILE_TOOLS.md:## 목적
+[PASS] plan-heading:STEP008_WORKSPACE_AND_FILE_TOOLS.md:## Reference Evidence
+[PASS] plan-heading:STEP008_WORKSPACE_AND_FILE_TOOLS.md:## 구현 범위
+[PASS] plan-heading:STEP008_WORKSPACE_AND_FILE_TOOLS.md:## Acceptance
+[PASS] plan-heading:STEP008_WORKSPACE_AND_FILE_TOOLS.md:## 제외
+[PASS] plan-heading:STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md:## 목적
+[PASS] plan-heading:STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md:## Reference Evidence
+[PASS] plan-heading:STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md:## 구현 범위
+[PASS] plan-heading:STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md:## Acceptance
+[PASS] plan-heading:STEP009_PROCESS_TOOL_AND_APPROVAL_RESUME.md:## 제외
+[PASS] plan-heading:STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md:## 목적
+[PASS] plan-heading:STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md:## Reference Evidence
+[PASS] plan-heading:STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md:## 구현 범위
+[PASS] plan-heading:STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md:## Acceptance
+[PASS] plan-heading:STEP010A_CONTROL_UI_FRAMEWORK_SELECTION.md:## 제외
+[PASS] plan-heading:STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md:## 목적
+[PASS] plan-heading:STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md:## Reference Evidence
+[PASS] plan-heading:STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md:## 구현 범위
+[PASS] plan-heading:STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md:## Acceptance
+[PASS] plan-heading:STEP010_SKILL_DISCOVERY_AND_RUN_SNAPSHOT.md:## 제외
+[PASS] plan-heading:STEP011_CONTROL_UI_VERTICAL_SLICE.md:## 목적
+[PASS] plan-heading:STEP011_CONTROL_UI_VERTICAL_SLICE.md:## Reference Evidence
+[PASS] plan-heading:STEP011_CONTROL_UI_VERTICAL_SLICE.md:## 구현 범위
+[PASS] plan-heading:STEP011_CONTROL_UI_VERTICAL_SLICE.md:## Acceptance
+[PASS] plan-heading:STEP011_CONTROL_UI_VERTICAL_SLICE.md:## 제외
+[PASS] plan-heading:STEP012_AUTOMATION_SCHEDULER.md:## 목적
+[PASS] plan-heading:STEP012_AUTOMATION_SCHEDULER.md:## Reference Evidence
+[PASS] plan-heading:STEP012_AUTOMATION_SCHEDULER.md:## 구현 범위
+[PASS] plan-heading:STEP012_AUTOMATION_SCHEDULER.md:## Acceptance
+[PASS] plan-heading:STEP012_AUTOMATION_SCHEDULER.md:## 제외
+[PASS] plan-heading:STEP013_BROWSER_TOOL.md:## 목적
+[PASS] plan-heading:STEP013_BROWSER_TOOL.md:## Reference Evidence
+[PASS] plan-heading:STEP013_BROWSER_TOOL.md:## 구현 범위
+[PASS] plan-heading:STEP013_BROWSER_TOOL.md:## Acceptance
+[PASS] plan-heading:STEP013_BROWSER_TOOL.md:## 제외
+[PASS] plan-heading:STEP014_SUBSESSION_AND_DELEGATED_WORK.md:## 목적
+[PASS] plan-heading:STEP014_SUBSESSION_AND_DELEGATED_WORK.md:## Reference Evidence
+[PASS] plan-heading:STEP014_SUBSESSION_AND_DELEGATED_WORK.md:## 구현 범위
+[PASS] plan-heading:STEP014_SUBSESSION_AND_DELEGATED_WORK.md:## Acceptance
+[PASS] plan-heading:STEP014_SUBSESSION_AND_DELEGATED_WORK.md:## 제외
+[PASS] plan-heading:STEP015_SANDBOX_BACKEND.md:## 목적
+[PASS] plan-heading:STEP015_SANDBOX_BACKEND.md:## Reference Evidence
+[PASS] plan-heading:STEP015_SANDBOX_BACKEND.md:## 구현 범위
+[PASS] plan-heading:STEP015_SANDBOX_BACKEND.md:## Acceptance
+[PASS] plan-heading:STEP015_SANDBOX_BACKEND.md:## 제외
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## 목적
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## Reference Evidence
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## 구현 범위
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## Acceptance
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## 제외
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 목적
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## Reference Evidence
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 구현 범위
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## Acceptance
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 제외
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 목적
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## Reference Evidence
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 구현 범위
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## Acceptance
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 제외
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 목적
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Reference Evidence
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 구현 범위
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Acceptance
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 제외
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 목적
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Reference Evidence
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 구현 범위
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Acceptance
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 제외
+[PASS] markdown-links :: checked=40 broken=[]
+[PASS] cli-entrypoint-path-to-file-url
+[PASS] cli-entrypoint-legacy-url-zero
+[PASS] step001-suite :: suite_pass
+[PASS] cli-version :: OpenRill 0.6.0-step006
+[PASS] cli-help :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  config path       Show profile config and snapshot paths
+  config validate   Parse, include-resolve, validate, and snapshot config
+  config show       Show the redacted materialized config
+  config init       Atomically create the minimal agent.yaml
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind override for start/run (default config: 127.0.0.1)
+  --port <port>         Port override for start/run; 0 selects an ephemeral port (default config: 47117)
+  --force               Reclaim an old unverified Host lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP003 start/run remain foreground commands. OS background service installation begins in STEP019.
+STEP003 config output is redacted. Secret values are resolved only at point of use.
+[PASS] cli-start-loopback-guard :: loopback_guard_pass
+[PASS] dist-package-count :: 24
+[PASS] web-built-deferred
+[PASS] runtime-directories-zero
+[PASS] database-files-zero
+[PASS] protected-payload-zero
+[PASS] windows-cmd-crlf
+[PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=274/274 state=PASSED packages=24 evidence=104 ui_framework=DEFERRED

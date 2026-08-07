@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "acceptedStep": "STEP012BR1_HISTORICAL_ACCEPTANCE_BASELINE_OWNERSHIP",
+  "acceptedZipSha256": "b90721d4d24f7467355f1f2dcd7e94d65f03517a7f60ff8208fa0c915f6ccbde",
+  "acceptedMarker": "STEP012BR1_HISTORICAL_ACCEPTANCE_BASELINE_OWNERSHIP checks=187/187 state=PASSED schema=8 scope=HISTORICAL_BASELINE_DELEGATED scheduler=WAKE_TIMER claim=TRANSACTIONAL lease=RENEWED recovery=CLAIM_REQUEUE_RUNNING_FAIL catch_up=SKIP_RUN_ONCE_BOUNDED shutdown=ASYNC_QUIESCENT executor=INJECTED_FAIL_CLOSED protocol_ui=DEFERRED browser_regression=CHROMIUM",
+  "browserSurfaceSha256": {
+    "apps/agent-web/src/browser-app.ts": "791bdcf3e99acbb5d22791f694bfdbeafa44de3ec8d216af76e121e63ef6956c",
+    "apps/agent-web/src/control-ui-projection.ts": "d8520bd4e4abd9a018a974eb5a300065c6305caf5356bd0d3c1c6b02ce1d520d",
+    "apps/agent-web/src/api/local-protocol-client.ts": "160d08da6db8bf16bdb4b66347695ff4d245dd9d6dd09436c90d8672485bad1e",
+    "apps/agent-web/public/index.html": "a9ec565e50d59ece95c8c0e4f35c69632204ae690974a65928ebf2e2d37a26f9",
+    "apps/agent-web/public/assets/app.css": "111912a581b598da128d560f10a3d4f6bd539492c452dd4e5a3efbf5d0a365d0",
+    "apps/agent-web/public/assets/favicon.svg": "9298440e25c475b55dd3b5ebea6bc3bd610a27feba342a37401bd5f3ade3fab3"
+  },
+  "normalizedLiveScriptSha256": "4b15d7b7a953b35e6f69e17ae9b9f94a0cb58e8b50c8a9292956bb3a15cad8d3",
+  "allowedLiveScriptDelta": "State schema literal 8 replaced by OPENRILL_STATE_SCHEMA_VERSION import/reference only"
+}

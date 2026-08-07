@@ -1,0 +1,176 @@
+[PASS] root-version :: 0.12.2-step012b
+[PASS] package-manager
+[PASS] step012b-script
+[PASS] step012b-package-script
+[PASS] required:packages/automation/src/scheduler.ts
+[PASS] required:packages/automation/src/errors.ts
+[PASS] required:packages/automation/src/types.ts
+[PASS] required:packages/automation/src/index.ts
+[PASS] required:packages/automation/README.md
+[PASS] required:packages/state/src/automation-repository.ts
+[PASS] required:services/agent-host/src/lifecycle.ts
+[PASS] required:services/agent-host/package.json
+[PASS] required:tests/unit/automation-scheduler-step012b.test.mjs
+[PASS] required:tests/unit/automation-step012a.test.mjs
+[PASS] required:scripts/run_step012b_acceptance.py
+[PASS] required:scripts/sh_run_step012b_acceptance.cmd
+[PASS] required:scripts/sh_run_step012b_acceptance.sh
+[PASS] required:scripts/package_step012b.py
+[PASS] required:docs/plans/STEP012B_AUTOMATION_SCHEDULER_LIFECYCLE_LEASE_AND_RECOVERY.md
+[PASS] required:docs/plans/STEP012_AUTOMATION_SCHEDULER.md
+[PASS] required:reference/validation/STEP012AR1_WINDOWS_LIVE_ACCEPTED.md
+[PASS] required:reference/validation/STEP012AR1_ACCEPTANCE_REPORT.txt
+[PASS] required:reference/validation/STEP012B_ACCEPTANCE_REPORT.txt
+[PASS] required:reference/validation/STEP012B_HISTORICAL_MANIFEST_FIXTURE_IDENTITY_DRIFT.md
+[PASS] required:reference/validation/STEP012B_HOST_READINESS_METADATA_WRITE_AFTER_CLOSE.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.12.2-step012b"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP012B_AUTOMATION_SCHEDULER_LIFECYCLE_LEASE_AND_RECOVERY 0.12.2-step012b
+[PASS] schema-remains-eight
+[PASS] migration-nine-zero
+[PASS] scheduler-exported
+[PASS] scheduler-types-exported
+[PASS] scheduler-errors
+[PASS] scheduler-injected-executor
+[PASS] scheduler-start-wake-close
+[PASS] scheduler-timer-unref
+[PASS] scheduler-wake-single-flight
+[PASS] scheduler-close-idempotent
+[PASS] scheduler-close-awaits-wake
+[PASS] due-materialization-owned
+[PASS] due-expected-cursor
+[PASS] due-enabled-conditional
+[PASS] claim-pending-only
+[PASS] claim-attempt-increment
+[PASS] running-owner-expiry
+[PASS] renew-owner-expiry
+[PASS] finish-owner-expiry
+[PASS] finish-clears-lease
+[PASS] finish-runtime-transaction
+[PASS] recover-expired-only
+[PASS] recover-claim-requeue
+[PASS] recover-running-fail
+[PASS] next-wake-pending-first
+[PASS] catchup-skip
+[PASS] catchup-run-once
+[PASS] catchup-bounded
+[PASS] regular-one-occurrence
+[PASS] claim-transactional-path
+[PASS] lease-renewal-path
+[PASS] terminal-path
+[PASS] lease-loss-fail-closed
+[PASS] executor-throw-durable-failure
+[PASS] run-limits-bounded
+[PASS] host-automation-dependency
+[PASS] lock-automation-dependency
+[PASS] host-executor-option
+[PASS] host-scheduler-composition
+[PASS] host-enabled-fail-closed
+[PASS] host-start-await
+[PASS] host-close-order
+[PASS] host-readiness-owned
+[PASS] host-readiness-close-quiescence
+[PASS] host-metadata-write-serialized
+[PASS] host-ready-rejection-observed
+[PASS] boundary-no-protocol-import
+[PASS] boundary-no-conversation-import
+[PASS] boundary-no-model-import
+[PASS] boundary-no-ui-import
+[PASS] boundary-no-automation-protocol-op
+[PASS] boundary-no-automation-ui-route
+[PASS] boundary-doc-exclusions
+[PASS] focused-catchup-source
+[PASS] focused-regular-source
+[PASS] focused-renewal-source
+[PASS] focused-two-owner-source
+[PASS] focused-recovery-source
+[PASS] focused-quiescence-source
+[PASS] focused-host-source
+[PASS] focused-close-before-ready-source
+[PASS] recurrence-step012b
+[PASS] issue-registry-through-060
+[PASS] issue-detail-059
+[PASS] historical-fixture-current-identity
+[PASS] historical-fixture-release-literal-zero
+[PASS] issue-detail-060
+[PASS] accepted-step-evidence
+[PASS] accepted-artifact-sha
+[PASS] accepted-marker-exact
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## Catch-up 계약
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-current-step:README.md
+[PASS] baseline-current-version:README.md
+[PASS] baseline-accepted-step:README.md
+[PASS] baseline-accepted-sha:README.md
+[PASS] baseline-feature:README.md
+[PASS] baseline-history:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-stale-zero:README.md
+[PASS] baseline-current-step:HANDOFF.md
+[PASS] baseline-current-version:HANDOFF.md
+[PASS] baseline-accepted-step:HANDOFF.md
+[PASS] baseline-accepted-sha:HANDOFF.md
+[PASS] baseline-feature:HANDOFF.md
+[PASS] baseline-history:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-stale-zero:HANDOFF.md
+[PASS] baseline-current-step:PLANS.md
+[PASS] baseline-current-version:PLANS.md
+[PASS] baseline-accepted-step:PLANS.md
+[PASS] baseline-accepted-sha:PLANS.md
+[PASS] baseline-feature:PLANS.md
+[PASS] baseline-history:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-stale-zero:PLANS.md
+[PASS] baseline-current-step:ROADMAP.md
+[PASS] baseline-current-version:ROADMAP.md
+[PASS] baseline-accepted-step:ROADMAP.md
+[PASS] baseline-accepted-sha:ROADMAP.md
+[PASS] baseline-feature:ROADMAP.md
+[PASS] baseline-history:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-stale-zero:ROADMAP.md
+[PASS] baseline-current-step:VALIDATION.md
+[PASS] baseline-current-version:VALIDATION.md
+[PASS] baseline-accepted-step:VALIDATION.md
+[PASS] baseline-accepted-sha:VALIDATION.md
+[PASS] baseline-feature:VALIDATION.md
+[PASS] baseline-history:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] baseline-stale-zero:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] package-manifest-initial :: OPENRILL_PACKAGE_MANIFEST_PASS declared=670 actual=670 missing=0 extra=0 changed=0
+[PASS] focused-build :: build_pass
+[PASS] focused-step012a-regression :: step012a_tests_pass
+[PASS] focused-scheduler-tests :: scheduler_tests_pass
+[PASS] canonical-suite :: suite_pass
+[FAIL] step012ar1-full-regression :: STEP012AR1_ACCEPTANCE_REPORT_IMMUTABILITY_AND_MANIFEST_DIAGNOSTICS checks=162/163 state=FAILED schema=8 reports=ARTIFACT_ISOLATED manifest=PRE_POST_VERIFIED diagnostics=CHANGED_PATHS feature=STEP012A schedules=AT_INTERVAL_CRON timezone=IANA dst=SKIP_GAP_REPEAT_INSTANT config_runtime=SEPARATED run_identity=UNIQUE browser_regression=CHROMIUM prerequisite=runtime_unavailable
+[PASS] nested-step012ar1-report-artifact :: .artifacts/nested/STEP012AR1_ACCEPTANCE_REPORT.txt
+[PASS] nested-step012ar1-packaged-report-immutable :: before=e666aaa72e937dc8944550a050f937526f509be95b4adb683ce46a7a4afdbfb4 after=e666aaa72e937dc8944550a050f937526f509be95b4adb683ce46a7a4afdbfb4
+[PASS] package-manifest-final :: OPENRILL_PACKAGE_MANIFEST_PASS declared=670 actual=670 missing=0 extra=0 changed=0
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP012B_AUTOMATION_SCHEDULER_LIFECYCLE_LEASE_AND_RECOVERY checks=174/175 state=FAILED schema=8 scheduler=WAKE_TIMER claim=TRANSACTIONAL lease=RENEWED recovery=CLAIM_REQUEUE_RUNNING_FAIL catch_up=SKIP_RUN_ONCE_BOUNDED shutdown=ASYNC_QUIESCENT executor=INJECTED_FAIL_CLOSED protocol_ui=DEFERRED browser_regression=CHROMIUM

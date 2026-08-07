@@ -1,0 +1,25 @@
+node_modules/
+dist/
+coverage/
+.artifacts/
+runtime-data/
+
+# Local runtime configuration and credentials.
+.env
+.env.*
+!.env.example
+!**/.env.example
+!**/.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# SQLite/runtime state.
+*.db
+*.db-wal
+*.db-shm
+
+# Python caches.
+__pycache__/
+*.py[cod]

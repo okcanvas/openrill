@@ -1,0 +1,35 @@
+{
+  "id": "agent-memory-preference-recall",
+  "title": "Durable memory preference recall",
+  "category": "memory",
+  "risk": "medium",
+  "executor": "memory-preference-recall",
+  "coverage": {
+    "primary": [
+      "memory.preference-recall"
+    ],
+    "secondary": [
+      "memory.provenance",
+      "memory.workspace-isolation"
+    ]
+  },
+  "capabilities": [
+    "memory.remember",
+    "memory.search",
+    "memory.get"
+  ],
+  "objective": "Verify an explicit preference remembered in one Conversation is grounded and recalled in another Conversation with durable provenance.",
+  "successCriteria": [
+    "The remember turn completes through memory.remember.",
+    "A later Conversation searches and gets the exact memory before answering.",
+    "The recalled answer is grounded in the stored record and provenance."
+  ],
+  "budget": {
+    "maxDurationMs": 15000,
+    "maxTurns": 8,
+    "maxModelCalls": 8,
+    "maxToolCalls": 6,
+    "maxTotalTokens": 4096
+  },
+  "defaultRepetitions": 2
+}

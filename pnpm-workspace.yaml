@@ -1,0 +1,12 @@
+packages:
+  - apps/*
+  - services/*
+  - packages/*
+  - connectors/*
+  - skills/*
+
+catalogMode: strict
+autoInstallPeers: true
+linkWorkspacePackages: true
+preferWorkspacePackages: true
+verifyDepsBeforeRun: error

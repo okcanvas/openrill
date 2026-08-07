@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "rules": {
+    "protocolLeaf": "@openrill/protocol",
+    "applicationPrefixes": [
+      "apps/"
+    ],
+    "servicePrefixes": [
+      "services/"
+    ],
+    "uiPackages": [
+      "@openrill/web",
+      "@openrill/desktop"
+    ],
+    "forbiddenProductDependencies": [
+      "openclaw",
+      "@openclaw/"
+    ],
+    "uiRuntimePackages": [
+      "react",
+      "react-dom",
+      "vue",
+      "lit",
+      "svelte",
+      "solid-js",
+      "preact",
+      "@angular/core"
+    ]
+  },
+  "owners": {
+    "@openrill/protocol": {
+      "path": "packages/protocol",
+      "description": "Wire-neutral identifiers and protocol foundation types."
+    },
+    "@openrill/config": {
+      "path": "packages/config",
+      "description": "Configuration contract ownership boundary."
+    },
+    "@openrill/state": {
+      "path": "packages/state",
+      "description": "Authoritative local state boundary."
+    },
+    "@openrill/conversations": {
+      "path": "packages/conversations",
+      "description": "Conversation and transcript boundary."
+    },
+    "@openrill/diagnostics": {
+      "path": "packages/diagnostics",
+      "description": "Structured diagnostic result boundary."
+    },
+    "@openrill/workspace": {
+      "path": "packages/workspace",
+      "description": "Workspace identity and lifecycle boundary."
+    },
+    "@openrill/model-adapter": {
+      "path": "packages/model-adapter",
+      "description": "Model provider abstraction boundary."
+    },
+    "@openrill/model-openai-responses": {
+      "path": "packages/model-openai-responses",
+      "description": "Built-in OpenAI-compatible Responses provider adapter."
+    },
+    "@openrill/approval": {
+      "path": "packages/approval",
+      "description": "Durable approval decision boundary."
+    },
+    "@openrill/tool-runtime": {
+      "path": "packages/tool-runtime",
+      "description": "Tool registration and execution boundary."
+    },
+    "@openrill/skills": {
+      "path": "packages/skills",
+      "description": "Skill discovery and immutable run snapshot boundary."
+    },
+    "@openrill/agent-kernel": {
+      "path": "packages/agent-kernel",
+      "description": "Agent execution orchestration boundary."
+    },
+    "@openrill/tools-files": {
+      "path": "packages/tools-files",
+      "description": "Filesystem tools boundary."
+    },
+    "@openrill/tools-process": {
+      "path": "packages/tools-process",
+      "description": "Process tools boundary."
+    },
+    "@openrill/automation": {
+      "path": "packages/automation",
+      "description": "Local automation scheduler boundary."
+    },
+    "@openrill/browser-runtime": {
+      "path": "packages/browser-runtime",
+      "description": "Browser tool runtime boundary."
+    },
+    "@openrill/browser-playwright": {
+      "path": "packages/browser-playwright",
+      "description": "Concrete Playwright binding and Chromium executable adapter boundary."
+    },
+    "@openrill/sandbox": {
+      "path": "packages/sandbox",
+      "description": "Optional sandbox backend boundary."
+    },
+    "@openrill/connectors": {
+      "path": "packages/connectors",
+      "description": "Connector normalization and delivery boundary."
+    },
+    "@openrill/extension-sdk": {
+      "path": "packages/extension-sdk",
+      "description": "Narrow extension SDK boundary."
+    },
+    "@openrill/connector-mattermost": {
+      "path": "connectors/mattermost",
+      "description": "Mattermost connector package boundary."
+    },
+    "@openrill/skills-builtin": {
+      "path": "skills/builtin",
+      "description": "Built-in skill catalogue boundary."
+    },
+    "@openrill/cli": {
+      "path": "apps/agent-cli",
+      "description": "OpenRill command-line application boundary."
+    },
+    "@openrill/web": {
+      "path": "apps/agent-web",
+      "description": "Browser Control UI application boundary."
+    },
+    "@openrill/desktop": {
+      "path": "apps/desktop",
+      "description": "Desktop shell application boundary."
+    },
+    "@openrill/host": {
+      "path": "services/agent-host",
+      "description": "Local Host composition root boundary."
+    }
+  }
+}

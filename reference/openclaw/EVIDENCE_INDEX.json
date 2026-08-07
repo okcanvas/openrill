@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "OC-ID-001",
+    "domain": "identity",
+    "statement": "패키지 이름은 openclaw이다.",
+    "needle": "\"name\": \"openclaw\"",
+    "path": "package.json",
+    "line": 2,
+    "excerpt": "\"name\": \"openclaw\","
+  },
+  {
+    "id": "OC-ID-002",
+    "domain": "identity",
+    "statement": "분석 기준 버전은 2026.7.2이다.",
+    "needle": "\"version\": \"2026.7.2\"",
+    "path": "package.json",
+    "line": 3,
+    "excerpt": "\"version\": \"2026.7.2\","
+  },
+  {
+    "id": "OC-ID-003",
+    "domain": "identity",
+    "statement": "소스 라이선스는 MIT이다.",
+    "needle": "\"license\": \"MIT\"",
+    "path": "package.json",
+    "line": 16,
+    "excerpt": "\"license\": \"MIT\","
+  },
+  {
+    "id": "OC-CLI-001",
+    "domain": "cli",
+    "statement": "런처가 지원 Node 런타임 하한을 직접 검사한다.",
+    "needle": "const MIN_NODE_22",
+    "path": "openclaw.mjs",
+    "line": 11,
+    "excerpt": "const MIN_NODE_22 = { major: 22, minor: 22, patch: 3 };"
+  },
+  {
+    "id": "OC-CLI-002",
+    "domain": "cli",
+    "statement": "런처가 자식 프로세스 respawn과 signal 전달을 소유한다.",
+    "needle": "const runRespawnedChild",
+    "path": "openclaw.mjs",
+    "line": 141,
+    "excerpt": "const runRespawnedChild = (command, args, env) => {"
+  },
+  {
+    "id": "OC-CLI-003",
+    "domain": "cli",
+    "statement": "TypeScript 진입점이 wrapper/entry 관계를 확인한다.",
+    "needle": "const ENTRY_WRAPPER_PAIRS",
+    "path": "src/entry.ts",
+    "line": 35,
+    "excerpt": "const ENTRY_WRAPPER_PAIRS = ["
+  },
+  {
+    "id": "OC-CLI-004",
+    "domain": "cli",
+    "statement": "gateway run에 대한 빠른 경로가 존재한다.",
+    "needle": "tryRunGatewayRunFastPath",
+    "path": "src/cli/run-main.ts",
+    "line": 158,
+    "excerpt": "async function tryRunGatewayRunFastPath("
+  },
+  {
+    "id": "OC-CLI-005",
+    "domain": "cli",
+    "statement": "검증된 설정 이후 플러그인 CLI를 지연 등록한다.",
+    "needle": "registerPluginCliCommandsFromValidatedConfig",
+    "path": "src/cli/run-main.ts",
+    "line": 1530,
+    "excerpt": "const { registerPluginCliCommandsFromValidatedConfig } ="
+  },
+  {
+    "id": "OC-GW-001",
+    "domain": "gateway",
+    "statement": "Gateway 수명주기 루프가 별도 함수로 분리되어 있다.",
+    "needle": "export async function runGatewayLoop",
+    "path": "src/cli/gateway-cli/run-loop.ts",
+    "line": 118,
+    "excerpt": "export async function runGatewayLoop(params: {"
+  },
+  {
+    "id": "OC-GW-002",
+    "domain": "gateway",
+    "statement": "Gateway 서버 시작이 별도 진입점으로 분리되어 있다.",
+    "needle": "export async function startGatewayServer",
+    "path": "src/gateway/server-start.ts",
+    "line": 101,
+    "excerpt": "export async function startGatewayServer("
+  },
+  {
+    "id": "OC-GW-003",
+    "domain": "gateway",
+    "statement": "시작 단계가 bootstrap으로 시작한다.",
+    "needle": "prepareGatewayServerBootstrap({",
+    "path": "src/gateway/server-start.ts",
+    "line": 109,
+    "excerpt": "const bootstrap = await prepareGatewayServerBootstrap({"
+  },
+  {
+    "id": "OC-GW-004",
+    "domain": "gateway",
+    "statement": "bootstrap 다음 runtime state 준비 단계가 있다.",
+    "needle": "prepareGatewayRuntimeState({",
+    "path": "src/gateway/server-start.ts",
+    "line": 117,
+    "excerpt": "const runtime = await prepareGatewayRuntimeState({"
+  },
+  {
+    "id": "OC-GW-005",
+    "domain": "gateway",
+    "statement": "lifecycle 준비 단계가 분리되어 있다.",
+    "needle": "prepareGatewayLifecycle({",
+    "path": "src/gateway/server-start.ts",
+    "line": 130,
+    "excerpt": "const lifecycleRuntime = await prepareGatewayLifecycle({"
+  },
+  {
+    "id": "OC-GW-006",
+    "domain": "gateway",
+    "statement": "core runtime 시작 단계가 분리되어 있다.",
+    "needle": "startGatewayCoreRuntime({",
+    "path": "src/gateway/server-start.ts",
+    "line": 151,
+    "excerpt": "const coreRuntime = await startGatewayCoreRuntime({"
+  },
+  {
+    "id": "OC-GW-007",
+    "domain": "gateway",
+    "statement": "listen 이후 후속 시작 단계를 완료한다.",
+    "needle": "finishGatewayStartup({",
+    "path": "src/gateway/server-start.ts",
+    "line": 163,
+    "excerpt": "await finishGatewayStartup({"
+  },
+  {
+    "id": "OC-GW-008",
+    "domain": "gateway",
+    "statement": "HTTP 서버와 분리된 noServer WebSocket 구성이 사용된다.",
+    "needle": "new WebSocketServer",
+    "path": "src/gateway/server-runtime-state.ts",
+    "line": 299,
+    "excerpt": "const wss = new WebSocketServer({"
+  },
+  {
+    "id": "OC-GW-009",
+    "domain": "gateway",
+    "statement": "listen 전에 upgrade handler를 결합한다.",
+    "needle": "attachGatewayUpgradeHandler({",
+    "path": "src/gateway/server-runtime-state.ts",
+    "line": 334,
+    "excerpt": "attachGatewayUpgradeHandler({"
+  },
+  {
+    "id": "OC-GW-010",
+    "domain": "gateway",
+    "statement": "WebSocket 메시지 핸들러가 handshake/auth/request dispatch를 소유한다.",
+    "needle": "export function attachGatewayWsMessageHandler",
+    "path": "src/gateway/server/ws-connection/message-handler.ts",
+    "line": 75,
+    "excerpt": "export function attachGatewayWsMessageHandler(params: GatewayWsMessageHandlerParams) {"
+  },
+  {
+    "id": "OC-GW-011",
+    "domain": "gateway",
+    "statement": "신뢰하지 않는 proxy header를 로컬 신뢰로 승격하지 않는다.",
+    "needle": "Proxy headers detected from untrusted address",
+    "path": "src/gateway/server/ws-connection/message-handler.ts",
+    "line": 148,
+    "excerpt": "\"Proxy headers detected from untrusted address. \" +"
+  },
+  {
+    "id": "OC-GW-012",
+    "domain": "gateway",
+    "statement": "Gateway lock payload는 PID, owner ID, 생성 시각과 실행 identity를 기록한다.",
+    "needle": "type LockPayload = {",
+    "path": "src/infra/gateway-lock.ts",
+    "line": 30,
+    "excerpt": "type LockPayload = {"
+  },
+  {
+    "id": "OC-GW-013",
+    "domain": "gateway",
+    "statement": "stale lock 회수 여부는 별도 함수에서 owner 생존성과 lock age를 판정한다.",
+    "needle": "shouldReclaimGatewayLock",
+    "path": "src/infra/gateway-lock.ts",
+    "line": 236,
+    "excerpt": "async function shouldReclaimGatewayLock(params: {"
+  },
+  {
+    "id": "OC-GW-014",
+    "domain": "gateway",
+    "statement": "Gateway lock 획득은 서버 시작과 분리된 공개 lifecycle 경계다.",
+    "needle": "acquireGatewayLock",
+    "path": "src/infra/gateway-lock.ts",
+    "line": 359,
+    "excerpt": "export async function acquireGatewayLock("
+  },
+  {
+    "id": "OC-GW-015",
+    "domain": "gateway",
+    "statement": "run loop는 server handle을 만들기 전에 lock을 획득한다.",
+    "needle": "let lock = await acquireGatewayLock",
+    "path": "src/cli/gateway-cli/run-loop.ts",
+    "line": 150,
+    "excerpt": "let lock = await acquireGatewayLock({ port: params.lockPort });"
+  },
+  {
+    "id": "OC-GW-016",
+    "domain": "gateway",
+    "statement": "listener readiness와 close handle 반환 사이의 startup signal race를 명시적으로 다룬다.",
+    "needle": "HTTP server can report ready",
+    "path": "src/cli/gateway-cli/run-loop.ts",
+    "line": 154,
+    "excerpt": "// The HTTP server can report ready before params.start returns its close handle."
+  },
+  {
+    "id": "OC-GW-017",
+    "domain": "gateway",
+    "statement": "startup 단계 실패 시 전용 rollback close를 실행한다.",
+    "needle": "} catch (err) {",
+    "path": "src/gateway/server-start.ts",
+    "line": 178,
+    "excerpt": "} catch (err) {"
+  },
+  {
+    "id": "OC-GW-018",
+    "domain": "gateway",
+    "statement": "정상 시작 뒤 close handler를 생성하여 shutdown composition을 캡슐화한다.",
+    "needle": "createCloseHandler",
+    "path": "src/gateway/server-start.ts",
+    "line": 187,
+    "excerpt": "const close = createCloseHandler();"
+  },
+  {
+    "id": "OC-PROTO-001",
+    "domain": "protocol",
+    "statement": "Gateway 프로토콜 버전을 명시한다.",
+    "needle": "export const PROTOCOL_VERSION",
+    "path": "packages/gateway-protocol/src/version.ts",
+    "line": 2,
+    "excerpt": "export const PROTOCOL_VERSION = 4 as const;"
+  },
+  {
+    "id": "OC-PROTO-002",
+    "domain": "protocol",
+    "statement": "초기 연결 파라미터가 닫힌 스키마로 정의된다.",
+    "needle": "export const ConnectParamsSchema",
+    "path": "packages/gateway-protocol/src/schema/frames.ts",
+    "line": 33,
+    "excerpt": "export const ConnectParamsSchema = closedObject({"
+  },
+  {
+    "id": "OC-PROTO-003",
+    "domain": "protocol",
+    "statement": "성공 handshake가 기능·snapshot·정책을 반환한다.",
+    "needle": "export const HelloOkSchema",
+    "path": "packages/gateway-protocol/src/schema/frames.ts",
+    "line": 76,
+    "excerpt": "export const HelloOkSchema = closedObject({"
+  },
+  {
+    "id": "OC-PROTO-004",
+    "domain": "protocol",
+    "statement": "요청 envelope가 별도 스키마이다.",
+    "needle": "export const RequestFrameSchema",
+    "path": "packages/gateway-protocol/src/schema/frames.ts",
+    "line": 156,
+    "excerpt": "export const RequestFrameSchema = closedObject({"
+  },
+  {
+    "id": "OC-PROTO-005",
+    "domain": "protocol",
+    "statement": "응답 envelope가 별도 스키마이다.",
+    "needle": "export const ResponseFrameSchema",
+    "path": "packages/gateway-protocol/src/schema/frames.ts",
+    "line": 165,
+    "excerpt": "export const ResponseFrameSchema = closedObject({"
+  },
+  {
+    "id": "OC-PROTO-006",
+    "domain": "protocol",
+    "statement": "서버 event envelope가 별도 스키마이다.",
+    "needle": "export const EventFrameSchema",
+    "path": "packages/gateway-protocol/src/schema/frames.ts",
+    "line": 174,
+    "excerpt": "export const EventFrameSchema = closedObject({"
+  },
+  {
+    "id": "OC-PROTO-007",
+    "domain": "protocol",
+    "statement": "전체 스키마와 별개로 dispatch 핵심 필드의 경량 guard가 있다.",
+    "needle": "dispatch-critical envelope fields",
+    "path": "packages/gateway-protocol/src/frame-guards.ts",
+    "line": 37,
+    "excerpt": "// These lightweight guards validate dispatch-critical envelope fields without"
+  },
+  {
+    "id": "OC-MSG-001",
+    "domain": "message",
+    "statement": "채널 입력이 공통 inbound dispatcher로 진입한다.",
+    "needle": "export async function dispatchInboundMessage(params",
+    "path": "src/auto-reply/dispatch.ts",
+    "line": 442,
+    "excerpt": "export async function dispatchInboundMessage(params: {"
+  },
+  {
+    "id": "OC-MSG-002",
+    "domain": "message",
+    "statement": "채널별 입력을 공통 계약으로 투영하는 경로가 있다.",
+    "needle": "dispatchInboundMessageWithProjectedDispatcher",
+    "path": "src/auto-reply/dispatch.ts",
+    "line": 746,
+    "excerpt": "export async function dispatchInboundMessageWithProjectedDispatcher(params: {"
+  },
+  {
+    "id": "OC-MSG-003",
+    "domain": "message",
+    "statement": "설정 기반 reply dispatch가 별도 계층이다.",
+    "needle": "export async function dispatchReplyFromConfig",
+    "path": "src/auto-reply/reply/dispatch-from-config.ts",
+    "line": 22,
+    "excerpt": "export async function dispatchReplyFromConfig("
+  },
+  {
+    "id": "OC-AGENT-001",
+    "domain": "agent",
+    "statement": "reply agent 실행이 세션·모델·전달 계층을 조정한다.",
+    "needle": "export async function runReplyAgent",
+    "path": "src/auto-reply/reply/agent-runner-run.ts",
+    "line": 70,
+    "excerpt": "export async function runReplyAgent("
+  },
+  {
+    "id": "OC-AGENT-002",
+    "domain": "agent",
+    "statement": "embedded agent 실행 진입점이 별도로 존재한다.",
+    "needle": "export async function runEmbeddedAgentEntry",
+    "path": "src/agents/embedded-agent-runner/run-entry.ts",
+    "line": 192,
+    "excerpt": "export async function runEmbeddedAgentEntry<T extends EmbeddedAgentRunResult>("
+  },
+  {
+    "id": "OC-AGENT-003",
+    "domain": "agent",
+    "statement": "준비된 실행은 복구·재시도 가능한 loop로 처리된다.",
+    "needle": "export async function runPreparedEmbeddedLoop",
+    "path": "src/agents/embedded-agent-runner/run-loop.ts",
+    "line": 58,
+    "excerpt": "export async function runPreparedEmbeddedLoop("
+  },
+  {
+    "id": "OC-AGENT-004",
+    "domain": "agent",
+    "statement": "모델 turn과 tool execution을 반복하는 core loop가 별도 패키지에 있다.",
+    "needle": "export function agentLoop(",
+    "path": "packages/agent-core/src/agent-loop.ts",
+    "line": 108,
+    "excerpt": "export function agentLoop("
+  },
+  {
+    "id": "OC-AGENT-005",
+    "domain": "agent",
+    "statement": "tool 시작 event가 명시적으로 발생한다.",
+    "needle": "tool_execution_start",
+    "path": "packages/agent-core/src/agent-loop.ts",
+    "line": 668,
+    "excerpt": "type: \"tool_execution_start\","
+  },
+  {
+    "id": "OC-STATE-001",
+    "domain": "state",
+    "statement": "논리 세션 레코드를 별도 테이블로 유지한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS session_nodes",
+    "path": "src/state/openclaw-agent-schema.sql",
+    "line": 34,
+    "excerpt": "CREATE TABLE IF NOT EXISTS session_nodes ("
+  },
+  {
+    "id": "OC-STATE-002",
+    "domain": "state",
+    "statement": "transcript generation/window를 논리 세션과 분리한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS session_windows",
+    "path": "src/state/openclaw-agent-schema.sql",
+    "line": 114,
+    "excerpt": "CREATE TABLE IF NOT EXISTS session_windows ("
+  },
+  {
+    "id": "OC-STATE-003",
+    "domain": "state",
+    "statement": "transcript event를 순번 기반으로 저장한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS transcript_events",
+    "path": "src/state/openclaw-agent-schema.sql",
+    "line": 336,
+    "excerpt": "CREATE TABLE IF NOT EXISTS transcript_events ("
+  },
+  {
+    "id": "OC-STATE-004",
+    "domain": "state",
+    "statement": "event identity/idempotency를 별도 테이블로 관리한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS transcript_event_identities",
+    "path": "src/state/openclaw-agent-schema.sql",
+    "line": 379,
+    "excerpt": "CREATE TABLE IF NOT EXISTS transcript_event_identities ("
+  },
+  {
+    "id": "OC-STATE-005",
+    "domain": "state",
+    "statement": "자동화 job을 SQLite에 영속화한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS cron_jobs",
+    "path": "src/state/openclaw-state-schema.sql",
+    "line": 1295,
+    "excerpt": "CREATE TABLE IF NOT EXISTS cron_jobs ("
+  },
+  {
+    "id": "OC-STATE-006",
+    "domain": "state",
+    "statement": "job 공개 설정을 JSON으로 보존한다.",
+    "needle": "job_json TEXT NOT NULL",
+    "path": "src/state/openclaw-state-schema.sql",
+    "line": 1365,
+    "excerpt": "job_json TEXT NOT NULL,"
+  },
+  {
+    "id": "OC-CONFIG-001",
+    "domain": "config",
+    "statement": "설정 IO를 context/factory로 캡슐화한다.",
+    "needle": "export function createConfigIO",
+    "path": "src/config/io.factory.ts",
+    "line": 21,
+    "excerpt": "export function createConfigIO(options: ConfigIoFactoryOptions = {}) {"
+  },
+  {
+    "id": "OC-CONFIG-002",
+    "domain": "config",
+    "statement": "설정 load가 env/include/validation/recovery 단계를 조정한다.",
+    "needle": "export function loadConfigFromContext",
+    "path": "src/config/io.load.ts",
+    "line": 34,
+    "excerpt": "export function loadConfigFromContext("
+  },
+  {
+    "id": "OC-CONFIG-003",
+    "domain": "config",
+    "statement": "설정 쓰기가 별도 경계와 안전 절차를 갖는다.",
+    "needle": "export async function writeConfigFileFromContext",
+    "path": "src/config/io.write.ts",
+    "line": 100,
+    "excerpt": "export async function writeConfigFileFromContext("
+  },
+  {
+    "id": "OC-CONFIG-004",
+    "domain": "config",
+    "statement": "설정 include를 경계 검사와 함께 처리한다.",
+    "needle": "export function resolveConfigIncludes(",
+    "path": "src/config/includes.ts",
+    "line": 561,
+    "excerpt": "export function resolveConfigIncludes("
+  },
+  {
+    "id": "OC-CONFIG-005",
+    "domain": "config",
+    "statement": "환경 변수 치환을 명시적 문법과 오류로 처리한다.",
+    "needle": "export function resolveConfigEnvVars",
+    "path": "src/config/env-substitution.ts",
+    "line": 201,
+    "excerpt": "export function resolveConfigEnvVars("
+  },
+  {
+    "id": "OC-CONFIG-006",
+    "domain": "config",
+    "statement": "미래 버전 설정에 대한 guard가 있다.",
+    "needle": "future",
+    "path": "src/config/future-version-guard.ts",
+    "line": 1,
+    "excerpt": "// Rejects config files written by unsupported future versions."
+  },
+  {
+    "id": "OC-APPROVAL-001",
+    "domain": "approval",
+    "statement": "실행 보안 레벨이 타입으로 정의된다.",
+    "needle": "export type ExecSecurity",
+    "path": "src/infra/exec-approvals-core.ts",
+    "line": 9,
+    "excerpt": "export type ExecSecurity = \"deny\" | \"allowlist\" | \"full\";"
+  },
+  {
+    "id": "OC-APPROVAL-002",
+    "domain": "approval",
+    "statement": "승인 요청 정책이 타입으로 정의된다.",
+    "needle": "export type ExecAsk",
+    "path": "src/infra/exec-approvals-core.ts",
+    "line": 10,
+    "excerpt": "export type ExecAsk = \"off\" | \"on-miss\" | \"always\";"
+  },
+  {
+    "id": "OC-APPROVAL-003",
+    "domain": "approval",
+    "statement": "승인 결정 값이 제한된다.",
+    "needle": "export type ExecApprovalDecision",
+    "path": "src/infra/exec-approvals-core.ts",
+    "line": 12,
+    "excerpt": "export type ExecApprovalDecision = \"allow-once\" | \"allow-always\" | \"deny\";"
+  },
+  {
+    "id": "OC-APPROVAL-004",
+    "domain": "approval",
+    "statement": "승인 대기·만료·해결 수명주기를 전담하는 manager가 있다.",
+    "needle": "export class ExecApprovalManager",
+    "path": "src/gateway/exec-approval-manager.ts",
+    "line": 221,
+    "excerpt": "export class ExecApprovalManager<TPayload = ExecApprovalRequestPayload> {"
+  },
+  {
+    "id": "OC-SKILL-001",
+    "domain": "skills",
+    "statement": "Skill의 이름·설명·경로·promptVersion 계약이 존재한다.",
+    "needle": "export interface Skill",
+    "path": "src/skills/loading/skill-contract.ts",
+    "line": 4,
+    "excerpt": "export interface Skill {"
+  },
+  {
+    "id": "OC-SKILL-002",
+    "domain": "skills",
+    "statement": "Skill catalog를 모델 prompt로 투영한다.",
+    "needle": "export function formatSkillsForPrompt",
+    "path": "src/skills/loading/skill-contract.ts",
+    "line": 38,
+    "excerpt": "export function formatSkillsForPrompt(skills: Skill[]): string {"
+  },
+  {
+    "id": "OC-SKILL-003",
+    "domain": "skills",
+    "statement": "로컬 Skill 탐색이 이름·경로 안전성 검사를 수행한다.",
+    "needle": "export function loadSkillsFromDirSafe",
+    "path": "src/skills/loading/local-loader.ts",
+    "line": 115,
+    "excerpt": "export function loadSkillsFromDirSafe(params: {"
+  },
+  {
+    "id": "OC-SKILL-004",
+    "domain": "skills",
+    "statement": "번들·사용자·workspace·plugin Skill을 통합한다.",
+    "needle": "export function loadWorkspaceSkillEntries",
+    "path": "src/skills/loading/workspace.ts",
+    "line": 1751,
+    "excerpt": "export function loadWorkspaceSkillEntries("
+  },
+  {
+    "id": "OC-CRON-001",
+    "domain": "automation",
+    "statement": "스케줄러가 lifecycle/read/mutation/run 작업을 분리한다.",
+    "needle": "export class CronService",
+    "path": "src/cron/service.ts",
+    "line": 25,
+    "excerpt": "export class CronService implements CronServiceContract {"
+  },
+  {
+    "id": "OC-CRON-002",
+    "domain": "automation",
+    "statement": "at/every/cron/event schedule의 다음 실행을 계산한다.",
+    "needle": "export function computeNextRunAtMs",
+    "path": "src/cron/schedule.ts",
+    "line": 55,
+    "excerpt": "export function computeNextRunAtMs(schedule: CronSchedule, nowMs: number): number | undefined {"
+  },
+  {
+    "id": "OC-PLUGIN-001",
+    "domain": "plugins",
+    "statement": "플러그인 탐색이 별도 보안 경계를 갖는다.",
+    "needle": "export function discoverOpenClawPlugins",
+    "path": "src/plugins/discovery.ts",
+    "line": 1402,
+    "excerpt": "export function discoverOpenClawPlugins(params: {"
+  },
+  {
+    "id": "OC-PLUGIN-002",
+    "domain": "plugins",
+    "statement": "플러그인 manifest 파일명이 고정되어 있다.",
+    "needle": "export const PLUGIN_MANIFEST_FILENAME",
+    "path": "src/plugins/manifest.ts",
+    "line": 27,
+    "excerpt": "export const PLUGIN_MANIFEST_FILENAME = \"openclaw.plugin.json\";"
+  },
+  {
+    "id": "OC-PLUGIN-003",
+    "domain": "plugins",
+    "statement": "manifest에 configSchema를 강제한다.",
+    "needle": "plugin manifest requires configSchema",
+    "path": "src/plugins/manifest.ts",
+    "line": 199,
+    "excerpt": "return cacheResult({ ok: false, error: \"plugin manifest requires configSchema\", manifestPath });"
+  },
+  {
+    "id": "OC-PLUGIN-004",
+    "domain": "plugins",
+    "statement": "플러그인 API가 많은 확장 표면을 통합한다.",
+    "needle": "export type OpenClawPluginApi =",
+    "path": "src/plugins/plugin-api.types.ts",
+    "line": 168,
+    "excerpt": "export type OpenClawPluginApi = {"
+  },
+  {
+    "id": "OC-SANDBOX-001",
+    "domain": "sandbox",
+    "statement": "sandbox backend handle 계약이 별도 타입이다.",
+    "needle": "export type SandboxBackendHandle",
+    "path": "src/agents/sandbox/backend-handle.types.ts",
+    "line": 59,
+    "excerpt": "export type SandboxBackendHandle = {"
+  },
+  {
+    "id": "OC-SANDBOX-002",
+    "domain": "sandbox",
+    "statement": "sandbox backend factory 등록 계약이 있다.",
+    "needle": "export type SandboxBackendFactory",
+    "path": "src/agents/sandbox/backend.types.ts",
+    "line": 46,
+    "excerpt": "export type SandboxBackendFactory = ("
+  },
+  {
+    "id": "OC-SANDBOX-003",
+    "domain": "sandbox",
+    "statement": "workspace confinement를 정책·backend·tool surface까지 검증한다.",
+    "needle": "export function resolveSandboxWorkspaceAuthority",
+    "path": "src/agents/sandbox/workspace-authority.ts",
+    "line": 138,
+    "excerpt": "export function resolveSandboxWorkspaceAuthority(params: {"
+  },
+  {
+    "id": "OC-CHANNEL-001",
+    "domain": "channels",
+    "statement": "채널 ingress를 durable queue에 저장한다.",
+    "needle": "const enqueue: ChannelIngressQueue",
+    "path": "src/channels/message/ingress-queue.ts",
+    "line": 573,
+    "excerpt": "const enqueue: ChannelIngressQueue<TPayload, TMetadata, TCompletedMetadata>[\"enqueue\"] = async ("
+  },
+  {
+    "id": "OC-CHANNEL-002",
+    "domain": "channels",
+    "statement": "claim token과 lane 차단으로 동시 처리를 제어한다.",
+    "needle": "const claimNext: ChannelIngressQueue",
+    "path": "src/channels/message/ingress-queue.ts",
+    "line": 757,
+    "excerpt": "const claimNext: ChannelIngressQueue<"
+  },
+  {
+    "id": "OC-CHANNEL-003",
+    "domain": "channels",
+    "statement": "Mattermost monitor가 독립 provider lifecycle로 구현된다.",
+    "needle": "export async function monitorMattermostProvider",
+    "path": "extensions/mattermost/src/mattermost/monitor.ts",
+    "line": 63,
+    "excerpt": "export async function monitorMattermostProvider(opts: MonitorMattermostOpts = {}): Promise<void> {"
+  },
+  {
+    "id": "OC-UI-001",
+    "domain": "ui",
+    "statement": "Control UI가 독립 Gateway browser client를 사용한다.",
+    "needle": "export class GatewayBrowserClient",
+    "path": "ui/src/api/gateway.ts",
+    "line": 306,
+    "excerpt": "export class GatewayBrowserClient {"
+  },
+  {
+    "id": "OC-UI-002",
+    "domain": "ui",
+    "statement": "승인 화면이 독립 route이다.",
+    "needle": "import { page as approvalsPage",
+    "path": "ui/src/app-routes.ts",
+    "line": 23,
+    "excerpt": "import { page as approvalsPage } from \"./pages/approvals/route.ts\";"
+  },
+  {
+    "id": "OC-UI-003",
+    "domain": "ui",
+    "statement": "대화 화면이 route module로 분리된다.",
+    "needle": "import { pages as chatPages",
+    "path": "ui/src/app-routes.ts",
+    "line": 26,
+    "excerpt": "import { pages as chatPages } from \"./pages/chat/route.ts\";"
+  },
+  {
+    "id": "OC-UI-004",
+    "domain": "ui",
+    "statement": "현재 Control UI package가 Lit runtime을 사용한다.",
+    "needle": "\"lit\": \"3.3.3\"",
+    "path": "ui/package.json",
+    "line": 38,
+    "excerpt": "\"lit\": \"3.3.3\","
+  },
+  {
+    "id": "OC-UI-005",
+    "domain": "ui",
+    "statement": "Control UI transcript virtualization uses TanStack Lit and virtual-core packages.",
+    "needle": "\"@tanstack/lit-virtual\": \"3.13.35\"",
+    "path": "ui/package.json",
+    "line": 32,
+    "excerpt": "\"@tanstack/lit-virtual\": \"3.13.35\","
+  },
+  {
+    "id": "OC-UI-006",
+    "domain": "ui",
+    "statement": "Control UI build and browser test stack pins Vite, Vitest browser, Playwright and Vitest.",
+    "needle": "\"@vitest/browser\": \"4.1.10\"",
+    "path": "ui/package.json",
+    "line": 46,
+    "excerpt": "\"@vitest/browser\": \"4.1.10\","
+  },
+  {
+    "id": "OC-OPS-001",
+    "domain": "operations",
+    "statement": "Windows Scheduled Tasks backend가 있다.",
+    "needle": "schtasks",
+    "path": "src/daemon/schtasks.ts",
+    "line": 8,
+    "excerpt": "} from \"./schtasks-control.js\";"
+  },
+  {
+    "id": "OC-OPS-002",
+    "domain": "operations",
+    "statement": "doctor가 독립 명령으로 구현된다.",
+    "needle": "export async function doctorCommand",
+    "path": "src/commands/doctor.ts",
+    "line": 47,
+    "excerpt": "export async function doctorCommand(runtime?: RuntimeEnv, options?: DoctorOptions): Promise<void> {"
+  },
+  {
+    "id": "OC-OPS-003",
+    "domain": "operations",
+    "statement": "update가 독립 명령·복구 흐름을 갖는다.",
+    "needle": "export async function updateCommand",
+    "path": "src/cli/update-cli/update-command.ts",
+    "line": 98,
+    "excerpt": "export async function updateCommand(opts: UpdateCommandOptions): Promise<void> {"
+  },
+  {
+    "id": "OC-TEST-001",
+    "domain": "tests",
+    "statement": "Gateway facade/import boundary를 테스트한다.",
+    "needle": "export async function startGatewayServer",
+    "path": "src/gateway/server-import-boundary.test.ts",
+    "line": 91,
+    "excerpt": "const serverStart = serverImpl.indexOf(\"export async function startGatewayServer\");"
+  },
+  {
+    "id": "OC-TEST-002",
+    "domain": "tests",
+    "statement": "SQLite session schema baseline을 테스트한다.",
+    "needle": "CREATE TABLE IF NOT EXISTS session_nodes",
+    "path": "test/scripts/sqlite-session-schema-baseline.test.ts",
+    "line": 18,
+    "excerpt": "expect(rendered.sql).toContain(\"CREATE TABLE IF NOT EXISTS session_nodes\");"
+  },
+  {
+    "id": "OC-TEST-003",
+    "domain": "tests",
+    "statement": "동시 connect race를 회귀 테스트한다.",
+    "needle": "race during lazy handler loading",
+    "path": "src/gateway/server/ws-connection.startup.test.ts",
+    "line": 26,
+    "excerpt": "it(\"admits only one of two connect frames that race during lazy handler loading\", async () => {"
+  },
+  {
+    "id": "OC-CONFIG-007",
+    "domain": "config",
+    "statement": "optimistic config write가 base snapshot의 현재성을 다시 확인한다.",
+    "needle": "export function assertBaseSnapshotStillCurrent",
+    "path": "src/config/io.write-safety.ts",
+    "line": 12,
+    "excerpt": "export function assertBaseSnapshotStillCurrent("
+  },
+  {
+    "id": "OC-CONFIG-008",
+    "domain": "config",
+    "statement": "config commit이 전용 atomic file replacement 경계를 사용한다.",
+    "needle": "replaceFileAtomic",
+    "path": "src/config/io.write.ts",
+    "line": 419,
+    "excerpt": "const result = await replaceFileAtomic({"
+  },
+  {
+    "id": "OC-CONFIG-009",
+    "domain": "config",
+    "statement": "last-known-good config artifact의 경로가 source config와 별도로 관리된다.",
+    "needle": "resolveLastKnownGoodConfigPath",
+    "path": "src/config/io.observe-recovery.ts",
+    "line": 228,
+    "excerpt": "function resolveLastKnownGoodConfigPath(configPath: string): string {"
+  },
+  {
+    "id": "OC-CONFIG-010",
+    "domain": "config",
+    "statement": "SecretRef는 shared grammar와 complete reference validation을 갖는다.",
+    "needle": "export function isValidSecretRef",
+    "path": "src/secrets/ref-contract.ts",
+    "line": 131,
+    "excerpt": "export function isValidSecretRef(ref: SecretRef): boolean {"
+  },
+  {
+    "id": "OC-CONFIG-011",
+    "domain": "config",
+    "statement": "config snapshot redaction이 별도 공개 함수로 분리되어 있다.",
+    "needle": "export function redactConfigSnapshot",
+    "path": "src/config/redact-snapshot.ts",
+    "line": 411,
+    "excerpt": "export function redactConfigSnapshot("
+  },
+  {
+    "id": "OC-CONFIG-012",
+    "domain": "config",
+    "statement": "config backup rotation과 permission hardening이 별도 유지보수 경계로 캡슐화된다.",
+    "needle": "export async function maintainConfigBackups",
+    "path": "src/config/backup-rotation.ts",
+    "line": 151,
+    "excerpt": "export async function maintainConfigBackups("
+  },
+  {
+    "id": "OC-PROTO-008",
+    "domain": "protocol",
+    "statement": "인증 전 WebSocket payload에 별도 상한을 적용한다.",
+    "needle": "preauthPayloadBytes > MAX_PREAUTH_PAYLOAD_BYTES",
+    "path": "src/gateway/server/ws-connection/message-handler.ts",
+    "line": 190,
+    "excerpt": "if (preauthPayloadBytes !== undefined && preauthPayloadBytes > MAX_PREAUTH_PAYLOAD_BYTES) {"
+  },
+  {
+    "id": "OC-PROTO-009",
+    "domain": "protocol",
+    "statement": "첫 WebSocket 요청은 connect handshake로 제한된다.",
+    "needle": "parsed.method !== \"connect\"",
+    "path": "src/gateway/server/ws-connection/message-handler.ts",
+    "line": 289,
+    "excerpt": "parsed.method !== \"connect\" ||"
+  },
+  {
+    "id": "OC-PROTO-010",
+    "domain": "protocol",
+    "statement": "인증 완료 후 요청 dispatch가 handshake와 분리된다.",
+    "needle": "authenticatedRequestDispatcher.dispatch",
+    "path": "src/gateway/server/ws-connection/message-handler.ts",
+    "line": 394,
+    "excerpt": "await authenticatedRequestDispatcher.dispatch(parsed, client);"
+  },
+  {
+    "id": "OC-PROTO-011",
+    "domain": "protocol",
+    "statement": "인증 전 handshake timeout이 별도 timer로 관리된다.",
+    "needle": "const handshakeTimer = setTimeout",
+    "path": "src/gateway/server/ws-connection.ts",
+    "line": 363,
+    "excerpt": "const handshakeTimer = setTimeout(() => {"
+  },
+  {
+    "id": "OC-PROTO-012",
+    "domain": "protocol",
+    "statement": "WebSocket outbound buffer 초과를 감지해 느린 연결을 종료한다.",
+    "needle": "socket.bufferedAmount > MAX_BUFFERED_BYTES",
+    "path": "src/gateway/server/ws-connection.ts",
+    "line": 407,
+    "excerpt": "if (socket.bufferedAmount > MAX_BUFFERED_BYTES) {"
+  },
+  {
+    "id": "OC-STATE-007",
+    "domain": "state",
+    "statement": "Node 내장 SQLite open을 런타임·filesystem location 경계로 캡슐화한다.",
+    "needle": "export function openNodeSqliteDatabase",
+    "path": "src/infra/node-sqlite.ts",
+    "line": 88,
+    "excerpt": "export function openNodeSqliteDatabase("
+  },
+  {
+    "id": "OC-STATE-008",
+    "domain": "state",
+    "statement": "SQLite busy timeout을 유한한 정수로 정규화하고 PRAGMA에 적용한다.",
+    "needle": "function configureSqliteBusyTimeout",
+    "path": "src/infra/sqlite-wal.ts",
+    "line": 60,
+    "excerpt": "function configureSqliteBusyTimeout(db: DatabaseSync, busyTimeoutMs: number): number {"
+  },
+  {
+    "id": "OC-STATE-009",
+    "domain": "state",
+    "statement": "SQLite write transaction callback의 Promise 반환을 명시적으로 거부한다.",
+    "needle": "function assertSyncTransactionResult",
+    "path": "src/infra/sqlite-transaction.ts",
+    "line": 42,
+    "excerpt": "function assertSyncTransactionResult(value: unknown): void {"
+  },
+  {
+    "id": "OC-STATE-010",
+    "domain": "state",
+    "statement": "SQLite quick/integrity check를 PRAGMA 결과 기반으로 검증한다.",
+    "needle": "function runSqliteCheck",
+    "path": "src/infra/sqlite-integrity.ts",
+    "line": 176,
+    "excerpt": "function runSqliteCheck("
+  },
+  {
+    "id": "OC-STATE-011",
+    "domain": "state",
+    "statement": "foreign_key_check를 직접 실행해 참조 무결성 위반을 열거한다.",
+    "needle": "function runSqliteForeignKeyCheck",
+    "path": "src/infra/sqlite-integrity.ts",
+    "line": 201,
+    "excerpt": "function runSqliteForeignKeyCheck(database: DatabaseSync, databaseLabel: string): void {"
+  },
+  {
+    "id": "OC-STATE-012",
+    "domain": "state",
+    "statement": "지원 버전보다 새로운 SQLite schema를 명시적으로 거부한다.",
+    "needle": "export function assertSupportedSchemaVersion",
+    "path": "src/state/openclaw-state-db-maintenance.ts",
+    "line": 92,
+    "excerpt": "export function assertSupportedSchemaVersion(db: DatabaseSync, pathname: string): void {"
+  },
+  {
+    "id": "OC-STATE-013",
+    "domain": "state",
+    "statement": "transcript event append를 하나의 SQLite transaction-owned 함수로 캡슐화한다.",
+    "needle": "export function appendTranscriptEventInTransaction",
+    "path": "src/config/sessions/session-accessor.sqlite-transcript-store.ts",
+    "line": 45,
+    "excerpt": "export function appendTranscriptEventInTransaction("
+  },
+  {
+    "id": "OC-STATE-014",
+    "domain": "state",
+    "statement": "event identity와 message idempotency를 append 전에 확인해 중복을 제거한다.",
+    "needle": "readTranscriptIdentityByEventId",
+    "path": "src/config/sessions/session-accessor.sqlite-transcript-store.ts",
+    "line": 65,
+    "excerpt": "if (identity && readTranscriptIdentityByEventId(database, scope.sessionId, identity.eventId)) {"
+  },
+  {
+    "id": "OC-STATE-015",
+    "domain": "state",
+    "statement": "transcript sequence를 저장 직전에 단조 증가 값으로 할당한다.",
+    "needle": "const seq = readNextTranscriptSeq",
+    "path": "src/config/sessions/session-accessor.sqlite-transcript-store.ts",
+    "line": 79,
+    "excerpt": "const seq = readNextTranscriptSeq(database, scope.sessionId);"
+  },
+  {
+    "id": "OC-STATE-016",
+    "domain": "state",
+    "statement": "projection rebuild는 authoritative transcript event를 sequence 순으로 다시 읽는다.",
+    "needle": ".selectFrom(\"transcript_events\")",
+    "path": "src/config/sessions/session-transcript-projection-rebuild.ts",
+    "line": 226,
+    "excerpt": ".selectFrom(\"transcript_events\")"
+  },
+  {
+    "id": "OC-AGENT-006",
+    "domain": "agent",
+    "statement": "embedded Agent 실행 진입점이 별도 함수로 분리되어 있다.",
+    "needle": "runEmbeddedAgentEntry",
+    "path": "src/agents/embedded-agent-runner/run-entry.ts",
+    "line": 192,
+    "excerpt": "export async function runEmbeddedAgentEntry<T extends EmbeddedAgentRunResult>("
+  },
+  {
+    "id": "OC-AGENT-007",
+    "domain": "agent",
+    "statement": "준비된 embedded Agent loop가 독립 실행 경계다.",
+    "needle": "runPreparedEmbeddedLoop",
+    "path": "src/agents/embedded-agent-runner/run-loop.ts",
+    "line": 58,
+    "excerpt": "export async function runPreparedEmbeddedLoop("
+  },
+  {
+    "id": "OC-AGENT-008",
+    "domain": "agent",
+    "statement": "모델과 tool 반복을 소유하는 agentLoop가 core package에 있다.",
+    "needle": "agentLoop",
+    "path": "packages/agent-core/src/agent-loop.ts",
+    "line": 108,
+    "excerpt": "export function agentLoop("
+  },
+  {
+    "id": "OC-AGENT-009",
+    "domain": "agent",
+    "statement": "tool call은 명시적인 sequential 실행 함수에서 처리된다.",
+    "needle": "executeToolCallsSequential",
+    "path": "packages/agent-core/src/agent-loop.ts",
+    "line": 649,
+    "excerpt": "async function executeToolCallsSequential("
+  },
+  {
+    "id": "OC-MODEL-001",
+    "domain": "model",
+    "statement": "provider registry를 주입받는 격리된 LLM runtime을 생성한다.",
+    "needle": "isolated LLM runtime",
+    "path": "packages/ai/src/stream.ts",
+    "line": 14,
+    "excerpt": "/** Creates an isolated LLM runtime backed by the supplied provider registry. */"
+  },
+  {
+    "id": "OC-MODEL-002",
+    "domain": "model",
+    "statement": "OpenAI Responses streaming adapter가 provider 함수로 분리되어 있다.",
+    "needle": "streamOpenAIResponses",
+    "path": "packages/ai/src/providers/openai-responses.ts",
+    "line": 82,
+    "excerpt": "export const streamOpenAIResponses: StreamFunction<\"openai-responses\", OpenAIResponsesOptions> = ("
+  },
+  {
+    "id": "OC-MODEL-003",
+    "domain": "model",
+    "statement": "Responses transport event loop가 provider stream을 직접 해석한다.",
+    "needle": "try {",
+    "path": "packages/ai/src/transports/openai-responses-stream-internal.ts",
+    "line": 295,
+    "excerpt": "  try {"
+  },
+  {
+    "id": "OC-MODEL-004",
+    "domain": "model",
+    "statement": "function call arguments delta를 stream event에서 누적한다.",
+    "needle": "response.function_call_arguments.delta",
+    "path": "packages/ai/src/transports/openai-responses-stream-internal.ts",
+    "line": 466,
+    "excerpt": "      } else if (event.type === \"response.function_call_arguments.delta\") {"
+  },
+  {
+    "id": "OC-MODEL-005",
+    "domain": "model",
+    "statement": "completed와 incomplete terminal event를 명시적으로 구분한다.",
+    "needle": "response.completed",
+    "path": "packages/ai/src/transports/openai-responses-stream-internal.ts",
+    "line": 684,
+    "excerpt": "      } else if (event.type === \"response.completed\" || event.type === \"response.incomplete\") {"
+  },
+  {
+    "id": "OC-FILE-001",
+    "domain": "file-tools",
+    "statement": "apply_patch는 기본적으로 workspace 내부로 제한된다.",
+    "needle": "Secure by default: apply_patch is workspace-contained",
+    "path": "src/agents/agent-tools.ts",
+    "line": 660,
+    "excerpt": "// Secure by default: apply_patch is workspace-contained unless explicitly disabled."
+  },
+  {
+    "id": "OC-FILE-002",
+    "domain": "file-tools",
+    "statement": "read Tool은 workspace-only 정책일 때 명시적인 root guard로 감싼다.",
+    "needle": "wrapToolWorkspaceRootGuardWithOptions",
+    "path": "src/agents/agent-tools.ts",
+    "line": 689,
+    "excerpt": "? wrapToolWorkspaceRootGuardWithOptions(sandboxed, sandboxRoot, {"
+  },
+  {
+    "id": "OC-FILE-003",
+    "domain": "file-tools",
+    "statement": "동일 실파일에 대한 mutation을 전용 queue로 직렬화한다.",
+    "needle": "withFileMutationQueue",
+    "path": "src/agents/sessions/tools/file-mutation-queue.ts",
+    "line": 24,
+    "excerpt": "export async function withFileMutationQueue<T>(filePath: string, fn: () => Promise<T>): Promise<T> {"
+  },
+  {
+    "id": "OC-FILE-004",
+    "domain": "file-tools",
+    "statement": "read Tool은 기본 byte와 line 상한을 별도 truncation 계약에서 가져온다.",
+    "needle": "DEFAULT_MAX_BYTES",
+    "path": "src/agents/sessions/tools/read.ts",
+    "line": 38,
+    "excerpt": "DEFAULT_MAX_BYTES,"
+  },
+  {
+    "id": "OC-FILE-005",
+    "domain": "file-tools",
+    "statement": "edit Tool의 replacement는 exact original text와 non-overlap을 요구한다.",
+    "needle": "Exact original text",
+    "path": "src/agents/sessions/tools/edit.ts",
+    "line": 49,
+    "excerpt": "description: \"Exact original text; unique and non-overlapping in this call.\","
+  },
+  {
+    "id": "OC-APPROVAL-005",
+    "domain": "approval",
+    "statement": "승인 만료 timer scheduling은 manager 내부 책임이다.",
+    "needle": "private scheduleExpiryTimer",
+    "path": "src/gateway/exec-approval-manager.ts",
+    "line": 833,
+    "excerpt": "  private scheduleExpiryTimer(entry: PendingEntry<TPayload>): void {"
+  },
+  {
+    "id": "OC-SKILL-005",
+    "domain": "skills",
+    "statement": "Run에 이미 존재하는 Skill snapshot prompt가 있으면 새 discovery 대신 snapshot을 우선 사용한다.",
+    "needle": "snapshotPrompt",
+    "path": "src/skills/loading/workspace.ts",
+    "line": 1671,
+    "excerpt": "  const snapshotPrompt = params.skillsSnapshot?.prompt?.trim();"
+  }
+]

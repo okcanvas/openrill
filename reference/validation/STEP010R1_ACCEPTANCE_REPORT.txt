@@ -1,0 +1,117 @@
+[PASS] root-version :: 0.10.1-step010r1
+[PASS] package-manager
+[PASS] step010r1-script
+[PASS] step010r1-package-script
+[PASS] required:tests/unit/skills-step010.test.mjs
+[PASS] required:scripts/run_step010_acceptance.py
+[PASS] required:scripts/run_step010r1_acceptance.py
+[PASS] required:scripts/sh_run_step010r1_acceptance.cmd
+[PASS] required:scripts/sh_run_step010r1_acceptance.sh
+[PASS] required:scripts/package_step010r1.py
+[PASS] required:docs/plans/STEP010R1_WINDOWS_SYMLINK_CAPABILITY_AND_SUITE_DIAGNOSTICS.md
+[PASS] required:reference/validation/STEP010_WINDOWS_FILE_SYMLINK_SKIP_FAILURE.md
+[PASS] required:reference/validation/STEP010_SUITE_PREDICATE_DIAGNOSTIC_MASKING.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.10.1-step010r1"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP010R1_WINDOWS_SYMLINK_CAPABILITY_AND_SUITE_DIAGNOSTICS 0.10.1-step010r1
+[PASS] symlink-fixture-no-skip
+[PASS] symlink-fixture-windows-junction
+[PASS] symlink-fixture-directory-target
+[PASS] symlink-fixture-nested-resource
+[PASS] file-symlink-fixture-zero
+[PASS] suite-full-predicate
+[PASS] suite-skipped-zero
+[PASS] suite-outcome-full-predicate
+[PASS] suite-detail-full-predicate
+[PASS] suite-detail-child-exit-only-zero
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-detail:STEP010_WINDOWS_FILE_SYMLINK_SKIP_FAILURE.md
+[PASS] issue-detail:STEP010_SUITE_PREDICATE_DIAGNOSTIC_MASKING.md
+[PASS] issue-detail:STEP010R1_FOCUSED_TEST_BUILD_PREREQUISITE.md
+[PASS] recurrence:cross-platform-filesystem
+[PASS] recurrence:aggregate-suite-diagnostics
+[PASS] recurrence:focused-build-prerequisite
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Windows 실패 증거
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-step010-failure:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-step010-failure:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-step010-failure:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-step010-failure:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-step010-failure:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] step010r1-windows-pending
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] focused-build-before-test
+[PASS] focused-skill-tests :: skill_tests_pass
+[PASS] step010-full-regression :: step010_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP010R1_WINDOWS_SYMLINK_CAPABILITY_AND_SUITE_DIAGNOSTICS checks=116/116 state=PASSED schema=7 symlink=JUNCTION_OR_DIRECTORY_LINK diagnostics=FULL_PREDICATE

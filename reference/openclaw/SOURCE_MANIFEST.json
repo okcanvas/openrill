@@ -1,0 +1,36 @@
+{
+  "sourceArchive": "openclaw-main.zip",
+  "sha256": "1a4fbe7e05ebd37db79a335749067b715eca900db1071e6d4af1cd5604604e82",
+  "package": {
+    "name": "openclaw",
+    "version": "2026.7.2",
+    "license": "MIT",
+    "packageManager": "pnpm@11.15.1+sha512.81350b07e53c9538a02f1f2303b4290fa2d7be04e56e2a970c4cc4b417dc761de196edabd49d55c7dc9580db81007c44143e4e3d7e462b3000d23c255122d065",
+    "engines": {
+      "node": ">=22.22.3 <23 || >=24.15.0 <25 || >=25.9.0"
+    }
+  },
+  "fileCounts": {
+    "src": 12833,
+    "packages": 827,
+    "extensions": 8826,
+    "skills": 75,
+    "ui": 2034,
+    "apps": 2080,
+    "test": 819,
+    "docs": 851,
+    "total": 30307
+  },
+  "selectedDependencies": {
+    "commander": "15.0.0",
+    "croner": "10.0.1",
+    "json5": "2.2.3",
+    "kysely": "0.29.4",
+    "openai": "6.49.0",
+    "typebox": "1.3.6",
+    "ws": "8.21.1",
+    "zod": "4.4.3"
+  },
+  "auditGeneratedAt": "2026-08-01T07:06:37.509662+00:00",
+  "auditScope": "Static source, manifest, SQL schema, tests and call-path inspection; dependencies were not installed and the source was not built."
+}

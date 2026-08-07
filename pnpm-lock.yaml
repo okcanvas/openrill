@@ -1,0 +1,421 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      '@types/node':
+        specifier: 22.20.1
+        version: 22.20.1
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+
+  apps/agent-cli:
+    dependencies:
+      '@openrill/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@openrill/diagnostics':
+        specifier: workspace:*
+        version: link:../../packages/diagnostics
+      '@openrill/host':
+        specifier: workspace:*
+        version: link:../../services/agent-host
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../../packages/protocol
+      '@openrill/sandbox-docker':
+        specifier: workspace:*
+        version: link:../../packages/sandbox-docker
+      '@openrill/skills':
+        specifier: workspace:*
+        version: link:../../packages/skills
+      '@openrill/tool-discovery':
+        specifier: workspace:*
+        version: link:../../packages/tool-discovery
+      '@openrill/workspace':
+        specifier: workspace:*
+        version: link:../../packages/workspace
+  apps/agent-web:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../../packages/protocol
+  apps/desktop:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../../packages/protocol
+  connectors/mattermost:
+    dependencies:
+      '@openrill/connectors':
+        specifier: workspace:*
+        version: link:../../packages/connectors
+      '@openrill/extension-sdk':
+        specifier: workspace:*
+        version: link:../../packages/extension-sdk
+  packages/agent-benchmark: {}
+  packages/agent-kernel:
+    dependencies:
+      '@openrill/approval':
+        specifier: workspace:*
+        version: link:../approval
+      '@openrill/conversations':
+        specifier: workspace:*
+        version: link:../conversations
+      '@openrill/model-adapter':
+        specifier: workspace:*
+        version: link:../model-adapter
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/skills':
+        specifier: workspace:*
+        version: link:../skills
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+  packages/approval:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+  packages/automation:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+  packages/browser-playwright:
+    dependencies:
+      '@openrill/browser-runtime':
+        specifier: workspace:*
+        version: link:../browser-runtime
+      playwright-core:
+        specifier: 1.62.0
+        version: 1.62.0
+  packages/browser-runtime:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+  packages/config:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  packages/connectors:
+    dependencies:
+      '@openrill/conversations':
+        specifier: workspace:*
+        version: link:../conversations
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+  packages/conversations:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+  packages/diagnostics:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  packages/extension-sdk:
+    dependencies:
+      '@openrill/config':
+        specifier: workspace:*
+        version: link:../config
+      '@openrill/connectors':
+        specifier: workspace:*
+        version: link:../connectors
+
+  packages/goals:
+    dependencies:
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+
+  packages/goal-executor:
+    dependencies:
+      '@openrill/goals':
+        specifier: workspace:*
+        version: link:../goals
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+      '@openrill/task-flows':
+        specifier: workspace:*
+        version: link:../task-flows
+      '@openrill/tasks':
+        specifier: workspace:*
+        version: link:../tasks
+  packages/memory:
+    dependencies:
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+
+  packages/task-flows:
+    dependencies:
+      '@openrill/conversations':
+        specifier: workspace:*
+        version: link:../conversations
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+      '@openrill/tasks':
+        specifier: workspace:*
+        version: link:../tasks
+
+  packages/tasks:
+    dependencies:
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+
+  packages/tools-goals:
+    dependencies:
+      '@openrill/goals':
+        specifier: workspace:*
+        version: link:../goals
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+  packages/tools-memory:
+    dependencies:
+      '@openrill/memory':
+        specifier: workspace:*
+        version: link:../memory
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+  packages/model-adapter:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  packages/model-openai-responses:
+    dependencies:
+      '@openrill/model-adapter':
+        specifier: workspace:*
+        version: link:../model-adapter
+  packages/protocol: {}
+  packages/sandbox:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/workspace':
+        specifier: workspace:*
+        version: link:../workspace
+  packages/sandbox-docker:
+    dependencies:
+      '@openrill/sandbox':
+        specifier: workspace:*
+        version: link:../sandbox
+  packages/skills: {}
+  packages/state:
+    dependencies:
+      '@openrill/config':
+        specifier: workspace:*
+        version: link:../config
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  packages/tool-discovery:
+    dependencies:
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+  packages/tool-runtime:
+    dependencies:
+      '@openrill/approval':
+        specifier: workspace:*
+        version: link:../approval
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  packages/tools-delegation:
+    dependencies:
+      '@openrill/conversations':
+        specifier: workspace:*
+        version: link:../conversations
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+
+  packages/tools-files:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+      '@openrill/workspace':
+        specifier: workspace:*
+        version: link:../workspace
+  packages/tools-process:
+    dependencies:
+      '@openrill/approval':
+        specifier: workspace:*
+        version: link:../approval
+      '@openrill/config':
+        specifier: workspace:*
+        version: link:../config
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+      '@openrill/sandbox':
+        specifier: workspace:*
+        version: link:../sandbox
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../state
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../tool-runtime
+      '@openrill/workspace':
+        specifier: workspace:*
+        version: link:../workspace
+  packages/workspace:
+    dependencies:
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../protocol
+  services/agent-host:
+    dependencies:
+      '@openrill/agent-kernel':
+        specifier: workspace:*
+        version: link:../../packages/agent-kernel
+      '@openrill/automation':
+        specifier: workspace:*
+        version: link:../../packages/automation
+      '@openrill/browser-playwright':
+        specifier: workspace:*
+        version: link:../../packages/browser-playwright
+      '@openrill/browser-runtime':
+        specifier: workspace:*
+        version: link:../../packages/browser-runtime
+      '@openrill/approval':
+        specifier: workspace:*
+        version: link:../../packages/approval
+      '@openrill/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@openrill/conversations':
+        specifier: workspace:*
+        version: link:../../packages/conversations
+      '@openrill/diagnostics':
+        specifier: workspace:*
+        version: link:../../packages/diagnostics
+      '@openrill/extension-sdk':
+        specifier: workspace:*
+        version: link:../../packages/extension-sdk
+      '@openrill/memory':
+        specifier: workspace:*
+        version: link:../../packages/memory
+      '@openrill/goals':
+        specifier: workspace:*
+        version: link:../../packages/goals
+      '@openrill/goal-executor':
+        specifier: workspace:*
+        version: link:../../packages/goal-executor
+      '@openrill/model-adapter':
+        specifier: workspace:*
+        version: link:../../packages/model-adapter
+      '@openrill/model-openai-responses':
+        specifier: workspace:*
+        version: link:../../packages/model-openai-responses
+      '@openrill/protocol':
+        specifier: workspace:*
+        version: link:../../packages/protocol
+      '@openrill/sandbox':
+        specifier: workspace:*
+        version: link:../../packages/sandbox
+      '@openrill/sandbox-docker':
+        specifier: workspace:*
+        version: link:../../packages/sandbox-docker
+      '@openrill/skills':
+        specifier: workspace:*
+        version: link:../../packages/skills
+      '@openrill/state':
+        specifier: workspace:*
+        version: link:../../packages/state
+      '@openrill/tasks':
+        specifier: workspace:*
+        version: link:../../packages/tasks
+      '@openrill/task-flows':
+        specifier: workspace:*
+        version: link:../../packages/task-flows
+      '@openrill/tool-runtime':
+        specifier: workspace:*
+        version: link:../../packages/tool-runtime
+      '@openrill/tools-files':
+        specifier: workspace:*
+        version: link:../../packages/tools-files
+      '@openrill/tools-delegation':
+        specifier: workspace:*
+        version: link:../../packages/tools-delegation
+      '@openrill/tools-memory':
+        specifier: workspace:*
+        version: link:../../packages/tools-memory
+      '@openrill/tools-goals':
+        specifier: workspace:*
+        version: link:../../packages/tools-goals
+      '@openrill/tool-discovery':
+        specifier: workspace:*
+        version: link:../../packages/tool-discovery
+      '@openrill/tools-process':
+        specifier: workspace:*
+        version: link:../../packages/tools-process
+      '@openrill/workspace':
+        specifier: workspace:*
+        version: link:../../packages/workspace
+  skills/builtin: {}
+
+packages:
+
+  '@types/node@22.20.1':
+    resolution: {integrity: sha512-EANqOCF9QFyra+4pfxUcX9STKJpCLjMbObVzljIJomAWSnuSIEAvyzEU53GaajbXJEgdh0iEcPL+DGvpUd4k1Q==}
+
+  playwright-core@1.62.0:
+    resolution: {integrity: sha512-nsNRyq0r2zsG8AcRHWknc9QRA5XCueC7gWMrs+Gx2tlZn9hcl8zudfh00lhJPY1DE7NmZ6bDsT9g2yey8mXljA==}
+    engines: {node: '>=20'}
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
+snapshots:
+
+  '@types/node@22.20.1':
+    dependencies:
+      undici-types: 6.21.0
+
+  playwright-core@1.62.0: {}
+
+  typescript@6.0.3: {}
+
+  undici-types@6.21.0: {}

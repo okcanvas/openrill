@@ -1,0 +1,20 @@
+import { spawn } from "node:child_process";
+import { readFile } from "node:fs/promises";
+import { OPENRILL_STATE_SCHEMA_VERSION } from "../packages/state/dist/index.js";
+import { parseNodeTapSummary } from "./node-tap-summary.mjs";
+import { loadStep023aLiveMarkerContract, renderStep023aLiveMarker } from "./step023a-live-marker.mjs";
+
+const contract=await loadStep023aLiveMarkerContract();
+if(process.platform!=="win32") throw new Error("OPENRILL_STEP023A_WINDOWS_REQUIRED");
+function spawnCapture(args){return new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{cwd:process.cwd(),env:{...process.env,NO_COLOR:"1",NODE_DISABLE_COLORS:"1"},stdio:["ignore","pipe","pipe"]});let output="";child.stdout.setEncoding("utf8");child.stderr.setEncoding("utf8");child.stdout.on("data",c=>{output+=c;process.stdout.write(c)});child.stderr.on("data",c=>{output+=c;process.stderr.write(c)});child.once("error",reject);child.once("exit",code=>resolve({code:code??1,output}));});}
+const focused=await spawnCapture(["--test","--test-concurrency=1","--test-reporter=tap","tests/unit/maintenance-retention-step023a.test.mjs","tests/unit/maintenance-host-step023a.test.mjs"]);
+const tap=parseNodeTapSummary(focused.output); const pkg=JSON.parse(await readFile(new URL("../package.json",import.meta.url),"utf8")); const baseline=JSON.parse(await readFile(new URL("../config/current-accepted-baseline.json",import.meta.url),"utf8"));
+const checks=[]; const names=new Set(); const check=(name,value,detail="")=>{if(names.has(name))throw new Error(`OPENRILL_STEP023A_DUPLICATE_CHECK:${name}`);names.add(name);checks.push({name,passed:Boolean(value),detail:String(detail)});};
+check("platform",process.platform==="win32",process.platform); check("focused-exit",focused.code===0,focused.code); check("focused-tests",tap.tests===17,tap.tests); check("focused-pass",tap.pass===17,tap.pass); check("focused-fail",tap.fail===0,tap.fail); check("focused-cancelled",tap.cancelled===0,tap.cancelled); check("focused-skipped",tap.skipped===0,tap.skipped); check("focused-todo",tap.todo===0,tap.todo); check("schema",Number(OPENRILL_STATE_SCHEMA_VERSION)===Number(contract.schema),OPENRILL_STATE_SCHEMA_VERSION); check("version",pkg.version===contract.version,pkg.version);
+for(const [name,phrase] of [
+ ["schema26","schema 26 adds durable connector cleanup"], ["schedule-isolation","retention scheduling is isolated"], ["tombstone-first","physical prune writes minimal tombstone"], ["active-run","owning Run is still active"], ["goal-flow","immutable Goal execution reference"], ["connector-receipt","Connector delivery is pruned only with receipt"], ["lease","lease prevents concurrent sweep ownership"], ["manual-cursor","bounded cursor advances deterministically"], ["closed-protocol","maintenance Protocol inputs are closed"], ["completion-protection","actionable completion delivery protects"], ["uncertain-protection","uncertain delivery with open dead-letter"], ["tombstone-collision","tombstone collision fails closed"], ["config","maintenance config is closed"], ["lease-loss","lease loss stops deletion"], ["periodic-cursor","protected prefix cannot starve later eligible history across Host restart"], ["host-protocol","Local Protocol exposes closed retention preview"], ["host-restart","Host-owned initial periodic sweep physically prunes"]
+]) check(name,focused.output.includes(phrase));
+check("accepted-baseline",baseline.step==="STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE",baseline.step);
+const expected=Number(String(contract.expectedChecks).split("/")[1]); if(checks.length!==expected) throw new Error(`OPENRILL_STEP023A_CHECK_INVENTORY:${checks.length}:${expected}`);
+const passed=checks.filter(i=>i.passed).length; const state=passed===checks.length?"PASSED":"FAILED"; console.log(renderStep023aLiveMarker(contract,{passed,total:checks.length,state}));
+for(const item of checks.filter(i=>!i.passed)) console.error(`OPENRILL_STEP023A_LIVE_FAILURE check=${item.name} detail=${item.detail}`); if(state!=="PASSED")process.exitCode=1;

@@ -1,0 +1,181 @@
+[PASS] root-version :: 0.12.10-step012dr4
+[PASS] package-manager
+[PASS] step012dr4-script
+[PASS] step012dr4-package-script
+[PASS] required:apps/agent-web/src/browser-app.ts
+[PASS] required:apps/agent-web/public/assets/app.css
+[PASS] required:scripts/run-step012d-live.mjs
+[PASS] required:scripts/live-host-ready.mjs
+[PASS] required:scripts/live-vue-static.mjs
+[PASS] required:scripts/run_step012dr4_acceptance.py
+[PASS] required:scripts/sh_run_step012dr4_acceptance.cmd
+[PASS] required:scripts/sh_run_step012dr4_acceptance.sh
+[PASS] required:scripts/package_step012dr4.py
+[PASS] required:tests/unit/automation-control-ui-step012d.test.mjs
+[PASS] required:tests/unit/live-host-ready-step012dr1.test.mjs
+[PASS] required:tests/unit/vue-static-serving-step012dr2.test.mjs
+[PASS] required:tests/unit/process-approval-step009.test.mjs
+[PASS] required:tests/unit/background-process-observation-step012dr3.test.mjs
+[PASS] required:tests/unit/automation-history-row-selector-step012dr4.test.mjs
+[PASS] required:docs/plans/STEP012DR4_AUTOMATION_HISTORY_ROW_SELECTOR_ISOLATION.md
+[PASS] required:docs/validation/STEP012D_FAILURE_PREVENTION_AUDIT.md
+[PASS] required:reference/validation/STEP012CR1_WINDOWS_LIVE_ACCEPTED.md
+[PASS] required:reference/validation/STEP012D_AUTOMATION_INTERVAL_ANCHOR_EDIT_DRIFT.md
+[PASS] required:reference/validation/STEP012D_HISTORICAL_BROWSER_OWNER_CUTOVER_DRIFT.md
+[PASS] required:reference/validation/STEP012D_HISTORICAL_ROOT_DOCUMENT_EXPECTATION_DRIFT.md
+[PASS] required:reference/validation/STEP012D_PROTOCOL_IDEMPOTENCY_MASKS_DURABLE_MANUAL_REPLAY.md
+[PASS] required:reference/validation/STEP012D_ACCEPTED_BASELINE_VERSION_STALE_FALSE_POSITIVE.md
+[PASS] required:reference/validation/STEP012D_WINDOWS_UI_CONNECTION_WAIT_BEFORE_HOST_READY_AND_PHASE_COLLAPSE.md
+[PASS] required:reference/validation/STEP012DR1_HISTORICAL_FEATURE_AND_CURRENT_RELEASE_IDENTITY_CONFLATION.md
+[PASS] required:reference/validation/STEP012DR1_WINDOWS_VUE_VENDOR_NOT_MATERIALIZED_IN_STATIC_ROOT.md
+[PASS] required:reference/validation/STEP012DR2_WINDOWS_BACKGROUND_PROCESS_STDOUT_FIXED_SLEEP_RACE.md
+[PASS] required:reference/validation/STEP012DR3_WINDOWS_AUTOMATION_HISTORY_SELECTOR_PREFIX_COLLISION.md
+[PASS] required:reference/validation/STEP012DR4_ACCEPTANCE_REPORT.txt
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.12.10-step012dr4"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP012DR4_AUTOMATION_HISTORY_ROW_SELECTOR_ISOLATION 0.12.10-step012dr4
+[PASS] automation-route
+[PASS] ui-operation:automation.create
+[PASS] ui-operation:automation.list
+[PASS] ui-operation:automation.get
+[PASS] ui-operation:automation.update
+[PASS] ui-operation:automation.run_now
+[PASS] ui-operation:automation.history
+[PASS] ui-testid:automation-new
+[PASS] ui-testid:automation-save
+[PASS] ui-testid:automation-toggle
+[PASS] ui-testid:automation-run-now
+[PASS] ui-testid:automation-replay-run
+[PASS] ui-testid:automation-history
+[PASS] job-notice-refresh
+[PASS] run-notice-refresh
+[PASS] revision-update
+[PASS] interval-anchor-preserved
+[PASS] interval-anchor-unconditional-zero
+[PASS] manual-replay-transport-key-separated
+[PASS] responsive-automation-layout
+[PASS] live-automation-enabled
+[PASS] live-durable-replay
+[PASS] live-ledger-link
+[PASS] live-secret-boundary
+[PASS] live-marker
+[PASS] host-ready-helper-contract
+[PASS] step011-host-ready-owned
+[PASS] step012d-host-ready-owned
+[PASS] ui-startup-phases
+[PASS] ui-connection-phase-separated
+[PASS] browser-evidence-startup-phase
+[PASS] live-waits-connected-and-ready
+[PASS] live-startup-evidence
+[PASS] vendor-aware-build-owned
+[PASS] vendor-dist-byte-verification
+[PASS] live-vue-static-preflight
+[PASS] live-vue-static-before-browser
+[PASS] issue-registry-067
+[PASS] issue-registry-068
+[PASS] issue-registry-069
+[PASS] issue-registry-070
+[PASS] issue-registry-071
+[PASS] issue-registry-072
+[PASS] issue-registry-073
+[PASS] issue-registry-074
+[PASS] issue-registry-075
+[PASS] issue-registry-076
+[PASS] issue-detail-067
+[PASS] issue-detail-068
+[PASS] issue-detail-069
+[PASS] issue-detail-070
+[PASS] issue-detail-071
+[PASS] issue-detail-072
+[PASS] issue-detail-073
+[PASS] issue-detail-074
+[PASS] issue-detail-075
+[PASS] issue-detail-076
+[PASS] history-row-namespace
+[PASS] history-row-broad-prefix-zero
+[PASS] history-row-durable-ledger
+[PASS] background-output-bounded-poll
+[PASS] background-output-delayed-fixture
+[PASS] background-output-timeout-evidence
+[PASS] recurrence-vue-static-serving
+[PASS] historical-current-release-dynamic
+[PASS] recurrence-step012dr1
+[PASS] recurrence-step012dr2
+[PASS] recurrence-step012dr3
+[PASS] recurrence-step012dr4
+[PASS] recurrence-step012d
+[PASS] failure-prevention-audit
+[PASS] accepted-step-evidence
+[PASS] accepted-artifact-sha
+[PASS] accepted-marker-exact
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-current-step:README.md
+[PASS] baseline-current-version:README.md
+[PASS] baseline-accepted-step:README.md
+[PASS] baseline-accepted-sha:README.md
+[PASS] baseline-browser-owner:README.md
+[PASS] baseline-stale-zero:README.md
+[PASS] baseline-current-step:HANDOFF.md
+[PASS] baseline-current-version:HANDOFF.md
+[PASS] baseline-accepted-step:HANDOFF.md
+[PASS] baseline-accepted-sha:HANDOFF.md
+[PASS] baseline-browser-owner:HANDOFF.md
+[PASS] baseline-stale-zero:HANDOFF.md
+[PASS] baseline-current-step:PLANS.md
+[PASS] baseline-current-version:PLANS.md
+[PASS] baseline-accepted-step:PLANS.md
+[PASS] baseline-accepted-sha:PLANS.md
+[PASS] baseline-browser-owner:PLANS.md
+[PASS] baseline-stale-zero:PLANS.md
+[PASS] baseline-current-step:ROADMAP.md
+[PASS] baseline-current-version:ROADMAP.md
+[PASS] baseline-accepted-step:ROADMAP.md
+[PASS] baseline-accepted-sha:ROADMAP.md
+[PASS] baseline-browser-owner:ROADMAP.md
+[PASS] baseline-stale-zero:ROADMAP.md
+[PASS] baseline-current-step:VALIDATION.md
+[PASS] baseline-current-version:VALIDATION.md
+[PASS] baseline-accepted-step:VALIDATION.md
+[PASS] baseline-accepted-sha:VALIDATION.md
+[PASS] baseline-browser-owner:VALIDATION.md
+[PASS] baseline-stale-zero:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] package-manifest-initial :: OPENRILL_PACKAGE_MANIFEST_PASS declared=754 actual=754 missing=0 extra=0 changed=0
+[PASS] focused-build :: build_pass
+[PASS] focused-step009-process-approval :: process_approval_tests_pass
+[PASS] focused-background-output-observation :: background_output_observation_pass
+[PASS] focused-history-row-selector :: history_row_selector_pass
+[PASS] focused-step009-repeat-5 :: 5/5_pass
+[PASS] focused-step012d-ui-bootstrap :: step012d_ui_bootstrap_tests_pass
+[PASS] focused-host-ready :: host_ready_tests_pass
+[PASS] focused-vue-static-serving :: vue_static_serving_tests_pass
+[PASS] focused-step012c-integration :: step012c_integration_tests_pass
+[PASS] canonical-suite :: suite_pass
+[FAIL] step012dr4-exact-vue-actual-chromium :: runtime_unavailable
+[PASS] package-manifest-final :: OPENRILL_PACKAGE_MANIFEST_PASS declared=754 actual=754 missing=0 extra=0 changed=0
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP012DR4_AUTOMATION_HISTORY_ROW_SELECTOR_ISOLATION checks=179/180 state=FAILED schema=9 history_selector=ISOLATED durable_ledger=ONE_RUN process_output=BOUNDED_POLLING host_ready=AWAITED startup=PHASED vendor_build=ALIGNED static_serving=BYTE_VERIFIED evidence=STARTUP_BOUNDED ui=AUTOMATION_CRUD_RUN_HISTORY browser=CHROMIUM mobile=PASS

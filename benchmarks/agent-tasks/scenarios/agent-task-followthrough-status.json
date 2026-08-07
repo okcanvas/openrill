@@ -1,0 +1,33 @@
+{
+  "id": "agent-task-followthrough-status",
+  "title": "Proof-backed task status separation",
+  "category": "task-status",
+  "risk": "medium",
+  "executor": "task-followthrough-status",
+  "coverage": {
+    "primary": [
+      "tasks.proof-backed-status"
+    ],
+    "secondary": [
+      "tasks.pending-blocked-done"
+    ]
+  },
+  "capabilities": [
+    "task.status",
+    "agent.reply"
+  ],
+  "objective": "Verify pending, blocked, and completed work are reported separately from a tool-backed status snapshot.",
+  "successCriteria": [
+    "The status tool is called before the final response.",
+    "The final response distinguishes pending, blocked, and done.",
+    "The response matches the returned status counts."
+  ],
+  "budget": {
+    "maxDurationMs": 10000,
+    "maxTurns": 4,
+    "maxModelCalls": 4,
+    "maxToolCalls": 3,
+    "maxTotalTokens": 2048
+  },
+  "defaultRepetitions": 2
+}

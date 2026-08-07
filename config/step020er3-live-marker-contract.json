@@ -1,0 +1,26 @@
+{
+  "step": "STEP020ER3_WINDOWS_PYTHON_LIVE_MARKER_VALIDATOR_ENTRYPOINT_CLOSURE",
+  "version": "0.20.8-step020er3",
+  "schema": 22,
+  "expectedChecks": "26/26",
+  "liveHarness": "STEP020ER3_H1_WINDOWS_PYTHON_VALIDATOR_ENTRYPOINT_AND_COMPLETION",
+  "fields": {
+    "correction": "WINDOWS_PYTHON_VALIDATOR_ENTRYPOINT_CLOSURE",
+    "source": "ABSOLUTE_FILE_ENTRYPOINT",
+    "validation": "NO_PYTHONPATH_ASSUMPTION",
+    "retry": "BOUNDED_TRANSPORT_ONLY",
+    "timeout": "CALLER_DEADLINE",
+    "security": "NON_TRANSPORT_FAIL_FAST",
+    "delivery": "DURABLE_TASK_EVENT",
+    "semantics": "REQUIRED_COMPLETION",
+    "controller": "OWNER_CONVERSATION_WAKE",
+    "queue": "SYSTEM_MESSAGE_WAKE_RUN",
+    "restart": "PENDING_DRAIN_IDENTITY_STABLE",
+    "scope": "CONTROLLER_TOOLS_DURABLE",
+    "decision": "EXPLICIT_TOOL_REQUIRED",
+    "migration": "TERMINAL_CHILD_SAFE_BACKFILL",
+    "flow": "CONTROLLER_OWNED_OUTCOME",
+    "plan_executor": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL"
+  }
+}

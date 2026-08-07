@@ -1,0 +1,20 @@
+{
+  "step": "STEP021BR1_PLAN_REVISION_STABLE_STEP_IDENTITY_AND_OPEN_BLOCKER_GUARD_CLOSURE",
+  "version": "0.21.2-step021br1",
+  "schema": 24,
+  "expectedChecks": "24/24",
+  "liveHarness": "STEP021BR1_H1_CHANGED_STEP_REEXECUTION_MUTABLE_ISOLATION_OPEN_BLOCKER_AND_RESTART",
+  "fields": {
+    "stability": "SEMANTIC_DEFINITION_MATCH",
+    "changed_step": "FRESH_EXECUTION_HISTORY",
+    "mutable_plan": "STABLE_DEFINITION_ONLY",
+    "blocker_guard": "UNBOUNDED_OPEN_EXISTENCE",
+    "retry": "MANUAL_BOUNDED_NEW_ATTEMPT",
+    "decision": "REVISION_SNAPSHOT_STALE_REJECTED",
+    "restart": "CHANGED_STEP_REEXECUTION_DUPLICATE_FREE",
+    "executor": "SINGLE_ACTIVE_STEP",
+    "parallel": "DEFERRED",
+    "provider": "SCRIPTED_LOCAL",
+    "openclaw_reference": "BOUND_CONTROLLER_SOURCE_REAUDITED"
+  }
+}

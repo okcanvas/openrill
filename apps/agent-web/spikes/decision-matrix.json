@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "openrill-control-ui-step010a-v1",
+  "weights": {
+    "workloadCorrectness": 30,
+    "maintainabilityAndTeamProductivity": 25,
+    "applicationEcosystem": 15,
+    "runtimeAndBundleCost": 15,
+    "desktopEmbedding": 10,
+    "testAndFailureClarity": 5
+  },
+  "scores": {
+    "vue": {
+      "workloadCorrectness": 5,
+      "maintainabilityAndTeamProductivity": 5,
+      "applicationEcosystem": 5,
+      "runtimeAndBundleCost": 3,
+      "desktopEmbedding": 5,
+      "testAndFailureClarity": 5
+    },
+    "lit": {
+      "workloadCorrectness": 5,
+      "maintainabilityAndTeamProductivity": 3,
+      "applicationEcosystem": 3,
+      "runtimeAndBundleCost": 5,
+      "desktopEmbedding": 5,
+      "testAndFailureClarity": 4
+    }
+  },
+  "decision": "VUE_3",
+  "rationaleCodes": [
+    "SAME_WORKLOAD_CONTRACT_PASSED",
+    "APP_SCALE_ROUTE_FORM_STATE_PRODUCTIVITY",
+    "SFC_TYPESCRIPT_TOOLING",
+    "LOCAL_PROTOCOL_REMAINS_FRAMEWORK_NEUTRAL",
+    "LIT_RUNTIME_SIZE_ADVANTAGE_NOT_DECISIVE_FOR_LOCAL_CONTROL_UI"
+  ],
+  "matrixSha256": "0fe6066ad50a6b69513157b7a1cc89be083f12c6cc3fdab9710d847c3d7d5579"
+}

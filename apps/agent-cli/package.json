@@ -1,0 +1,34 @@
+{
+  "name": "@openrill/cli",
+  "version": "0.25.0-step023a",
+  "private": true,
+  "description": "OpenRill CLI and foreground Host lifecycle command boundary.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0 <23 || >=24.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "node ../../scripts/package-task.mjs clean .",
+    "build": "node ../../scripts/package-task.mjs build .",
+    "typecheck": "node ../../scripts/package-task.mjs typecheck ."
+  },
+  "dependencies": {
+    "@openrill/protocol": "workspace:*",
+    "@openrill/diagnostics": "workspace:*",
+    "@openrill/host": "workspace:*",
+    "@openrill/config": "workspace:*",
+    "@openrill/sandbox-docker": "workspace:*",
+    "@openrill/workspace": "workspace:*",
+    "@openrill/skills": "workspace:*",
+    "@openrill/tool-discovery": "workspace:*"
+  }
+}

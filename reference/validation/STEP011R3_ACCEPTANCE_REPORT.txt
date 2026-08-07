@@ -1,0 +1,162 @@
+[PASS] root-version :: 0.11.3-step011r3
+[PASS] package-manager
+[PASS] step011r3-script
+[PASS] step011r3-package-script
+[PASS] step011r3-package-marker
+[PASS] required:scripts/chromium-executable.mjs
+[PASS] required:scripts/live-fixture-cleanup.mjs
+[PASS] required:scripts/run-step011-live.mjs
+[PASS] required:scripts/run_step011_acceptance.py
+[PASS] required:scripts/run_step011r3_acceptance.py
+[PASS] required:scripts/sh_run_step011r3_acceptance.cmd
+[PASS] required:scripts/sh_run_step011r3_acceptance.sh
+[PASS] required:scripts/package_step011r3.py
+[PASS] required:tests/unit/browser-page-evidence-step011r3.test.mjs
+[PASS] required:tests/unit/live-fixture-cleanup-step011r1.test.mjs
+[PASS] required:docs/plans/STEP011R3_WINDOWS_BROWSER_BOOTSTRAP_EVIDENCE.md
+[PASS] required:reference/validation/STEP011R2_BROWSER_BOOTSTRAP_EVIDENCE_LOSS.md
+[PASS] required:reference/validation/STEP011R2_BROWSER_WAIT_PREDICATE_ONLY_DIAGNOSTIC.md
+[PASS] required:reference/validation/STEP011R3_ADDITIVE_UNIT_COUNT_DRIFT.md
+[PASS] required:reference/validation/STEP011R3_FAILURE_REPORT_NONDETERMINISM.md
+[PASS] required:scripts/browser-page-evidence.mjs
+[PASS] required:tests/unit/browser-page-evidence-step011r3.test.mjs
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.11.3-step011r3"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP011R3_WINDOWS_BROWSER_BOOTSTRAP_EVIDENCE 0.11.3-step011r3
+[PASS] browser-evidence:boundaries
+[PASS] browser-evidence:runtime
+[PASS] browser-evidence:console
+[PASS] browser-evidence:log
+[PASS] browser-evidence:network-failed
+[PASS] browser-evidence:network-http
+[PASS] browser-evidence:page-state
+[PASS] browser-evidence:wait
+[PASS] live-browser:helper-import
+[PASS] live-browser:blank-start
+[PASS] live-browser:attach
+[PASS] live-browser:enable
+[PASS] live-browser:navigate
+[PASS] live-browser:wait-evidence
+[PASS] live-pre-navigation-order :: 9635,11309,11372,11437
+[PASS] live-final-url-process-argument-zero
+[PASS] feature-suite-tests-current
+[PASS] feature-suite-files-current
+[PASS] feature-vendor-failure-stable
+[PASS] feature-browser-failure-extractor
+[PASS] correction-regression-failure-stable
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-registry:OR-ISSUE-013
+[PASS] issue-registry:OR-ISSUE-014
+[PASS] issue-registry:OR-ISSUE-015
+[PASS] issue-registry:OR-ISSUE-016
+[PASS] issue-registry:OR-ISSUE-017
+[PASS] issue-registry:OR-ISSUE-018
+[PASS] issue-registry:OR-ISSUE-019
+[PASS] issue-registry:OR-ISSUE-020
+[PASS] issue-registry:OR-ISSUE-021
+[PASS] issue-registry:OR-ISSUE-022
+[PASS] issue-registry:OR-ISSUE-023
+[PASS] issue-registry:OR-ISSUE-024
+[PASS] issue-registry:OR-ISSUE-025
+[PASS] issue-registry:OR-ISSUE-026
+[PASS] issue-registry:OR-ISSUE-027
+[PASS] issue-registry:OR-ISSUE-028
+[PASS] issue-registry:OR-ISSUE-029
+[PASS] issue-registry:OR-ISSUE-030
+[PASS] issue-registry:OR-ISSUE-031
+[PASS] issue-registry:OR-ISSUE-032
+[PASS] issue-registry:OR-ISSUE-033
+[PASS] issue-registry:OR-ISSUE-034
+[PASS] issue-registry:OR-ISSUE-035
+[PASS] issue-registry:OR-ISSUE-036
+[PASS] issue-registry:OR-ISSUE-037
+[PASS] issue-registry:OR-ISSUE-038
+[PASS] issue-registry:OR-ISSUE-039
+[PASS] issue-registry:OR-ISSUE-040
+[PASS] issue-registry:OR-ISSUE-041
+[PASS] issue-registry:OR-ISSUE-042
+[PASS] issue-registry:OR-ISSUE-043
+[PASS] issue-registry:OR-ISSUE-044
+[PASS] issue-registry:OR-ISSUE-045
+[PASS] issue-registry:OR-ISSUE-046
+[PASS] issue-registry:OR-ISSUE-047
+[PASS] issue-detail:STEP011R2_BROWSER_BOOTSTRAP_EVIDENCE_LOSS.md
+[PASS] issue-detail:STEP011R2_BROWSER_WAIT_PREDICATE_ONLY_DIAGNOSTIC.md
+[PASS] issue-detail:STEP011R3_ADDITIVE_UNIT_COUNT_DRIFT.md
+[PASS] issue-detail:STEP011R3_FAILURE_REPORT_NONDETERMINISM.md
+[PASS] recurrence:pre-navigation
+[PASS] recurrence:wait-evidence
+[PASS] recurrence:additive-suite-inventory
+[PASS] recurrence:stable-failure-report
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Windows 실패 증거
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] baseline-step:README.md
+[PASS] baseline-version:README.md
+[PASS] baseline-step011r2-failure:README.md
+[PASS] baseline-feature:README.md
+[PASS] baseline-previous-windows:README.md
+[PASS] baseline-next:README.md
+[PASS] baseline-step:HANDOFF.md
+[PASS] baseline-version:HANDOFF.md
+[PASS] baseline-step011r2-failure:HANDOFF.md
+[PASS] baseline-feature:HANDOFF.md
+[PASS] baseline-previous-windows:HANDOFF.md
+[PASS] baseline-next:HANDOFF.md
+[PASS] baseline-step:PLANS.md
+[PASS] baseline-version:PLANS.md
+[PASS] baseline-step011r2-failure:PLANS.md
+[PASS] baseline-feature:PLANS.md
+[PASS] baseline-previous-windows:PLANS.md
+[PASS] baseline-next:PLANS.md
+[PASS] baseline-step:ROADMAP.md
+[PASS] baseline-version:ROADMAP.md
+[PASS] baseline-step011r2-failure:ROADMAP.md
+[PASS] baseline-feature:ROADMAP.md
+[PASS] baseline-previous-windows:ROADMAP.md
+[PASS] baseline-next:ROADMAP.md
+[PASS] baseline-step:VALIDATION.md
+[PASS] baseline-version:VALIDATION.md
+[PASS] baseline-step011r2-failure:VALIDATION.md
+[PASS] baseline-feature:VALIDATION.md
+[PASS] baseline-previous-windows:VALIDATION.md
+[PASS] baseline-next:VALIDATION.md
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] focused-browser-evidence-tests :: browser_evidence_tests_pass
+[FAIL] step011-full-regression :: STEP011_CONTROL_UI_VERTICAL_SLICE checks=183/195 state=FAILED schema=7 framework=VUE_3 browser=CHROMIUM prerequisite=runtime_unavailable
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup :: []
+STEP011R3_WINDOWS_BROWSER_BOOTSTRAP_EVIDENCE checks=160/161 state=FAILED schema=7 instrumentation=PRE_NAVIGATION diagnostics=PAGE_NETWORK_RUNTIME browser=CHROMIUM

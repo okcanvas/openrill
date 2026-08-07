@@ -1,0 +1,59 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] typescript-version :: 6.0.3
+[PASS] node-types-version :: 22.20.1
+[PASS] step002a-script
+[PASS] step002a-package-script
+[PASS] required:tsconfig.base.json
+[PASS] required:tsconfig.node.json
+[PASS] required:tsconfig.web.json
+[PASS] required:tests/unit/typescript-environment.test.mjs
+[PASS] required:scripts/run_step002a_acceptance.py
+[PASS] required:scripts/sh_run_step002a_acceptance.cmd
+[PASS] required:scripts/sh_run_step002a_acceptance.sh
+[PASS] required:scripts/package_step002a.py
+[PASS] required:docs/plans/STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES.md
+[PASS] required:docs/adrs/ADR-0015-EXPLICIT_TYPESCRIPT_RUNTIME_TYPES.md
+[PASS] base-types-explicit-empty :: []
+[PASS] node-types-explicit-node :: ["node"]
+[PASS] web-types-explicit-empty :: []
+[PASS] node-config-extends-base :: ./tsconfig.base.json
+[PASS] web-config-extends-base :: ./tsconfig.base.json
+[PASS] web-dom-lib
+[PASS] base-node-types-zero
+[PASS] web-node-types-zero
+[PASS] workspace-tsconfig-count :: 24
+[PASS] node-workspace-count :: 23
+[PASS] web-workspace-count :: ["apps/agent-web/tsconfig.json"]
+[PASS] workspace-types-overrides-zero :: []
+[PASS] node-sensitive-workspaces-present :: ["apps/agent-cli", "packages/config", "packages/conversations", "packages/state", "packages/tools-process", "services/agent-host"]
+[PASS] node-sensitive-workspaces-classified :: []
+[PASS] web-node-global-leak-zero
+[PASS] lock-node-types-importer
+[PASS] lock-node-types-snapshot
+[PASS] lock-typescript-snapshot
+[PASS] local-typescript-installed :: installed
+[PASS] effective-host-node-types :: node
+[PASS] effective-web-types-empty :: empty
+[PASS] step002a-heading:## 목적
+[PASS] step002a-heading:## 기준선
+[PASS] step002a-heading:## Reference Evidence
+[PASS] step002a-heading:## 원인
+[PASS] step002a-heading:## 구현 범위
+[PASS] step002a-heading:## 공개 계약
+[PASS] step002a-heading:## 상태 전이
+[PASS] step002a-heading:## 실패 및 복구
+[PASS] step002a-heading:## Acceptance
+[PASS] step002a-heading:## 패키징 산출물
+[PASS] step002a-heading:## 제외
+[PASS] plan-typescript6-default
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step002-regression :: step002_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP002A_TYPESCRIPT6_EXPLICIT_NODE_TYPES checks=58/58 state=PASSED node_types=EXPLICIT web_node_types=DENIED typescript6=SUPPORTED

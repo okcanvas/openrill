@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "runtimePackaging": "EXTERNAL_SPIKE_ONLY",
+  "productionDependencyIntroduction": "STEP011",
+  "finalists": {
+    "vue": {
+      "name": "Vue",
+      "version": "3.5.40",
+      "module": "https://cdn.jsdelivr.net/npm/vue@3.5.40/dist/vue.runtime.esm-browser.prod.js",
+      "publishedRuntimeBytes": 106440,
+      "license": "MIT"
+    },
+    "lit": {
+      "name": "Lit",
+      "version": "3.3.3",
+      "module": "https://cdn.jsdelivr.net/gh/lit/dist@v3.3.3/core/lit-core.min.js",
+      "publishedRuntimeBytes": 15400,
+      "license": "BSD-3-Clause"
+    }
+  }
+}

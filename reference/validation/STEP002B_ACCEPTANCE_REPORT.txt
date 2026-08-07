@@ -1,0 +1,61 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step002b-script
+[PASS] step002b-package-script
+[PASS] required:packages/config/src/index.ts
+[PASS] required:tests/unit/profile-paths.test.mjs
+[PASS] required:scripts/run_step002b_acceptance.py
+[PASS] required:scripts/sh_run_step002b_acceptance.cmd
+[PASS] required:scripts/sh_run_step002b_acceptance.sh
+[PASS] required:scripts/package_step002b.py
+[PASS] required:docs/plans/STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS.md
+[PASS] required:docs/adrs/ADR-0016-TARGET_PLATFORM_PATH_SEMANTICS.md
+[PASS] required:reference/validation/STEP002A_WINDOWS_PROFILE_PATH_FAILURE.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.0-step006"]
+[PASS] config-imports-posix-win32
+[PASS] config-bare-resolve-import-zero
+[PASS] config-platform-selector
+[PASS] config-selected-resolve-data
+[PASS] config-selected-resolve-config
+[PASS] config-selected-resolve-runtime
+[PASS] config-selected-resolve-lock
+[PASS] config-selected-resolve-metadata
+[PASS] config-host-platform-default
+[PASS] profile-test-contract:explicit platform selects path semantics independently of the host OS
+[PASS] profile-test-contract:platform: "win32"
+[PASS] profile-test-contract:platform: "linux"
+[PASS] profile-test-contract:platform: "darwin"
+[PASS] profile-test-contract:C:\\Local\\OpenRill\\alpha\\runtime
+[PASS] profile-test-contract:/home/test/.local/share/openrill/alpha/runtime
+[PASS] profile-test-contract:D:\\OpenRillData\\beta\\runtime
+[PASS] profile-test-contract:/srv/openrill-data/beta/runtime
+[PASS] step002b-heading:## 목적
+[PASS] step002b-heading:## 기준선
+[PASS] step002b-heading:## Reference Evidence
+[PASS] step002b-heading:## 원인
+[PASS] step002b-heading:## 구현 범위
+[PASS] step002b-heading:## 공개 계약
+[PASS] step002b-heading:## 상태 전이
+[PASS] step002b-heading:## 실패 및 복구
+[PASS] step002b-heading:## Acceptance
+[PASS] step002b-heading:## 패키징 산출물
+[PASS] step002b-heading:## 제외
+[PASS] plan-exact-windows-failure
+[PASS] plan-target-path-contract
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] live-windows-runtime :: C:\Local\OpenRill\alpha\runtime
+[PASS] live-windows-config :: C:\Roaming\OpenRill\alpha
+[PASS] live-unix-runtime :: /home/test/.local/share/openrill/alpha/runtime
+[PASS] live-unix-config :: /home/test/.config/openrill/alpha
+[PASS] live-windows-override :: D:\OpenRillData\beta\runtime
+[PASS] live-unix-override :: /srv/openrill-data/beta/runtime
+[PASS] step002a-regression :: step002a_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP002B_CROSS_PLATFORM_PROFILE_PATH_SEMANTICS checks=60/60 state=PASSED path_semantics=TARGET_PLATFORM host_os_leak=DENIED

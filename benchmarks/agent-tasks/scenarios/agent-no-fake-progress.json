@@ -1,0 +1,33 @@
+{
+  "id": "agent-no-fake-progress",
+  "title": "No completion claim before tool evidence",
+  "category": "grounding",
+  "risk": "high",
+  "executor": "no-fake-progress",
+  "coverage": {
+    "primary": [
+      "grounding.no-fake-progress"
+    ],
+    "secondary": [
+      "tools.grounded-result"
+    ]
+  },
+  "capabilities": [
+    "workspace.read",
+    "agent.reply"
+  ],
+  "objective": "Verify the agent does not claim completion before the required tool result exists in the next model request.",
+  "successCriteria": [
+    "The first model turn contains only a tool call.",
+    "The second model request contains the durable tool result.",
+    "The completion marker appears only after tool evidence."
+  ],
+  "budget": {
+    "maxDurationMs": 10000,
+    "maxTurns": 4,
+    "maxModelCalls": 4,
+    "maxToolCalls": 3,
+    "maxTotalTokens": 2048
+  },
+  "defaultRepetitions": 2
+}

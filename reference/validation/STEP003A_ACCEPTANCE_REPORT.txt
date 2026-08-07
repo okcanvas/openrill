@@ -1,0 +1,51 @@
+[PASS] root-version :: 0.6.0-step006
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step003a-script
+[PASS] step003a-package-script
+[PASS] required:scripts/run-step001-suite.mjs
+[PASS] required:scripts/run_step003_acceptance.py
+[PASS] required:scripts/run_step003a_acceptance.py
+[PASS] required:scripts/sh_run_step003a_acceptance.cmd
+[PASS] required:scripts/sh_run_step003a_acceptance.sh
+[PASS] required:scripts/package_step003a.py
+[PASS] required:docs/plans/STEP003A_DETERMINISTIC_NODE_TEST_REPORTER.md
+[PASS] required:docs/adrs/ADR-0018-DETERMINISTIC_NODE_TEST_REPORTER.md
+[PASS] required:reference/validation/STEP003_WINDOWS_DEFAULT_REPORTER_FAILURE.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.6.0-step006"]
+[PASS] suite-explicit-tap-reporter
+[PASS] suite-default-reporter-zero
+[PASS] suite-shell-false
+[PASS] suite-platform-shell-zero
+[PASS] suite-spawn-error-closed
+[PASS] suite-no-color
+[PASS] suite-python-utf8
+[PASS] suite-deterministic-marker
+[PASS] step003-requires-tap-marker
+[PASS] step003-requires-test-total
+[PASS] step003-requires-pass-total
+[PASS] step003-requires-fail-zero
+[PASS] step003-default-glyph-zero
+[PASS] step003a-heading:## 목적
+[PASS] step003a-heading:## 기준선
+[PASS] step003a-heading:## Reference Evidence
+[PASS] step003a-heading:## 원인
+[PASS] step003a-heading:## 구현 범위
+[PASS] step003a-heading:## 공개 계약
+[PASS] step003a-heading:## 상태 전이
+[PASS] step003a-heading:## 실패 및 복구
+[PASS] step003a-heading:## Acceptance
+[PASS] step003a-heading:## 패키징 산출물
+[PASS] step003a-heading:## 제외
+[PASS] plan-windows-output
+[PASS] plan-explicit-reporter
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] explicit-tap-suite-live :: suite_pass
+[PASS] step003-regression :: step003_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] generated-cleanup
+STEP003A_DETERMINISTIC_NODE_TEST_REPORTER checks=50/50 state=PASSED reporter=TAP shell=FALSE platform_output=STABLE

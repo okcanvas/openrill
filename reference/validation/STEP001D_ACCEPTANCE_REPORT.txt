@@ -1,0 +1,304 @@
+[PASS] root-version :: 0.2.0-step002
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step001d-script
+[PASS] entrypoint-imports-path-resolve
+[PASS] entrypoint-imports-path-to-file-url
+[PASS] entrypoint-exports-direct-check
+[PASS] entrypoint-canonical-file-url
+[PASS] entrypoint-legacy-url-construction-zero
+[PASS] entrypoint-main-guard
+[PASS] reported-windows-url-misclassification-reproduced :: d: d:\NODE_AGENTS\okcanvas-openrill\openrill.mjs
+[PASS] canonical-direct-check-roundtrip :: true
+[PASS] step001d-plan
+[PASS] step001d-heading:## 목적
+[PASS] step001d-heading:## Reference Evidence
+[PASS] step001d-heading:## 실패 증거
+[PASS] step001d-heading:## 원인
+[PASS] step001d-heading:## 구현 범위
+[PASS] step001d-heading:## 공개 계약
+[PASS] step001d-heading:## 상태 전이
+[PASS] step001d-heading:## 실패 및 복구
+[PASS] step001d-heading:## Acceptance
+[PASS] step001d-heading:## 패키징 산출물
+[PASS] step001d-heading:## 제외
+[PASS] step001d-windows-launcher
+[PASS] step001d-windows-launcher-crlf
+[PASS] step001d-windows-launcher-root-relative
+[PASS] step001d-posix-launcher
+[PASS] step001d-build-suite :: suite_pass
+[PASS] cli-version-live :: OpenRill 0.2.0-step002
+[PASS] cli-help-live :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind for start/run (default: 127.0.0.1)
+  --port <port>         Port for start/run; 0 selects an ephemeral port (default: 47117)
+  --force               Reclaim an old unverified lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP002 start/run are foreground commands. OS background service installation begins in STEP019.
+[PASS] cli-unknown-closed-live :: openrill: unknown command: unknown
+[PASS] step001-regression :: _SDK_AND_MATTERMOST.md:## 구현 범위
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## Acceptance
+[PASS] plan-heading:STEP016_CONNECTOR_SDK_AND_MATTERMOST.md:## 제외
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 목적
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## Reference Evidence
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 구현 범위
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## Acceptance
+[PASS] plan-heading:STEP017_NARROW_EXTENSION_SDK.md:## 제외
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 목적
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## Reference Evidence
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 구현 범위
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## Acceptance
+[PASS] plan-heading:STEP018_DOCTOR_BACKUP_AND_UPDATE.md:## 제외
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 목적
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Reference Evidence
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 구현 범위
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Acceptance
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 제외
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 목적
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Reference Evidence
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 구현 범위
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Acceptance
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 제외
+[PASS] markdown-links :: checked=36 broken=[]
+[PASS] cli-entrypoint-path-to-file-url
+[PASS] cli-entrypoint-legacy-url-zero
+[PASS] step001-suite :: suite_pass
+[PASS] cli-version :: OpenRill 0.2.0-step002
+[PASS] cli-help :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind for start/run (default: 127.0.0.1)
+  --port <port>         Port for start/run; 0 selects an ephemeral port (default: 47117)
+  --force               Reclaim an old unverified lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP002 start/run are foreground commands. OS background service installation begins in STEP019.
+[PASS] cli-start-loopback-guard :: openrill: STEP002 Host bind must be loopback: 0.0.0.0
+[PASS] dist-package-count :: 24
+[PASS] web-built-deferred
+[PASS] runtime-directories-zero
+[PASS] database-files-zero
+[PASS] protected-payload-zero
+[PASS] windows-cmd-crlf
+[PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=259/259 state=PASSED packages=24 evidence=83 ui_framework=DEFERRED
+[PASS] step001a-regression :: [PASS] root-version :: 0.2.0-step002
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step001a-script
+[PASS] lockfile-version
+[PASS] protocol-importer-empty-object
+[PASS] protocol-importer-not-null
+[PASS] snapshots-present
+[PASS] snapshot:'@types/node@22.20.1':
+[PASS] snapshot:typescript@6.0.3: {}
+[PASS] snapshot:undici-types@6.21.0: {}
+[PASS] step001a-plan
+[PASS] step001a-heading:## 목적
+[PASS] step001a-heading:## 실패 증거
+[PASS] step001a-heading:## 원인
+[PASS] step001a-heading:## 구현 범위
+[PASS] step001a-heading:## Acceptance
+[PASS] step001a-heading:## 제외
+[PASS] step001-regression :: g:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 구현 범위
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Acceptance
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 제외
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 목적
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Reference Evidence
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 구현 범위
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Acceptance
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 제외
+[PASS] markdown-links :: checked=36 broken=[]
+[PASS] cli-entrypoint-path-to-file-url
+[PASS] cli-entrypoint-legacy-url-zero
+[PASS] step001-suite :: suite_pass
+[PASS] cli-version :: OpenRill 0.2.0-step002
+[PASS] cli-help :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind for start/run (default: 127.0.0.1)
+  --port <port>         Port for start/run; 0 selects an ephemeral port (default: 47117)
+  --force               Reclaim an old unverified lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP002 start/run are foreground commands. OS background service installation begins in STEP019.
+[PASS] cli-start-loopback-guard :: openrill: STEP002 Host bind must be loopback: 0.0.0.0
+[PASS] dist-package-count :: 24
+[PASS] web-built-deferred
+[PASS] runtime-directories-zero
+[PASS] database-files-zero
+[PASS] protected-payload-zero
+[PASS] windows-cmd-crlf
+[PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=259/259 state=PASSED packages=24 evidence=83 ui_framework=DEFERRED
+STEP001A_PNPM_LOCKFILE_REPAIR checks=18/18 state=PASSED null_importers=0 package_manager=pnpm@11.15.1
+[PASS] step001b-regression :: [PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=259/259 state=PASSED packages=24 evidence=83 ui_framework=DEFERRED
+[PASS] step001a-regression :: [PASS] root-version :: 0.2.0-step002
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step001a-script
+[PASS] lockfile-version
+[PASS] protocol-importer-empty-object
+[PASS] protocol-importer-not-null
+[PASS] snapshots-present
+[PASS] snapshot:'@types/node@22.20.1':
+[PASS] snapshot:typescript@6.0.3: {}
+[PASS] snapshot:undici-types@6.21.0: {}
+[PASS] step001a-plan
+[PASS] step001a-heading:## 목적
+[PASS] step001a-heading:## 실패 증거
+[PASS] step001a-heading:## 원인
+[PASS] step001a-heading:## 구현 범위
+[PASS] step001a-heading:## Acceptance
+[PASS] step001a-heading:## 제외
+[PASS] step001-regression :: g:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 구현 범위
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Acceptance
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 제외
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 목적
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Reference Evidence
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 구현 범위
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Acceptance
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 제외
+[PASS] markdown-links :: checked=36 broken=[]
+[PASS] cli-entrypoint-path-to-file-url
+[PASS] cli-entrypoint-legacy-url-zero
+[PASS] step001-suite :: suite_pass
+[PASS] cli-version :: OpenRill 0.2.0-step002
+[PASS] cli-help :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind for start/run (default: 127.0.0.1)
+  --port <port>         Port for start/run; 0 selects an ephemeral port (default: 47117)
+  --force               Reclaim an old unverified lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP002 start/run are foreground commands. OS background service installation begins in STEP019.
+[PASS] cli-start-loopback-guard :: openrill: STEP002 Host bind must be loopback: 0.0.0.0
+[PASS] dist-package-count :: 24
+[PASS] web-built-deferred
+[PASS] runtime-directories-zero
+[PASS] database-files-zero
+[PASS] protected-payload-zero
+[PASS] windows-cmd-crlf
+[PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=259/259 state=PASSED packages=24 evidence=83 ui_framework=DEFERRED
+STEP001A_PNPM_LOCKFILE_REPAIR checks=18/18 state=PASSED null_importers=0 package_manager=pnpm@11.15.1
+STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT checks=25/25 state=PASSED auto_install_peers=TRUE package_manager=pnpm@11.15.1
+[PASS] step001c-regression :: =24 evidence=83 ui_framework=DEFERRED
+[PASS] step001a-regression :: [PASS] root-version :: 0.2.0-step002
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step001a-script
+[PASS] lockfile-version
+[PASS] protocol-importer-empty-object
+[PASS] protocol-importer-not-null
+[PASS] snapshots-present
+[PASS] snapshot:'@types/node@22.20.1':
+[PASS] snapshot:typescript@6.0.3: {}
+[PASS] snapshot:undici-types@6.21.0: {}
+[PASS] step001a-plan
+[PASS] step001a-heading:## 목적
+[PASS] step001a-heading:## 실패 증거
+[PASS] step001a-heading:## 원인
+[PASS] step001a-heading:## 구현 범위
+[PASS] step001a-heading:## Acceptance
+[PASS] step001a-heading:## 제외
+[PASS] step001-regression :: g:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 구현 범위
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## Acceptance
+[PASS] plan-heading:STEP019_WINDOWS_DAEMON_AND_DESKTOP_SHELL.md:## 제외
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 목적
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Reference Evidence
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 구현 범위
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## Acceptance
+[PASS] plan-heading:STEP020_RELEASE_ACCEPTANCE.md:## 제외
+[PASS] markdown-links :: checked=36 broken=[]
+[PASS] cli-entrypoint-path-to-file-url
+[PASS] cli-entrypoint-legacy-url-zero
+[PASS] step001-suite :: suite_pass
+[PASS] cli-version :: OpenRill 0.2.0-step002
+[PASS] cli-help :: OpenRill local autonomous agent
+
+Usage: openrill <command> [options]
+
+Commands:
+  start      Start the foreground local Host
+  run        Alias for start
+  status     Query the profile Host through the local control endpoint
+  stop       Request graceful Host shutdown
+  help       Show this help
+  version    Show the packaged version
+
+Options:
+  --profile <name>      Profile name (default: default)
+  --bind <address>      Loopback bind for start/run (default: 127.0.0.1)
+  --port <port>         Port for start/run; 0 selects an ephemeral port (default: 47117)
+  --force               Reclaim an old unverified lock after the safety age
+  --json                Emit machine-readable JSON
+  --timeout-ms <ms>     Stop timeout (default: 5000)
+
+STEP002 start/run are foreground commands. OS background service installation begins in STEP019.
+[PASS] cli-start-loopback-guard :: openrill: STEP002 Host bind must be loopback: 0.0.0.0
+[PASS] dist-package-count :: 24
+[PASS] web-built-deferred
+[PASS] runtime-directories-zero
+[PASS] database-files-zero
+[PASS] protected-payload-zero
+[PASS] windows-cmd-crlf
+[PASS] windows-cmd-root
+[PASS] generated-cleanup
+STEP001_REPOSITORY_AND_TOOLCHAIN_FOUNDATION checks=259/259 state=PASSED packages=24 evidence=83 ui_framework=DEFERRED
+STEP001A_PNPM_LOCKFILE_REPAIR checks=18/18 state=PASSED null_importers=0 package_manager=pnpm@11.15.1
+STEP001B_PNPM_LOCKFILE_SETTINGS_ALIGNMENT checks=25/25 state=PASSED auto_install_peers=TRUE package_manager=pnpm@11.15.1
+STEP001C_WINDOWS_UTF8_SUBPROCESS_CAPTURE checks=35/35 state=PASSED capture=BINARY decode=UTF8_REPLACE windows_locale=INDEPENDENT
+STEP001D_WINDOWS_CLI_ENTRYPOINT_CANONICALIZATION checks=35/35 state=PASSED entrypoint=PATH_TO_FILE_URL windows_drive_scheme=SAFE

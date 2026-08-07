@@ -1,0 +1,151 @@
+[PASS] root-version :: 0.5.0-step005
+[PASS] package-manager :: pnpm@11.15.1
+[PASS] step005-script
+[PASS] step005-package-script
+[PASS] required:packages/state/src/errors.ts
+[PASS] required:packages/state/src/types.ts
+[PASS] required:packages/state/src/paths.ts
+[PASS] required:packages/state/src/transaction.ts
+[PASS] required:packages/state/src/integrity.ts
+[PASS] required:packages/state/src/migrations.ts
+[PASS] required:packages/state/src/repository.ts
+[PASS] required:packages/state/src/database.ts
+[PASS] required:packages/state/src/index.ts
+[PASS] required:packages/state/migrations/001_state_identity.sql
+[PASS] required:packages/state/migrations/002_state_health_checks.sql
+[PASS] required:services/agent-host/src/control.ts
+[PASS] required:tests/unit/state-step005.test.mjs
+[PASS] required:scripts/run-step005-live.mjs
+[PASS] required:scripts/run_step005_acceptance.py
+[PASS] required:scripts/sh_run_step005_acceptance.cmd
+[PASS] required:scripts/sh_run_step005_acceptance.sh
+[PASS] required:scripts/package_step005.py
+[PASS] required:docs/contracts/STATE_DATABASE.md
+[PASS] required:docs/operations/SQLITE_RELIABILITY.md
+[PASS] required:docs/plans/STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION.md
+[PASS] required:docs/adrs/ADR-0020-PROFILE_SCOPED_SQLITE_MIGRATION_LEDGER.md
+[PASS] required:reference/openclaw/SQLITE_STATE.md
+[PASS] manifest-count :: 25
+[PASS] manifest-version-alignment :: ["0.5.0-step005"]
+[PASS] node-sqlite-built-in-only
+[PASS] no-openclaw-dependency
+[PASS] ui-framework-still-deferred
+[PASS] state-config-dependency
+[PASS] state-protocol-dependency
+[PASS] host-state-dependency
+[PASS] host-control-subpath
+[PASS] state-path-contract:selectPathSemantics
+[PASS] state-path-contract:platform === "win32" ? win32 : posix
+[PASS] state-path-contract:"state"
+[PASS] state-path-contract:"agent.db"
+[PASS] state-path-contract:"backups"
+[PASS] database-contract:from "node:sqlite"
+[PASS] database-contract:DEFAULT_STATE_BUSY_TIMEOUT_MS = 1500
+[PASS] database-contract:STATE_WAL_AUTOCHECKPOINT_PAGES = 1000
+[PASS] database-contract:STATE_JOURNAL_SIZE_LIMIT_BYTES = 64 * 1024 * 1024
+[PASS] database-contract:PRAGMA foreign_keys = ON
+[PASS] database-contract:PRAGMA trusted_schema = OFF
+[PASS] database-contract:PRAGMA synchronous = NORMAL
+[PASS] database-contract:PRAGMA journal_mode = WAL
+[PASS] database-contract:timeout: busyTimeoutMs
+[PASS] database-contract:enableForeignKeyConstraints: true
+[PASS] database-contract:allowExtension: false
+[PASS] database-contract:currentVersion > 0
+[PASS] database-contract:assertStateIntegrity(database
+[PASS] database-contract:checkpointMode ?? "TRUNCATE"
+[PASS] database-contract:await backup(
+[PASS] database-contract:readOnly: true
+[PASS] database-contract:full: true
+[PASS] database-contract:createHash("sha256")
+[PASS] database-extension-loading-zero
+[PASS] migration-contract:OPENRILL_STATE_SCHEMA_VERSION = 2
+[PASS] migration-contract:MIGRATION_FILE_PATTERN
+[PASS] migration-contract:createHash("sha256")
+[PASS] migration-contract:CREATE TABLE IF NOT EXISTS schema_migrations
+[PASS] migration-contract:STATE_MIGRATION_DRIFT
+[PASS] migration-contract:STATE_SCHEMA_NEWER
+[PASS] migration-contract:PRAGMA user_version
+[PASS] migration-contract:runImmediateStateTransaction
+[PASS] migration-contract:state_identity
+[PASS] migration-contract:return rows.map((row) => ({
+[PASS] migration-contract:product: row.product
+[PASS] transaction-contract:BEGIN IMMEDIATE
+[PASS] transaction-contract:STATE_TRANSACTION_ASYNC
+[PASS] transaction-contract:COMMIT
+[PASS] transaction-contract:ROLLBACK
+[PASS] integrity-contract:quick_check
+[PASS] integrity-contract:integrity_check
+[PASS] integrity-contract:PRAGMA foreign_key_check
+[PASS] integrity-contract:STATE_INTEGRITY_FAILED
+[PASS] repository-contract:class StateRepositories
+[PASS] repository-contract:return {
+[PASS] repository-contract:product: row.product
+[PASS] repository-contract:JSON.parse
+[PASS] repository-contract:BEGIN IMMEDIATE
+[PASS] raw-database-public-export-zero
+[PASS] state-public-open
+[PASS] state-public-diagnostics
+[PASS] migration001:CREATE TABLE state_identity
+[PASS] migration001:product = 'OpenRill'
+[PASS] migration001:FOREIGN KEY (schema_version)
+[PASS] migration001:) STRICT;
+[PASS] migration002:CREATE TABLE state_health_checks
+[PASS] migration002:json_valid(details_json)
+[PASS] migration002:CREATE INDEX idx_state_health_checks_status
+[PASS] migration002:) STRICT;
+[PASS] host-state-before-listener
+[PASS] host-state-close-before-lock
+[PASS] host-state-startup-rollback
+[PASS] cli-host-runtime-lazy
+[PASS] cli-control-runtime-lazy
+[PASS] cli-static-host-runtime-zero
+[PASS] unit-contract:state paths are profile-scoped
+[PASS] unit-contract:fresh open applies immutable migrations
+[PASS] unit-contract:second open is a migration no-op
+[PASS] unit-contract:sequential upgrade fixture
+[PASS] unit-contract:checksum drift
+[PASS] unit-contract:newer schema version
+[PASS] unit-contract:foreign key enforcement
+[PASS] unit-contract:transaction rolls back
+[PASS] unit-contract:concurrent writer contention
+[PASS] unit-contract:foreign key corruption
+[PASS] unit-contract:online backup includes committed WAL state
+[PASS] unit-contract:Host readiness requires migrated state
+[PASS] evidence-count :: 100
+[PASS] evidence-unique
+[PASS] evidence-report :: 100
+[PASS] evidence:OC-STATE-007
+[PASS] evidence:OC-STATE-008
+[PASS] evidence:OC-STATE-009
+[PASS] evidence:OC-STATE-010
+[PASS] evidence:OC-STATE-011
+[PASS] evidence:OC-STATE-012
+[PASS] step005-heading:## 목적
+[PASS] step005-heading:## 기준선
+[PASS] step005-heading:## Reference Evidence
+[PASS] step005-heading:## OpenClaw 문제 분석
+[PASS] step005-heading:## 구현 범위
+[PASS] step005-heading:## 공개 계약
+[PASS] step005-heading:## 상태 전이
+[PASS] step005-heading:## 실패 및 복구
+[PASS] step005-heading:## Acceptance
+[PASS] step005-heading:## 패키징 산출물
+[PASS] step005-heading:## 제외
+[PASS] step005-heading:## 완료 선언
+[PASS] plan-independent-redesign
+[PASS] state-contract-doc
+[PASS] sqlite-operations-doc
+[PASS] state-adr
+[PASS] reference-study
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] step004-regression :: step004_pass
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step005-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] state-path-value-not-reported
+[PASS] generated-cleanup
+STEP005_SQLITE_STATE_AND_MIGRATION_FOUNDATION checks=150/150 state=PASSED schema=2 journal=WAL migrations=CHECKSUMMED backup=VERIFIED

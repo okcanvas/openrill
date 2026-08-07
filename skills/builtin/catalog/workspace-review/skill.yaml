@@ -1,0 +1,15 @@
+id: workspace-review
+version: 1.0.0
+description: Review a configured workspace using bounded read-only file inspection and report evidence-backed findings.
+activation:
+  - review workspace
+  - inspect workspace
+instructions: instructions.md
+tools:
+  - workspace.list
+  - workspace.read
+  - workspace.search
+resources:
+  - resources/checklist.md
+compatibility:
+  minOpenRill: 0.10.0-step010

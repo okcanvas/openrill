@@ -1,0 +1,139 @@
+[PASS] root-version :: 0.13.0-step013a
+[PASS] package-manager
+[PASS] step013a-script
+[PASS] step013a-package-script
+[PASS] required:packages/browser-runtime/src/types.ts
+[PASS] required:packages/browser-runtime/src/errors.ts
+[PASS] required:packages/browser-runtime/src/policy.ts
+[PASS] required:packages/browser-runtime/src/runtime.ts
+[PASS] required:packages/browser-runtime/src/index.ts
+[PASS] required:packages/browser-runtime/README.md
+[PASS] required:scripts/verify_source_version_alignment.py
+[PASS] required:scripts/run_step013a_acceptance.py
+[PASS] required:scripts/package_step013a.py
+[PASS] required:scripts/sh_run_step013a_acceptance.cmd
+[PASS] required:scripts/sh_run_step013a_acceptance.sh
+[PASS] required:tests/unit/browser-runtime-step013a.test.mjs
+[PASS] required:tests/unit/browser-runtime-boundaries-step013a.test.mjs
+[PASS] required:docs/plans/STEP013A_BROWSER_RUNTIME_LIFECYCLE_AND_POLICY_FOUNDATION.md
+[PASS] required:docs/validation/STEP013A_BROWSER_RUNTIME_FAILURE_PREVENTION_AUDIT.md
+[PASS] required:reference/validation/STEP012DR4_WINDOWS_LIVE_ACCEPTED.md
+[PASS] required:reference/validation/STEP013A_OPENCLAW_BROWSER_REFERENCE_AUDIT.md
+[PASS] required:reference/validation/STEP012DR4_ACCEPTED_SOURCE_VERSION_IDENTITY_DRIFT.md
+[PASS] required:reference/validation/STEP013A_BROWSER_DRIVER_PREFLIGHT_AFTER_STATE_LOCK_NEAR_MISS.md
+[PASS] required:reference/validation/STEP013A_BROWSER_TIMEOUT_UNREF_LIVENESS_FAILURE.md
+[PASS] required:reference/validation/STEP013A_HOST_SHUTDOWN_TEST_TURN_ASSUMPTION.md
+[PASS] required:reference/validation/STEP013A_HISTORICAL_HOST_FIXTURE_BROWSER_CONFIG_AND_DRAIN_EXPECTATION_DRIFT.md
+[PASS] required:reference/validation/STEP013A_HISTORICAL_ROOT_ACCEPTED_BASELINE_CUTOVER_OWNERSHIP_DRIFT.md
+[PASS] required:reference/validation/STEP013A_ACCEPTANCE_REPORT.txt
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.13.0-step013a"]
+[PASS] package-manifest-generator-step
+[PASS] package-manifest-generator-version
+[PASS] package-manifest-verifier-step
+[PASS] package-manifest-verifier-version
+[PASS] package-manifest-generated-identity :: STEP013A_BROWSER_RUNTIME_LIFECYCLE_AND_POLICY_FOUNDATION 0.13.0-step013a
+[PASS] schema-9
+[PASS] migration-010-zero :: ["001_state_identity.sql", "009_automation_protocol_run_linkage.sql", "007_skill_discovery_run_snapshot.sql", "004_agent_model_execution.sql", "002_state_health_checks.sql", "006_process_approval_resume.sql", "008_automation_domain_persistence.sql", "005_workspace_file_artifacts.sql", "003_conversation_event_ledger.sql"]
+[PASS] browser-protocol-zero
+[PASS] browser-tool-registration-zero
+[PASS] external-product-dependency-zero :: []
+[PASS] provider-neutral-driver
+[PASS] single-flight-launch
+[PASS] generation-invalidation
+[PASS] run-owner-four-tuple
+[PASS] actor-limits-before-create
+[PASS] popup-download-deny
+[PASS] run-cancel-owned
+[PASS] idle-sweep-owned
+[PASS] bounded-operation-race
+[PASS] close-before-await
+[PASS] navigation-scheme-policy
+[PASS] navigation-credential-policy
+[PASS] navigation-private-policy
+[PASS] navigation-final-policy
+[PASS] config-browser-closed
+[PASS] config-default-disabled
+[PASS] config-no-persistence-path
+[PASS] driver-preflight-before-lock
+[PASS] browser-process-drain-before-db
+[PASS] accepted-step-evidence
+[PASS] accepted-artifact-sha
+[PASS] openclaw-reference-sha
+[PASS] openclaw-reference-role
+[PASS] openclaw-reference-file-hashes
+[PASS] openclaw-deliberate-differences
+[PASS] issue-registry-077
+[PASS] issue-recurrence-077
+[PASS] issue-registry-078
+[PASS] issue-recurrence-078
+[PASS] issue-registry-079
+[PASS] issue-recurrence-079
+[PASS] issue-registry-080
+[PASS] issue-recurrence-080
+[PASS] issue-registry-081
+[PASS] issue-recurrence-081
+[PASS] issue-registry-082
+[PASS] issue-recurrence-082
+[PASS] issue-detail-077
+[PASS] issue-detail-078
+[PASS] issue-detail-079
+[PASS] issue-detail-080
+[PASS] issue-detail-081
+[PASS] issue-detail-082
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## OpenClaw 참조
+[PASS] plan-heading:## 코드 확인
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] failure-prevention-audit
+[PASS] baseline-current-step:README.md
+[PASS] baseline-current-version:README.md
+[PASS] baseline-accepted-step:README.md
+[PASS] baseline-accepted-sha:README.md
+[PASS] next-step013b:README.md
+[PASS] baseline-current-step:HANDOFF.md
+[PASS] baseline-current-version:HANDOFF.md
+[PASS] baseline-accepted-step:HANDOFF.md
+[PASS] baseline-accepted-sha:HANDOFF.md
+[PASS] next-step013b:HANDOFF.md
+[PASS] baseline-current-step:PLANS.md
+[PASS] baseline-current-version:PLANS.md
+[PASS] baseline-accepted-step:PLANS.md
+[PASS] baseline-accepted-sha:PLANS.md
+[PASS] next-step013b:PLANS.md
+[PASS] baseline-current-step:ROADMAP.md
+[PASS] baseline-current-version:ROADMAP.md
+[PASS] baseline-accepted-step:ROADMAP.md
+[PASS] baseline-accepted-sha:ROADMAP.md
+[PASS] next-step013b:ROADMAP.md
+[PASS] baseline-current-step:VALIDATION.md
+[PASS] baseline-current-version:VALIDATION.md
+[PASS] baseline-accepted-step:VALIDATION.md
+[PASS] baseline-accepted-sha:VALIDATION.md
+[PASS] next-step013b:VALIDATION.md
+[PASS] source-version-alignment :: OPENRILL_SOURCE_VERSION_ALIGNMENT_PASS version=0.13.0-step013a manifests=26 sources=25 host_literals=3
+[PASS] python-text-io-explicit :: []
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] package-manifest-initial :: OPENRILL_PACKAGE_MANIFEST_PASS declared=776 actual=776 missing=0 extra=0 changed=0
+[PASS] focused-build :: build_pass
+[PASS] focused-browser-runtime :: browser_runtime_tests_pass
+[PASS] focused-browser-boundaries :: browser_boundary_tests_pass
+[PASS] focused-historical-host-fixtures :: historical_host_fixtures_pass
+[PASS] canonical-suite :: suite_pass
+[PASS] package-manifest-final :: OPENRILL_PACKAGE_MANIFEST_PASS declared=776 actual=776 missing=0 extra=0 changed=0
+[PASS] runtime-database-files-zero :: []
+[PASS] generated-cleanup :: []
+STEP013A_BROWSER_RUNTIME_LIFECYCLE_AND_POLICY_FOUNDATION checks=138/138 state=PASSED schema=9 baseline=STEP012DR4 openclaw_reference=PINNED lifecycle=RUN_OWNED_GENERATION_GUARDED navigation=PRE_POST_POLICY popup=DENY download=DENY shutdown=QUIESCENT tools=DEFERRED_STEP013B adapter=INJECTED

@@ -1,0 +1,113 @@
+[PASS] root-version :: 0.7.0-step007
+[PASS] package-manager
+[PASS] step007-script
+[PASS] step007-package-script
+[PASS] required:packages/model-adapter/src/types.ts
+[PASS] required:packages/model-adapter/src/scripted.ts
+[PASS] required:packages/model-openai-responses/src/index.ts
+[PASS] required:packages/tool-runtime/src/index.ts
+[PASS] required:packages/agent-kernel/src/kernel.ts
+[PASS] required:packages/state/migrations/004_agent_model_execution.sql
+[PASS] required:services/agent-host/src/model-resolver.ts
+[PASS] required:services/agent-host/src/run-coordinator.ts
+[PASS] required:tests/unit/agent-kernel-step007.test.mjs
+[PASS] required:tests/unit/model-openai-responses-step007.test.mjs
+[PASS] required:scripts/run-step007-live.mjs
+[PASS] required:scripts/run_step007_acceptance.py
+[PASS] required:scripts/sh_run_step007_acceptance.cmd
+[PASS] required:scripts/sh_run_step007_acceptance.sh
+[PASS] required:scripts/package_step007.py
+[PASS] required:docs/contracts/MODEL_ADAPTER.md
+[PASS] required:docs/contracts/AGENT_KERNEL.md
+[PASS] required:docs/governance/ENGINEERING_ISSUE_REGISTRY.md
+[PASS] required:docs/testing/RECURRENCE_PREVENTION_GATES.md
+[PASS] required:docs/plans/STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER.md
+[PASS] required:docs/adrs/ADR-0023-PROVIDER_NEUTRAL_AGENT_KERNEL.md
+[PASS] required:reference/openclaw/AGENT_KERNEL_AND_MODEL_ADAPTER.md
+[PASS] manifest-count :: 26
+[PASS] manifest-version-alignment :: ["0.7.0-step007"]
+[PASS] new-provider-package
+[PASS] no-openclaw-dependency
+[PASS] migration-contract:ALTER TABLE run_attempts ADD COLUMN provider_id
+[PASS] migration-contract:CREATE TABLE model_invocations
+[PASS] migration-contract:UNIQUE (run_id, request_number)
+[PASS] migration-contract:idx_model_invocations_attempt
+[PASS] schema-version-four
+[PASS] model-contract:interface ModelAdapter
+[PASS] model-contract:interface ModelAdapterResolver
+[PASS] model-contract:type: "text_delta"
+[PASS] model-contract:type: "tool_call"
+[PASS] model-contract:type: "completed"
+[PASS] provider-contract:createOpenAIResponsesAdapter
+[PASS] provider-contract:text/event-stream
+[PASS] provider-contract:response.function_call_arguments.delta
+[PASS] provider-contract:response.completed
+[PASS] provider-contract:store: false
+[PASS] kernel-contract:executeAgentRun
+[PASS] kernel-contract:model.requested
+[PASS] kernel-contract:model.retry
+[PASS] kernel-contract:tool.replayed
+[PASS] kernel-contract:execution: "SEQUENTIAL"
+[PASS] kernel-contract:AGENT_MODEL_CALL_BUDGET_EXCEEDED
+[PASS] kernel-http-import-zero
+[PASS] kernel-sqlite-import-zero
+[PASS] secret-point-of-use
+[PASS] active-run-abort
+[PASS] new-send-schedules-once
+[PASS] cancel-aborts-active
+[PASS] config-provider-contract:maxOutputTokens
+[PASS] config-provider-contract:maxRetries
+[PASS] config-provider-contract:readonly model?: string
+[PASS] issue-registry:OR-ISSUE-001
+[PASS] issue-registry:OR-ISSUE-002
+[PASS] issue-registry:OR-ISSUE-003
+[PASS] issue-registry:OR-ISSUE-004
+[PASS] issue-registry:OR-ISSUE-005
+[PASS] issue-registry:OR-ISSUE-006
+[PASS] issue-registry:OR-ISSUE-007
+[PASS] issue-registry:OR-ISSUE-008
+[PASS] issue-registry:OR-ISSUE-009
+[PASS] issue-registry:OR-ISSUE-010
+[PASS] issue-registry:OR-ISSUE-011
+[PASS] issue-registry:OR-ISSUE-012
+[PASS] issue-close-contract
+[PASS] step007-recurrence-heading
+[PASS] recurrence-fresh-zip
+[PASS] migration-test-current-schema-derived
+[PASS] python-text-io-explicit :: []
+[PASS] evidence-count :: 113
+[PASS] evidence-report :: 113
+[PASS] evidence:OC-AGENT-006
+[PASS] evidence:OC-AGENT-007
+[PASS] evidence:OC-AGENT-008
+[PASS] evidence:OC-AGENT-009
+[PASS] evidence:OC-MODEL-001
+[PASS] evidence:OC-MODEL-002
+[PASS] evidence:OC-MODEL-003
+[PASS] evidence:OC-MODEL-004
+[PASS] evidence:OC-MODEL-005
+[PASS] plan-heading:## 목적
+[PASS] plan-heading:## 기준선
+[PASS] plan-heading:## Reference Evidence
+[PASS] plan-heading:## OpenClaw 문제 분석
+[PASS] plan-heading:## 구현 범위
+[PASS] plan-heading:## 공개 계약
+[PASS] plan-heading:## 상태 전이
+[PASS] plan-heading:## 실패 및 복구
+[PASS] plan-heading:## Acceptance
+[PASS] plan-heading:## 반복 방지 기록
+[PASS] plan-heading:## 패키징 산출물
+[PASS] plan-heading:## 제외
+[PASS] plan-heading:## 완료 선언
+[PASS] windows-launcher-crlf
+[PASS] windows-launcher-root-relative
+[PASS] posix-launcher
+[PASS] build-unit-architecture-exports :: suite_pass
+[PASS] step006-ledger-regression :: step006_pass
+[PASS] step007-live-process :: live_pass
+[PASS] database-files-zero
+[PASS] runtime-files-zero
+[PASS] protected-payload-zero
+[PASS] secret-value-not-reported
+[PASS] generated-cleanup
+STEP007_AGENT_KERNEL_AND_MODEL_ADAPTER checks=112/112 state=PASSED schema=4 kernel=PROVIDER_NEUTRAL provider=OPENAI_RESPONSES ledger=MODEL_INVOCATIONS

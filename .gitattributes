@@ -1,0 +1,11 @@
+# OpenRill packages own byte-level source hashes in PACKAGE_MANIFEST.json.
+# Preserve every tracked file byte-for-byte unless a narrower executable
+# contract explicitly requires checkout conversion.
+* -text
+
+# STEP022CR3/OR-ISSUE-372: these four user-facing Windows entrypoints must
+# always be CRLF in the worktree, independent of contributor core.autocrlf.
+start-and-run-step022c-live.cmd text eol=crlf
+start-mattermost-testbed.cmd text eol=crlf
+reset-mattermost-testbed.cmd text eol=crlf
+stop-mattermost-testbed.cmd text eol=crlf
