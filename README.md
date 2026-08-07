@@ -1,383 +1,618 @@
-<!-- STEP023AR1_GITHUB_PUBLISHING_START -->
-# GitHub Publishing Corrective — STEP023AR1
-
-```text
-CORRECTIVE=STEP023AR1_GITHUB_PUBLISHING_SOURCE_HYGIENE_AND_EOL_CONTRACT_CLOSURE
-PRODUCT_STEP=STEP023A_PERIODIC_MAINTENANCE_PHYSICAL_RETENTION_AND_PRUNE
-PRODUCT_VERSION=0.25.0-step023a
-STATE_SCHEMA=26
-PRODUCT_RUNTIME_MODIFICATIONS=0
-GITHUB_PRIVATE_READY=YES
-PUBLIC_OPEN_SOURCE_LICENSE=NOT_SELECTED
-GIT_EOL=REPOSITORY_OWNED
-SECRET_IGNORE=ENV_FAMILY_AND_KEY_FILES
-```
-
-GitHub publication is now treated as a source-transport boundary rather than a manual upload. `.gitattributes` preserves package bytes by default and the CRLF-only root Windows CMD contract closed by STEP022CR3, `.gitignore` covers the broader local-secret filename family, and `GITHUB_PUBLISHING.md` owns the exact first-push and visibility rules. No OpenRill license is inferred from the MIT license recorded for referenced OpenClaw source. Product runtime semantics, schema 26, STEP023A source identity, accepted Product baseline, and Mattermost LIVE_PENDING status are unchanged.
-
-Continuation for publication: `GITHUB_PUBLISHING.md`, `reference/validation/STEP023AR1_GITHUB_PUBLISHING_READINESS_AUDIT.md`, then OR-ISSUE-405 through OR-ISSUE-410.
-<!-- STEP023AR1_GITHUB_PUBLISHING_END -->
-
-<!-- STEP023A_CURRENT_START -->
-# Current Source Candidate — STEP023A Periodic Maintenance Physical Retention and Prune
-
-```text
-STEP=STEP023A_PERIODIC_MAINTENANCE_PHYSICAL_RETENTION_AND_PRUNE
-VERSION=0.25.0-step023a
-STATE_SCHEMA=26
-SOURCE_PACKAGE=LOCAL_SOURCE_ACCEPTED
-PROMOTION=WINDOWS_MAINTENANCE_RETENTION_LIVE_PENDING
-OFFICIAL_PRODUCT_BASELINE=STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE
-ACCEPTED_BASELINE_VERSION=0.21.3-step021br2
-ACCEPTED_BASELINE_CHECKS=82/82
-MATTERMOST_CONNECTOR=PREPARING_LIVE_PENDING_NON_BLOCKING
-MAINTENANCE=HOST_OWNED_PERIODIC
-OWNERSHIP=DURABLE_LEASE
-CURSOR=PERSISTED_RESTART_CONTINUATION
-PRUNE=PROTECTION_RECHECK_TOMBSTONE_FIRST
-AMBIGUOUS_CONNECTOR_HISTORY=NO_AUTOMATIC_PRUNE
-NEXT_PLANNED=STEP023B_STATE_BACKUP_QUARANTINE_REPAIR_AND_RESTORE_DRILL
-```
-
-STEP023A closes physical retention for terminal Task, Task Flow and safe Connector-delivery history without creating another executor. Retention scheduling is separated from reconciliation; a due timestamp alone never permits deletion; the State repository rechecks active/unresolved references inside the delete transaction; a minimal hashed tombstone is inserted before cascade deletion; durable leases prevent concurrent owners; and a persisted deterministic sweep cursor prevents protected-prefix starvation across intervals and Host restart. Local Protocol exposes closed preview, prune and tombstone reads. Mattermost STEP022C remains preserved as PREPARING/LIVE_PENDING and does not block this independent maintenance step. The official Product baseline remains STEP021BR2 until a later candidate passes its required Windows promotion gate.
-
-Continuation order for this candidate: `HANDOFF.md`, `docs/plans/STEP023A_PERIODIC_MAINTENANCE_PHYSICAL_RETENTION_AND_PRUNE.md`, `docs/contracts/MAINTENANCE_RETENTION.md`, `docs/research/STEP023A_OPENCLAW_MAINTENANCE_REFERENCE_AUDIT.md`, `reference/validation/STEP023A_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`, then OR-ISSUE-376 onward. Any older section labelled current below this block is historical retained evidence and must not reclaim current source identity.
-<!-- STEP023A_CURRENT_END -->
-
-<!-- STEP022CR2_SUPPORT_START -->
-# Current Validation/Packaging Corrective — STEP022CR2 Integrated Mattermost Testbed Single-Root Bootstrap
-
-```text
-STEP=STEP022CR2_INTEGRATED_MATTERMOST_TESTBED_SINGLE_ROOT_BOOTSTRAP
-PRODUCT_STEP=STEP022C_MATTERMOST_REAL_CONNECTOR_DURABLE_VERTICAL_SLICE
-PRODUCT_VERSION=0.24.0-step022c
-STATE_SCHEMA=25
-PRODUCT_RUNTIME_MODIFICATIONS=0
-TESTBED=INTEGRATED_UNDER_testbeds/mattermost
-WORKING_ROOT=SELF_DERIVED
-EXTERNAL_OPENRILL_ROOT_ARGUMENT=FORBIDDEN
-CMD_ENTRYPOINT=start-and-run-step022c-live.cmd
-POWERSHELL_ENTRYPOINT=start-and-run-step022c-live.ps1
-MATTERMOST_IMAGE=mattermost/mattermost-team-edition:11.7.7
-POSTGRES_IMAGE=postgres:18-alpine
-LOCAL_SUPPORT_ACCEPTANCE=STAGED_EXACT_ACCEPTED
-STEP022C_FOCUSED=24/24
-STEP022CR2_FOCUSED=12/12
-RETAINED_PRODUCT=61/61
-AFFECTED_REGRESSION=23/23
-GOVERNANCE=243/243
-CANONICAL=183 files / 957/957 tests
-ARCHITECTURE=37 packages / 99 edges / 186 sources
-EXPORTS=37/37
-DOCKER_LIVE=NOT_RUN_IN_PACKAGING_ENV
-STEP022C_WINDOWS_LIVE=PENDING_REAL_LOCAL_DOCKER
-OFFICIAL_PRODUCT_BASELINE=STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE
-```
-
-The prior separate Testbed ZIP required a second project directory and a mandatory `-OpenRillRoot` argument. That packaging contract was wrong for the actual one-root workflow. STEP022CR2 keeps all STEP022C Product code and schema unchanged, embeds the real Mattermost Docker Testbed in this source tree, and makes the repository root itself the only OpenRill working directory. On Windows CMD run `start-and-run-step022c-live.cmd`; on PowerShell run `.\start-and-run-step022c-live.ps1`. No path argument is accepted.
-
-Evidence: `docs/plans/STEP022CR2_INTEGRATED_MATTERMOST_TESTBED_SINGLE_ROOT_BOOTSTRAP.md`, `testbeds/mattermost/README.md`, and OR-ISSUE-366 through OR-ISSUE-370.
-<!-- STEP022CR2_SUPPORT_END -->
-
-<!-- STEP022C_CURRENT_START -->
-# Current Candidate — STEP022C Mattermost Real Connector Durable Vertical Slice
-
-```text
-STEP=STEP022C_MATTERMOST_REAL_CONNECTOR_DURABLE_VERTICAL_SLICE
-VERSION=0.24.0-step022c
-STATE_SCHEMA=25
-SOURCE_PACKAGE=LOCAL_SOURCE_ACCEPTED
-PROMOTION=WINDOWS_MATTERMOST_REAL_LIVE_PENDING
-OFFICIAL_PRODUCT_BASELINE=STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE
-ACCEPTED_BASELINE_VERSION=0.21.3-step021br2
-ACCEPTED_CHECKS=82/82
-ACCEPTED_ZIP_SHA256=4f763933b37235b2ed7f87f1c1922fc934fdf80bb4135b8e37b12b274f1a1ed5
-MATTERMOST=REAL_REST_WEBSOCKET
-ROUTING=DM_MENTION_THREAD
-INGRESS=PERSIST_BEFORE_ACK
-EXECUTION=ADOPTED_RUN_SCHEDULED
-DELIVERY=TERMINAL_RUN_TO_RECEIPT
-AMBIGUITY=MAYBE_ACCEPTED_NO_REPLAY
-DOCTOR=REST_AND_WEBSOCKET_AUTH_PROBE
-RESTART=REMOTE_REPLY_DUPLICATE_FREE
-EXTENSION=DYNAMIC_IMPORT_SECRETREF
-PROTOCOL=REDACTED_STATUS_DOCTOR
-MODEL=SCRIPTED_LOCAL
-FOCUSED_MATTERMOST=24/24
-RETAINED_PRODUCT=61/61
-AFFECTED_REGRESSION=23/23
-GOVERNANCE=241/241
-CANONICAL=181 files / 945/945 tests
-ARCHITECTURE=37 packages / 99 edges / 186 sources
-EXPORTS=37/37
-MANIFEST=1882/1882
-LOCAL_ACCEPTANCE=32/32 PASSED
-RECORDED_AUTOMATED_RUN_SECONDS=80.177
-FINAL_RECORD_STATE_RECHECK=32/32 PASSED
-WINDOWS_LIVE=PENDING_ENV
-LIVE_HARNESS=STEP022C_H1_REAL_MATTERMOST_DM_MENTION_THREAD_DELIVERY_AND_RESTART
-```
-
-STEP022C turns the schema-25 durable Connector runtime into one real Mattermost vertical slice. The packaged Extension authenticates through REST, receives posted events over WebSocket, routes DM/channel mentions and threads, persists ingress before adoption, schedules the created Run in the Agent coordinator, projects terminal assistant output to one durable delivery, stores the exact Mattermost receipt, and recovers without duplicate durable or remote replies. Attachments, reactions, streaming edits, multi-account policy, rate-limit coordination, and operator dead-letter replay remain deferred.
-
-Continuation order: read `HANDOFF.md`, `docs/plans/STEP022C_MATTERMOST_REAL_CONNECTOR_DURABLE_VERTICAL_SLICE.md`, `docs/contracts/MATTERMOST_CONNECTOR.md`, `docs/research/STEP022C_OPENCLAW_MATTERMOST_CONNECTOR_AUDIT.md`, and `reference/validation/STEP022C_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`.
-<!-- STEP022C_CURRENT_END -->
-
-<!-- STEP022B_HISTORY_START -->
-# Historical Local Candidate — STEP022B Durable Connector Runtime, Ingress, Delivery and Binding
-
-```text
-STEP=STEP022B_DURABLE_CONNECTOR_RUNTIME_INGRESS_DELIVERY_AND_BINDING
-VERSION=0.23.0-step022b
-STATE_SCHEMA=25
-SOURCE_PACKAGE=LOCAL_SOURCE_ACCEPTED
-PROMOTION=WINDOWS_CONNECTOR_RUNTIME_LIVE_PENDING
-OFFICIAL_PRODUCT_BASELINE=STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE
-ACCEPTED_BASELINE_VERSION=0.21.3-step021br2
-ACCEPTED_CHECKS=82/82
-ACCEPTED_ZIP_SHA256=4f763933b37235b2ed7f87f1c1922fc934fdf80bb4135b8e37b12b274f1a1ed5
-INGRESS=PERSIST_BEFORE_ACK
-BINDING=ATOMIC_CONVERSATION_MESSAGE_RUN
-DELIVERY=CLAIM_DISPATCH_RECEIPT
-UNCERTAIN=NO_AUTOMATIC_REPLAY
-EXTENSION=HOST_REGISTERED_ADAPTER
-PROTOCOL=REDACTED_LEDGER_READ
-RESTART=SAFE_RECLAIM_AND_UNCERTAIN_ISOLATION
-MATTERMOST=DEFERRED_STEP022C
-FOCUSED_CONNECTOR=21/21
-RETAINED_PRODUCT=40/40
-AFFECTED_REGRESSION=23/23
-GOVERNANCE=230/230
-CANONICAL=173 files / 910/910 tests
-ARCHITECTURE=37 packages / 99 edges / 179 sources
-EXPORTS=37/37
-MANIFEST=1744/1744
-LOCAL_ACCEPTANCE=32/32 PASSED
-WINDOWS_LIVE=PENDING_ENV
-LIVE_HARNESS=STEP022B_H1_DURABLE_CONNECTOR_INGRESS_DELIVERY_RECEIPT_AND_RESTART
-```
-
-STEP022B replaces the Connector identity stub with schema-25 durable account, binding, ingress, logical delivery, attempt, provider receipt and dead-letter ledgers. External events are persisted before acknowledgement; first binding plus Conversation/Message/Run admission is atomic; possible provider acceptance is quarantined as UNCERTAIN without automatic replay. Connector Extensions register real Host-owned adapters through the STEP022A contract. This step does not claim a real Mattermost transport; that remains STEP022C.
-<!-- STEP022B_HISTORY_END -->
-
-<!-- STEP021BR2_CURRENT_START -->
-# Current Candidate — STEP021BR2 Windows TAP Summary Parser Closure
-
-```text
-STEP=STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE
-VERSION=0.21.3-step021br2
-STATE_SCHEMA=24
-SOURCE_PACKAGE=CODE_LEVEL_ACCEPTED
-PROMOTION=WINDOWS_TAP_SUMMARY_LIVE_PENDING
-OFFICIAL_PRODUCT_BASELINE=STEP021A_DURABLE_GOAL_PLAN_TO_TASK_FLOW_EXECUTOR_FOUNDATION
-ACCEPTED_CHECKS=58/58
-PARENT_FAILURE=STEP021BR1 67/68 FAILED / INNER 20/24 FAILED
-FOCUSED_PRODUCT_EVIDENCE=22/22 PASSED
-FAILURE_CLASS=ACCEPTANCE_HARNESS_ONLY
-ISSUE=OR-ISSUE-306
-LIVE_HARNESS=STEP021BR2_H1_WINDOWS_TAP_SUMMARY_PARSER_AND_PLAN_REVISION_RESTART
-LOCAL_ACCEPTANCE=81/81 PASSED
-HARNESS_REGRESSION=4/4
-FOCUSED_PRODUCT=22/22
-AFFECTED_REGRESSION=116/116
-GOVERNANCE=210/210
-CANONICAL=163 files / 855/855 tests
-MANIFEST=1667/1667
-ARCHITECTURE=37 packages / 98 edges / 168 sources
-EXPORTS=37/37
-RECORDED_AUTOMATED_RUN_SECONDS=94.932
-FINAL_RECORD_STATE_RECHECK=81/81 PASSED
-```
-
-Actual Windows STEP021BR1 completed all 22 focused Goal/Plan revision Product tests, including changed-Step Host restart, but four TAP summary counts were `-1`. Code review proved the dynamic JavaScript `RegExp` string consumed the numeric escape and produced `(d+)`. STEP021BR2 replaces it with a shared structured line parser, covers LF and Windows CRLF, keeps missing values fail-closed, and repairs the historical STEP021BR1 Harness. Product behavior and schema 24 are unchanged.
-
-Windows transition command: `pnpm install --frozen-lockfile` then `pnpm acceptance:step021br2:live`. Until 28/28 Windows Live passes, STEP021A remains the official Product baseline. Evidence: `reference/validation/STEP021BR1_WINDOWS_TAP_SUMMARY_PARSER_FAILURE.md`; plan: `docs/plans/STEP021BR2_WINDOWS_TAP_SUMMARY_PARSER_CLOSURE.md`; recurrence: `reference/validation/STEP021BR2_OR_ISSUE_306.md`.
-<!-- STEP021BR2_CURRENT_END -->
-
-<!-- STEP021BR1_CURRENT_START -->
-# Current Corrective Candidate — STEP021BR1 Plan Revision Stable-Step Identity and Open-Blocker Guard Closure
-
-```text
-STEP=STEP021BR1_PLAN_REVISION_STABLE_STEP_IDENTITY_AND_OPEN_BLOCKER_GUARD_CLOSURE
-VERSION=0.21.2-step021br1
-STATE_SCHEMA=24
-SOURCE_PACKAGE=CODE_LEVEL_ACCEPTED
-LOCAL_CHECKS=67/67
-FOCUSED_PRODUCT=22/22
-AFFECTED_REGRESSION=116/116
-GOVERNANCE=201/201
-CANONICAL=161 files / 842 tests
-MANIFEST=1654/1654
-ARCHITECTURE=37 packages / 98 edges / 168 sources
-EXPORTS=37/37
-RECORDED_AUTOMATED_RUN_SECONDS=208.088
-LOCAL_TOOLCHAIN=Node_22.16.0 + TypeScript_5.8.3_compatibility
-PNPM_FROZEN_INSTALL=NOT_RUN_NO_REGISTRY_ACCESS
-PROMOTION=WINDOWS_PLAN_REVISION_CORRECTIVE_LIVE_PENDING
-WINDOWS_PLAN_REVISION_CORRECTIVE_LIVE=PENDING_ENV
-LIVE_HARNESS=STEP021BR1_H1_CHANGED_STEP_REEXECUTION_MUTABLE_ISOLATION_OPEN_BLOCKER_AND_RESTART
-OFFICIAL_PRODUCT_BASELINE=STEP021A_DURABLE_GOAL_PLAN_TO_TASK_FLOW_EXECUTOR_FOUNDATION
-ACCEPTED_VERSION=0.21.0-step021a
-ACCEPTED_SCHEMA=23
-ACCEPTED_CHECKS=58/58
-ACCEPTED_ZIP=openrill-step021a-durable-goal-plan-task-flow-executor-foundation-v1.zip
-ACCEPTED_SHA256=6193888a454807a65603616fcef146b150e83b18ebc0060e7a577cbd425821fc
-ACCEPTED_EVIDENCE=reference/validation/STEP021A_WINDOWS_GOAL_PLAN_EXECUTOR_LIVE_ACCEPTANCE.md
-```
-
-STEP021BR1 closes the pre-Windows-Live audit findings OR-ISSUE-303 through OR-ISSUE-305. Stable completion now requires semantic immutable Step equality; changed/new Steps receive fresh execution history; an older pinned execution cannot project completion into a changed current Plan Step; and adoption uses an unbounded open-blocker existence query. The Host restart contract re-executes a changed completed Step and finishes with exactly four unique child Tasks.
-
-The complete local aggregate passed under the available Node 22.16.0 and TypeScript 5.8.3 compatibility toolchain. The exact `pnpm install --frozen-lockfile` path remains a required Windows acceptance step because pnpm 11.15.1 was not locally cached and registry access was unavailable.
-
-Plan: `docs/plans/STEP021BR1_PLAN_REVISION_STABLE_STEP_IDENTITY_AND_OPEN_BLOCKER_GUARD_CLOSURE.md`. Audit: `reference/validation/STEP021B_PRE_WINDOWS_LIVE_CODE_AUDIT.md`. Local evidence: `reference/validation/STEP021BR1_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`. Failure prevention: `OR-ISSUE-303` through `OR-ISSUE-305`.
-<!-- STEP021BR1_CURRENT_END -->
-
-# STEP020ER3_WINDOWS_PYTHON_LIVE_MARKER_VALIDATOR_ENTRYPOINT_CLOSURE current source/package corrective candidate
-
-```text
-step=STEP020ER3_WINDOWS_PYTHON_LIVE_MARKER_VALIDATOR_ENTRYPOINT_CLOSURE
-version=0.20.8-step020er3
-state_schema=22
-source_package=ACCEPTED
-promotion=WINDOWS_PYTHON_VALIDATOR_LIVE_PENDING
-accepted_product_baseline=STEP020D_TASK_AND_TASK_FLOW_RECONCILIATION_LOST_AND_RETENTION_FOUNDATION
-accepted_version=0.20.4-step020d
-accepted_checks=53/53
-accepted_zip_sha256=5a3b83b35e52176fad6b5525991e2da7eaf1ab16aac25c566d4a63027518b450
-windows_python_validator_live=PENDING_ENV
-live_harness=STEP020ER3_H1_WINDOWS_PYTHON_VALIDATOR_ENTRYPOINT_AND_COMPLETION
-local_checks=65/65
-focused_product=20/20
-affected_regression=99/99
-governance=175/175
-canonical=151 files / 794 tests
-manifest=1574/1574
-architecture=36 packages / 93 edges / 163 sources
-exports=36/36
-automated_run_seconds=72.767
-```
-
-The actual STEP020ER2 Windows run failed `STEP020ER2 54/57 Windows LIVE FAILED`: focused Product was 14/16, canonical stopped at the same test, and the inner Harness was 20/23. All Product completion, retry, controller wake, Host restart and schema-backfill scenarios passed. The two failures were `ModuleNotFoundError: No module named 'scripts.step020er2_live_marker'` from a Node test that launched `python -c` and assumed caller cwd/PYTHONPATH semantics.
-
-STEP020ER3 removes that assumption. Python validation is an explicit absolute file entrypoint with `--validate-stdin`; Node paths use `fileURLToPath`; external cwd, spaces, and a shadow `scripts` package are tested. The structured field-set marker contract remains intact. No Local Protocol retry, completion delivery, Task, Flow, Run, Host lifecycle or State schema Product behavior changes. `OR-ISSUE-272` records the failure and correction; `OR-ISSUE-273` preserves the exact failed-state evidence.
-
-Evidence: `reference/validation/STEP020ER2_WINDOWS_PYTHON_VALIDATOR_ENTRYPOINT_FAILURE.md`, `reference/validation/STEP020ER3_OR_ISSUE_272.md`, `docs/plans/STEP020ER3_WINDOWS_PYTHON_LIVE_MARKER_VALIDATOR_ENTRYPOINT_CLOSURE.md`, and `reference/validation/STEP020ER3_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`.
-
-Autonomous Plan execution, physical prune, periodic/distributed sweeping, external model, Browser LIVE and real Connector remain deferred. Mattermost and Connector work remains speculative until a concrete adapter and executable real API/event environment exist.
-
----
-
-## Retained prior continuation
-
-# STEP020ER2_WINDOWS_COMPLETION_LIVE_MARKER_CONTRACT_ALIGNMENT current source/package accepted corrective candidate
-
-```text
-step=STEP020ER2_WINDOWS_COMPLETION_LIVE_MARKER_CONTRACT_ALIGNMENT
-version=0.20.7-step020er2
-state_schema=22
-source_package=ACCEPTED
-local_checks=56/56
-focused_product=16/16
-affected_regression=99/99
-governance=168/168
-canonical=149 files / 783 tests
-manifest=1560/1560
-architecture=36 packages / 93 edges / 163 sources
-exports=36/36
-promotion=WINDOWS_COMPLETION_MARKER_LIVE_PENDING
-accepted_product_baseline=STEP020D_TASK_AND_TASK_FLOW_RECONCILIATION_LOST_AND_RETENTION_FOUNDATION
-accepted_version=0.20.4-step020d
-accepted_checks=53/53
-accepted_zip_sha256=5a3b83b35e52176fad6b5525991e2da7eaf1ab16aac25c566d4a63027518b450
-windows_completion_marker_live=PENDING_ENV
-live_harness=STEP020ER2_H1_WINDOWS_COMPLETION_LIVE_MARKER_CONTRACT_ALIGNMENT
-automated_run_seconds=68.940
-```
-
-The actual STEP020ER1 Windows run proved the Product path: its Windows stage returned PASS and the inner Harness passed 21/21, including the queued controller wake restart scenario. The aggregate nevertheless reported `STEP020ER1 59/60 Windows LIVE FAILED` because its independently copied exact marker required `queue=SYSTEM_MESSAGE_WAKE_RUN` and `migration=TERMINAL_CHILD_SAFE_BACKFILL`, while the live runner omitted those two tokens.
-
-STEP020ER2 is an evidence-contract correction only. `config/step020er2-live-marker-contract.json` is the single source for marker identity and fields. The Windows runner renders from it and the aggregate validates one key/value field set independent of ordering. Missing, extra, duplicate or changed fields fail explicitly. No Local Protocol retry, completion delivery, Task, Flow, Run, Host lifecycle or schema Product behavior is changed. `OR-ISSUE-270` records the marker mismatch and `OR-ISSUE-271` records the historical-governance ownership recurrence.
-
-Evidence: `reference/validation/STEP020ER1_WINDOWS_LIVE_MARKER_CONTRACT_FAILURE.md`, `reference/validation/STEP020ER2_OR_ISSUE_270.md`, `reference/validation/STEP020ER2_OR_ISSUE_271.md`, and `reference/validation/STEP020ER2_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`.
-
-Autonomous Plan execution, physical prune, periodic/distributed sweeping, external model, Browser LIVE and real Connector remain deferred. Mattermost and Connector work remains speculative until a concrete adapter and executable real API/event environment exist.
-
----
-# STEP020E_DURABLE_TASK_COMPLETION_DELIVERY_CONTROLLER_WAKE_AND_REQUIRED_COMPLETION_SEMANTICS current source/package accepted candidate
-
-```text
-step=STEP020E_DURABLE_TASK_COMPLETION_DELIVERY_CONTROLLER_WAKE_AND_REQUIRED_COMPLETION_SEMANTICS
-version=0.20.5-step020e
-state_schema=22
-source_package=ACCEPTED
-local_checks=49/49
-focused_product=10/10
-affected_regression=99/99
-governance=162/162
-canonical=145 files / 771 tests
-manifest=1538/1538
-architecture=36 packages / 93 edges / 163 sources
-exports=36/36
-promotion=WINDOWS_COMPLETION_LIVE_PENDING
-accepted_product_baseline=STEP020D_TASK_AND_TASK_FLOW_RECONCILIATION_LOST_AND_RETENTION_FOUNDATION
-accepted_version=0.20.4-step020d
-accepted_checks=53/53
-accepted_zip_sha256=5a3b83b35e52176fad6b5525991e2da7eaf1ab16aac25c566d4a63027518b450
-windows_completion_live=PENDING_ENV
-live_harness=STEP020E_H1_DURABLE_COMPLETION_DELIVERY_CONTROLLER_WAKE_RESTART_AND_SEMANTICS
-automated_run_seconds=62.143
-```
-
-STEP020E closes the durable continuation path from a terminal managed child Task to its Conversation-owned controller. Task terminal projection and one delivery intent commit atomically; the owner system message, silent controller wake Run, wake Task and delivery binding commit atomically before the existing Run coordinator schedules execution. Exact replay and Host restart preserve identity, and a delivery is complete only after a successful bound `task_flow` decision. Empty or progress-only output is `terminalOutcome=BLOCKED`; Flow outcome remains controller-owned. Autonomous Goal Plan-to-Task execution remains deferred.
-
-Code-grounded evidence: `docs/research/STEP020E_OPENCLAW_COMPLETION_DELIVERY_AND_CONTROLLER_WAKE_AUDIT.md`, `docs/plans/STEP020E_DURABLE_TASK_COMPLETION_DELIVERY_CONTROLLER_WAKE_AND_REQUIRED_COMPLETION_SEMANTICS.md`, `reference/validation/STEP020D_WINDOWS_MAINTENANCE_LIVE_ACCEPTANCE.md`, `reference/validation/STEP020E_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`, and independent failure assets OR-ISSUE-259 through OR-ISSUE-268. Retained continuity includes OR-ISSUE-213, OR-ISSUE-214, OR-ISSUE-238, OR-ISSUE-239, OR-ISSUE-247, and OR-ISSUE-251.
-
-Mattermost and Connector work remains speculative and deferred until a concrete real adapter contract and executable real API/event environment exist. No fake surface is promoted as real integration evidence. Plugin runtime is deferred; no Plugin marketplace or remote plugin installation is claimed.
-
----
 # OpenRill
 
-Current source/package candidate:
+**A local-first durable AI agent runtime for long-running, restart-safe, tool-using workflows.**
+
+OpenRill is an experimental agent runtime focused on one problem:
+
+> An agent should be able to execute real work over time without losing execution identity, orchestration state, or recovery semantics when a process stops, a host restarts, a tool waits for approval, or an external system becomes temporarily unavailable.
+
+Instead of treating an agent run as a single in-memory request, OpenRill models conversations, goals, plans, runs, tasks, task flows, tool execution, connectors, and maintenance as explicit durable runtime concepts.
+
+---
+
+## Why OpenRill?
+
+Many agent implementations work well while a single process stays alive, but long-running work introduces harder problems:
+
+* What happens when the host restarts?
+* How is a running task resumed without creating duplicates?
+* Who owns cancellation?
+* How do multiple tasks form one workflow?
+* How does a completed child task wake its controller?
+* How are retries and blockers represented durably?
+* How do external messages enter the runtime without being acknowledged too early?
+* How can old workflow state be physically removed without deleting something still referenced?
+
+OpenRill approaches these as runtime and state-modeling problems rather than prompt-engineering problems.
+
+---
+
+## Core Runtime Model
+
+OpenRill deliberately keeps several concepts separate.
 
 ```text
-STEP020B_DURABLE_TASK_FLOW_REGISTRY_AND_CONTROLLER_LIFECYCLE_FOUNDATION
-version=0.20.1-step020b
-state_schema=19
-source_package=ACCEPTED
-promotion=WINDOWS_TASK_FLOW_LIVE_PENDING
-local_checks=36/36
-canonical=130 files / 706 tests
+Conversation
+    │
+    ├── Goal
+    │    └── revisioned Plan
+    │          └── Goal execution projection
+    │
+    ├── Task Flow
+    │    └── Task
+    │          └── Run
+    │               └── Attempt
+    │
+    └── Messages / Events / Tool Results
 ```
 
-STEP020B adds a durable controller-owned Task Flow registry over the STEP020A Task ledger. Goal/Plan remains intent, Task remains one Run-linked execution fact, and Task Flow persists orchestration status, revision, wait/block state and links to several Tasks. It is not an autonomous Plan executor or a second general scheduler.
+### Goal
+
+A durable objective owned by a Conversation.
+
+### Plan
+
+A revisioned, ordered proposal for achieving a Goal.
+
+A Plan describes **intent**. It is not execution state.
+
+### Run
+
+The authoritative execution lifecycle.
+
+### Attempt
+
+One execution attempt of a Run, with its own provenance.
+
+### Task
+
+A durable one-to-one Run-linked activity ledger.
+
+A Task records execution facts and delegates cancellation to its owning Run. It is **not** a scheduler.
+
+### Task Flow
+
+A durable controller-owned orchestration record over multiple Tasks.
+
+A Task Flow owns orchestration state such as:
+
+* revision
+* current step
+* wait state
+* block state
+* cancellation intent
+
+It is not itself an autonomous Plan executor.
+
+The runtime maintains the following separation:
+
+```text
+Goal / Plan intent
+    !=
+Step execution projection
+    !=
+Task execution fact
+    !=
+Run execution authority
+```
+
+This boundary is one of the central design rules of OpenRill.
+
+---
+
+## What Is Implemented
+
+OpenRill currently contains working foundations for:
+
+* durable Conversations and message/event history
+* SQLite-backed runtime state
+* Run and Attempt lifecycle management
+* model adapter boundaries
+* OpenAI Responses model adapter
+* workspace-scoped execution
+* file tools
+* process tools
+* tool discovery and runtime
+* Tool Approval and resume
+* Skills discovery and profile enablement
+* durable agent memory
+* browser runtime foundations
+* Playwright browser integration
+* Host and Docker process backends
+* Automation persistence and scheduling
+* durable Goal and revisioned Plan state
+* Goal/Plan → Task Flow execution
+* durable Task lifecycle
+* controller-owned Task Flow orchestration
+* atomic child Task admission
+* retry and blocker handling
+* durable completion delivery
+* controller wake-up after child completion
+* Host restart recovery
+* cancellation propagation
+* stale/lost runtime reconciliation
+* local Extension runtime
+* durable Connector ingress and delivery ledgers
+* Mattermost REST/WebSocket connector implementation
+* periodic retention scheduling
+* durable maintenance leases
+* persisted maintenance sweep cursors
+* protected physical pruning
+* retention tombstones
+
+---
+
+## Durable Execution
+
+OpenRill is designed so execution identity survives process boundaries.
+
+For managed workflows, state is not reconstructed only from prompts or transient memory. Runtime ownership is recorded explicitly.
+
+Examples include:
+
+```text
+Goal
+  → Plan revision
+  → active Step
+  → controller-owned Task Flow
+  → child Task
+  → Run
+  → Attempt
+```
+
+When a child Task completes, completion can be delivered durably back to its owning controller rather than relying on an in-memory callback.
+
+When the Host restarts, recovery logic uses persisted state to decide what may safely continue, reconcile, block, cancel, or remain untouched.
+
+---
+
+## Tool Execution
+
+The repository contains tool/runtime foundations for capabilities including:
+
+```text
+@openrill/tool-runtime
+@openrill/tool-discovery
+@openrill/tools-files
+@openrill/tools-process
+@openrill/tools-memory
+@openrill/tools-goals
+@openrill/tools-delegation
+@openrill/approval
+```
+
+Tool approval is modeled as runtime state so execution can wait and resume without pretending the original process remained alive.
+
+---
+
+## Skills
+
+Skills are treated separately from Tools.
+
+```text
+Skill
+  → describes capability and requirements
+
+Tool
+  → performs an executable operation
+```
+
+The repository contains Skill discovery, eligibility checks, profile allowlisting, and built-in Skill infrastructure.
+
+CLI operations include:
+
+```text
+openrill skill list
+openrill skill show <id>
+openrill skill check
+openrill skill enable <id>
+openrill skill disable <id>
+```
+
+---
+
+## Connectors
+
+OpenRill separates external transport concerns from Conversation, Run, Task, Task Flow, Goal, Plan, and State ownership.
+
+The current repository contains a Mattermost connector package:
+
+```text
+connectors/mattermost
+```
+
+Its transport boundary includes:
+
+* REST authentication
+* WebSocket event ingestion
+* direct-message routing
+* channel mention routing
+* thread routing
+* ingress persistence
+* Conversation/Run adoption
+* terminal assistant delivery
+* provider receipt persistence
+* restart-safe duplicate protection
+
+A local Mattermost Docker testbed is included under:
+
+```text
+testbeds/mattermost
+```
+
+The real Mattermost integration remains classified as **LIVE_PENDING** until its required live acceptance gate is completed.
+
+It is not presented as production-certified integration.
+
+---
+
+## Maintenance and Retention
+
+The current source candidate adds physical retention for durable runtime history.
+
+Retention is intentionally separate from reconciliation.
+
+A record becoming old enough for retention does **not** automatically mean that it is safe to delete.
+
+Before physical deletion, OpenRill rechecks protections such as active or unresolved references.
+
+The maintenance path includes:
+
+```text
+periodic Host-owned sweep
+    │
+    ├── durable lease
+    ├── persisted sweep cursor
+    ├── retention candidate selection
+    ├── protection recheck
+    ├── tombstone creation
+    └── physical prune
+```
+
+Ambiguous Connector delivery history is not automatically pruned.
+
+The current state schema is:
+
+```text
+26
+```
+
+---
+
+## Repository Structure
+
+```text
+openrill/
+├── apps/
+│   ├── agent-cli/
+│   ├── agent-web/
+│   └── desktop/
+│
+├── services/
+│   └── agent-host/
+│
+├── packages/
+│   ├── agent-kernel/
+│   ├── approval/
+│   ├── automation/
+│   ├── browser-runtime/
+│   ├── conversations/
+│   ├── extension-sdk/
+│   ├── goal-executor/
+│   ├── goals/
+│   ├── memory/
+│   ├── model-adapter/
+│   ├── model-openai-responses/
+│   ├── protocol/
+│   ├── sandbox/
+│   ├── state/
+│   ├── task-flows/
+│   ├── tasks/
+│   ├── tool-runtime/
+│   ├── tools-*/
+│   └── workspace/
+│
+├── connectors/
+│   └── mattermost/
+│
+├── skills/
+│   └── builtin/
+│
+├── testbeds/
+│   └── mattermost/
+│
+├── tests/
+├── scripts/
+├── docs/
+├── reference/
+└── openrill.mjs
+```
+
+The workspace currently contains 37 architectural packages.
+
+---
+
+## Requirements
+
+The root package contract currently requires:
+
+```text
+Node.js >= 22.16.0 < 23
+or
+Node.js >= 24.0.0
+
+pnpm >= 11.15.1
+```
+
+The repository pins:
+
+```text
+pnpm@11.15.1
+```
+
+Python is also used by the repository's validation, architecture, manifest, and packaging scripts.
+
+Docker is required only for features that use the Docker execution backend or the Mattermost testbed.
+
+---
+
+## Build
+
+Clone the repository and install the pinned workspace dependencies.
+
+```bash
+git clone https://github.com/okcanvas/openrill.git
+cd openrill
+
+pnpm install --frozen-lockfile
+pnpm build
+```
+
+Then inspect the CLI:
+
+```bash
+node openrill.mjs help
+```
+
+---
+
+## CLI
+
+The current CLI exposes:
+
+```text
+openrill setup
+openrill doctor
+openrill ask
+
+openrill conversation list
+openrill conversation show <id>
+
+openrill skill list
+openrill skill show <id>
+openrill skill check
+openrill skill enable <id>
+openrill skill disable <id>
+
+openrill start
+openrill run
+openrill status
+openrill stop
+
+openrill config path
+openrill config validate
+openrill config show
+openrill config init
+```
+
+Prompt text for `ask` is read from **stdin**, not from a command-line argument.
+
+Secrets are not accepted as normal command-line arguments, and configuration output is designed to remain redacted.
+
+---
+
+## Windows Local Setup
+
+The current setup path includes Windows DPAPI support for local API-key protection.
+
+After building:
 
 ```cmd
-pnpm acceptance:step020b
-pnpm acceptance:step020b:live
+node openrill.mjs setup --workspace . --endpoint https://api.openai.com/v1 --model <model-id>
 ```
 
-Official accepted Product baseline:
+Then verify the local environment:
+
+```cmd
+node openrill.mjs doctor
+```
+
+`setup` can securely request the API key interactively.
+
+Automation can use `--api-key-stdin`; API keys are not designed to be stored directly in repository configuration.
+
+---
+
+## Validation
+
+OpenRill development uses explicit acceptance gates rather than treating compilation as sufficient evidence.
+
+Typical repository checks include:
+
+```bash
+pnpm build
+pnpm typecheck
+pnpm test
+pnpm test:architecture
+pnpm test:exports
+pnpm package:verify
+```
+
+Individual development steps also have focused acceptance suites.
+
+For the current source candidate:
+
+```bash
+pnpm acceptance:step023a
+```
+
+The Windows maintenance-retention live gate is:
+
+```bash
+pnpm acceptance:step023a:live
+```
+
+A candidate is not described as live-accepted until its required live gate actually passes.
+
+---
+
+## Current Development Status
 
 ```text
-STEP020A_DURABLE_BACKGROUND_TASK_LEDGER_AND_RUNTIME_LIFECYCLE_FOUNDATION
-version=0.20.0-step020a
-state_schema=18
-checks=40/40
-sha256=67ac1fa4a5067ff3070f0a990bfdfd262a6d956961ebd221432cdacf567c9a7f
+Current source:
+  STEP023A_PERIODIC_MAINTENANCE_PHYSICAL_RETENTION_AND_PRUNE
+
+Version:
+  0.25.0-step023a
+
+State schema:
+  26
+
+Source/package status:
+  LOCAL_SOURCE_ACCEPTED
+
+Windows STEP023A live status:
+  PENDING
+
+Mattermost connector:
+  PREPARING / LIVE_PENDING
+
+Current accepted Product baseline:
+  0.21.3-step021br2
+
+Accepted baseline checks:
+  82/82
 ```
 
-Read `HANDOFF.md` first in another conversation. Code-grounded OpenClaw audit: `docs/research/STEP020B_OPENCLAW_TASK_FLOW_REFERENCE_AUDIT.md`. Implementation boundary: `docs/plans/STEP020B_DURABLE_TASK_FLOW_REGISTRY_AND_CONTROLLER_LIFECYCLE_FOUNDATION.md`.
+OpenRill is under active development.
 
-Explicitly deferred: autonomous Plan-to-Task execution, model-selected orchestration, delivery/notification, audit repair, LOST sweeping, retention, distributed workers, external model, Browser LIVE and real Connector.
+The repository contains completed foundations and executable acceptance suites, but the current source candidate should not be interpreted as a production-ready release.
 
-Local source evidence: `reference/validation/STEP020B_LOCAL_SOURCE_PACKAGE_ACCEPTANCE.md`.
+---
 
-## STEP022CR3 Windows CMD entrypoint byte-contract corrective
+## Design Principles
 
-- Packaging corrective: `STEP022CR3_WINDOWS_CMD_ENTRYPOINT_BYTE_CONTRACT_CLOSURE`.
-- Product identity remains `STEP022C_MATTERMOST_REAL_CONNECTOR_DURABLE_VERTICAL_SLICE`, version `0.24.0-step022c`, schema 25.
-- The user-facing CMD entrypoint is `start-and-run-step022c-live.cmd` in this repository root; no second directory and no external root argument are allowed.
-- The primary CMD file is non-empty ASCII with Windows CRLF and directly runs `call pnpm install --frozen-lockfile` followed by `call pnpm mattermost:testbed:live`; it does not delegate to PowerShell.
-- Packaging must reopen the ZIP and byte-verify all root CMD entrypoints before success (`OR-ISSUE-372`).
-- Real Windows Mattermost live remains pending; the official Product baseline remains STEP021BR2 until that gate passes.
+### Durable state before convenience
 
+Important workflow facts should survive process termination.
+
+### Explicit ownership
+
+Run, Task, Task Flow, Goal, Plan, Connector, and maintenance responsibilities should not silently overlap.
+
+### No success by assumption
+
+A scheduled action, network send, or retention deadline is not automatically considered successful.
+
+### Persist before acknowledging external work
+
+External ingress is persisted before the runtime considers it adopted.
+
+### Fail closed on ambiguous delivery
+
+If an external provider may already have accepted a delivery, OpenRill does not blindly replay it.
+
+### Recovery must preserve identity
+
+Restart handling should resume or reconcile existing durable work instead of manufacturing replacement work.
+
+### Retention must not mutate active workflow semantics
+
+Deletion eligibility is rechecked at the State boundary before physical pruning.
+
+### Tests are evidence, not documentation decoration
+
+Live, deterministic, packaging, architecture, and regression gates are kept distinct.
+
+---
+
+## Documentation
+
+The repository intentionally keeps detailed engineering evidence alongside the source.
+
+Start with:
+
+* [`ARCHITECTURE.md`](ARCHITECTURE.md) — architecture and dependency boundaries
+* [`PROJECT.md`](PROJECT.md) — detailed project state
+* [`ROADMAP.md`](ROADMAP.md) — development progression
+* [`GLOSSARY.md`](GLOSSARY.md) — runtime terminology
+* [`DECISIONS.md`](DECISIONS.md) — retained architectural decisions
+* [`VALIDATION.md`](VALIDATION.md) — validation history and evidence
+* [`HANDOFF.md`](HANDOFF.md) — exact continuation state
+* [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution guidance
+* [`SECURITY.md`](SECURITY.md) — security guidance
+
+Detailed contracts, implementation plans, research audits, and failure-prevention records live under:
+
+```text
+docs/
+reference/
+```
+
+The repository deliberately retains failed acceptance evidence and corrective records so that previously discovered failure modes are not silently reintroduced.
+
+---
+
+## Development Philosophy
+
+OpenRill is developed under a simple rule:
+
+> **Do not infer runtime behavior from names, intentions, or documentation when the code and executable evidence can be inspected.**
+
+Changes are expected to preserve:
+
+* source-grounded decisions
+* explicit runtime ownership
+* deterministic regression coverage
+* failure evidence
+* restart behavior
+* package integrity
+* continuation documentation
+
+---
+
+## Security
+
+Do not commit credentials or local secret files.
+
+The repository ignores local environment and common private-key file families, while keeping example configuration files trackable.
+
+See [`SECURITY.md`](SECURITY.md) for the project security boundary.
+
+---
+
+## License
+
+An OpenRill project license has **not yet been selected**.
+
+Do not infer OpenRill's license from third-party notices or referenced projects.
+
+See [`NOTICE.md`](NOTICE.md) for third-party attribution information.
+
+---
+
+## Project Status
+
+OpenRill is an active experimental runtime project.
+
+It is currently best suited for:
+
+* agent-runtime research
+* durable workflow experimentation
+* local autonomous-agent infrastructure
+* restart/recovery semantics
+* tool orchestration
+* agent execution-state modeling
+* connector durability experiments
+
+APIs, schemas, protocols, and operational contracts may continue to evolve before a stable release.
